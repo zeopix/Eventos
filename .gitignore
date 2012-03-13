@@ -6,3 +6,4 @@ build/
 vendor/
 .idea/
 .idea/*
+app/config/parameters.ini
