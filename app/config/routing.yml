@@ -1,7 +1,5 @@
 CoreUserBundle:
     resource: "@CoreUserBundle/Resources/config/routing.yml"
-    type:     annotation
-    prefix:   /
 
 # Internal routing configuration to handle ESI
 #_internal:
