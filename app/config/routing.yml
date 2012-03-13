@@ -1,5 +1,5 @@
 CoreUserBundle:
-    resource: "@CoreUserBundle/Controller/"
+    resource: "@CoreUserBundle/Resources/config/routing.yml"
     type:     annotation
     prefix:   /
 
