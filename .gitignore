@@ -4,6 +4,5 @@ app/cache/*
 app/logs/*
 build/
 vendor/
-.idea/
 .idea/*
 app/config/parameters.ini
