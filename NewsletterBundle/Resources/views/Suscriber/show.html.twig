@@ -1,0 +1,50 @@
+{% extends 'JetNewsletterBundle::layout.html.twig' %}
+{% set active = 'suscribers' %}
+{% block header %}<h1>Suscritores</h1><small>Ver perfil</small>{% endblock %}
+{% block main %}
+
+<table class="table-striped">
+    <tbody>
+        <tr>
+            <th>Nombre</th>
+            <td>{{ entity.name }}</td>
+        </tr>
+        <tr>
+            <th>Correo electrónico</th>
+            <td>{{ entity.email }}</td>
+        </tr>
+        <tr>
+            <th>Fecha de ingreso</th>
+            <td>{{ entity.createdat|date('Y-m-d H:i:s') }}</td>
+        </tr>
+        <tr>
+            <th>Ultima acción</th>
+            <td>{{ entity.updatedat|date('Y-m-d H:i:s') }}</td>
+        </tr>
+        <tr>
+            <th>Teléfono</th>
+            <td>{{ entity.phone }}</td>
+        </tr>
+        <tr>
+            <th>Dirección</th>
+            <td>{{ entity.address }}</td>
+        </tr>
+        <tr>
+            <th>Información</th>
+            <td>{{ entity.description }}</td>
+        </tr>
+    </tbody>
+</table>
+
+        <a class="btn" href="{{ path('suscriptores') }}">
+            Volver atras
+        </a>
+        <a class="btn success" href="{{ path('suscriptores_edit', { 'id': entity.id }) }}">
+            Modificar
+        </a>
+        <form action="{{ path('suscriptores_delete', { 'id': entity.id }) }}" method="post">
+            {{ form_widget(delete_form) }}
+            <button class="btn danger" type="submit">Borrar</button>
+        </form>
+
+{% endblock %}

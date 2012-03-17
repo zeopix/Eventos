@@ -1,0 +1,23 @@
+{% extends 'JetNewsletterBundle::layout.html.twig' %}
+{% set active = 'templates' %}
+{% form_theme edit_form 'JetNewsletterBundle:Form:fields.html.twig' %}
+{% block header %}<h1>Plantillas</h1><small>Editar plantilla</small>{% endblock %}
+{% block main %}
+<form action="{{ path('plantillas_update', { 'id': entity.id }) }}" method="post" {{ form_enctype(edit_form) }}>
+    {{ form_widget(edit_form) }}
+    <p>
+        <button class="btn success" type="submit">Guardar</button>
+    </p>
+</form>
+
+        <a class="btn" href="{{ path('plantillas') }}">
+            Volver atrás
+        </a>
+
+        <form action="{{ path('plantillas_delete', { 'id': entity.id }) }}" method="post">
+            {{ form_widget(delete_form) }}
+            <button class="btn danger" type="submit">Borrar Plantilla</button>
+        </form>
+{{ tinymce_init() }}     
+
+{% endblock %}

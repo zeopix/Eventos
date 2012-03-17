@@ -1,0 +1,17 @@
+{% extends 'JetNewsletterBundle::layout.html.twig' %}
+{% set active = 'templates' %}
+{% form_theme form 'JetNewsletterBundle:Form:fields.html.twig' %}
+{% block header %}<h1>Plantillas</h1><small>Nueva plantilla</small>{% endblock %}
+{% block main %}
+<form action="{{ path('plantillas_create') }}" method="post" {{ form_enctype(form) }}>
+    {{ form_widget(form) }}
+    <p>
+        <button class="btn success" type="submit">Guardar</button>
+    </p>
+</form>
+
+        <a class="btn" href="{{ path('plantillas') }}">
+            Volver atrás
+        </a>
+{{ tinymce_init() }}     
+{% endblock %}

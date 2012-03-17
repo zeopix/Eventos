@@ -1,0 +1,37 @@
+{% extends 'JetNewsletterBundle::layout.html.twig' %}
+{% set active = 'templates' %}
+{% block header %}<h1>Plantillas</h1>{% endblock %}
+{% block main %}
+<table class="table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Titulo</th>
+            <th>Twig</th>
+            <th>Created_at</th>
+            <th>Updated_at</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for entity in entities %}
+        <tr>
+            <td><a href="{{ path('plantillas_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+            <td>{{ entity.titulo }}</td>
+            <td>{{ entity.twig }}</td>
+            <td>{% if entity.createdat %}{{ entity.createdat|date('Y-m-d H:i:s') }}{% endif%}</td>
+            <td>{% if entity.updatedat %}{{ entity.updatedat|date('Y-m-d H:i:s') }}{% endif%}</td>
+            <td>
+                        <a class="btn" href="{{ path('plantillas_show', { 'id': entity.id }) }}">show</a>
+                  
+                        <a class="btn" href="{{ path('plantillas_edit', { 'id': entity.id }) }}">edit</a>
+                 
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+ <a class="btn success" href="{{ path('plantillas_new') }}">
+            Nueva Plantilla
+        </a>
+{% endblock %}

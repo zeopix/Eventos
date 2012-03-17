@@ -1,0 +1,36 @@
+{% extends 'JetNewsletterBundle::layout.html.twig' %}
+{% set active = 'suscribers' %}
+{% block header %}<h1>Suscritores</h1>{% endblock %}
+{% block main %}
+<table class="table-striped">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Correo electrónico</th>
+            <th>Teléfono</th>
+            <th>Dirección</th>
+            <th>Información</th>
+            <th>#</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for entity in entities %}
+        <tr>
+            <td>{{ entity.name }}</td>
+            <td>{{ entity.email }}</td>
+            <td>{{ entity.phone }}</td>
+            <td>{{ entity.address }}</td>
+            <td>{{ entity.description }}</td>
+            <td>
+               <a class="btn" href="{{ path('suscriptores_show', { 'id': entity.id }) }}">ver</a>
+			    <a class="btn" href="{{ path('suscriptores_edit', { 'id': entity.id }) }}">editar</a>
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+        <a class="btn success large" href="{{ path('suscriptores_new') }}">
+            Nuevo Suscritor
+        </a>
+{% endblock %}

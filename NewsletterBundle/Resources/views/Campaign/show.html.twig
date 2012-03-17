@@ -1,0 +1,52 @@
+{% extends 'JetNewsletterBundle::layout.html.twig' %}
+{% set active = 'campaigns' %}
+{% block header %}<h1>Campañas</h1><small>Detalles Campaña</small>{% endblock %}
+{% block main %}
+<h2>Campaña Nº{{ entity.id }}</h2>
+<table class="table-striped">
+    <tbody>
+        <tr>
+            <th>Estado</th>
+            <td>{{ entity.getTextStatus() }}</td>
+            <th>Fecha de inicio</th>
+            <td>{{ entity.startsat|date('Y-m-d H:i:s') }}</td>
+        </tr>
+        <tr>
+            <th>Título</th>
+            <td colspan="3">{{ entity.title }}</td>
+        </tr>
+        <tr>
+            <th>Plantilla</th>
+            <td colspan="3">{{ entity.template }}</td>
+        </tr>
+        <tr>
+            <th>Cabecera</th>
+            <td colspan="3">{{ entity.head }}</td>
+        </tr>
+        <tr>
+            <th>Cuerpo</th>
+            <td colspan="3">{{ entity.body }}</td>
+        </tr>
+        <tr>
+            <th>Fecha de creación</th>
+            <td>{{ entity.createdat|date('Y-m-d H:i:s') }}</td>
+            <th>Última actualización</th>
+            <td>{{ entity.updatedat|date('Y-m-d H:i:s') }}</td>
+        </tr>
+    </tbody>
+</table>
+<h2>Previsualización del Mensaje</h2>
+<iframe class="previsualizacion" src="{{ path('render',{ 'campaignid' : entity.id }) }}" width="600px" height="300px"></iframe>
+
+<br><br>
+        <a class="btn" href="{{ path('campanas') }}">
+            Volver atrás
+        </a>
+        <a class="btn success" href="{{ path('campanas_edit', { 'id': entity.id }) }}">
+            Editar
+        </a>
+        <form action="{{ path('campanas_delete', { 'id': entity.id }) }}" method="post">
+            {{ form_widget(delete_form) }}
+            <button class="btn danger" type="submit">Borrar Campaña</button>
+        </form>
+{% endblock %}

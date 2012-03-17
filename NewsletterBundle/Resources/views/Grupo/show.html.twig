@@ -1,0 +1,56 @@
+{% extends 'JetNewsletterBundle::layout.html.twig' %}
+{% set active = 'grupos' %}
+{% block header %}<h1>Grupos</h1><small>Ver grupo</small>{% endblock %}
+{% block main %}
+<table class="table-striped">
+    <tbody>
+        <tr>
+            <th>Título</th>
+            <td>{{ entity.title }}</td>
+        </tr>
+        <tr>
+            <th>Descripción</th>
+            <td>{{ entity.description }}</td>
+        </tr>
+        <tr>
+            <th>Fecha de creación</th>
+            <td>{{ entity.createdat|date('Y-m-d H:i:s') }}</td>
+        </tr>
+        <tr>
+            <th>Modificado:</th>
+            <td>{{ entity.updatedat|date('Y-m-d H:i:s') }}</td>
+        </tr>
+        <tr>
+            <th>Total miembros:</th>
+            <td>{{ entity.members }}</td>
+        </tr>
+    </tbody>
+</table>
+<h2>Miembros</h2>
+<table class="zebra-striped">
+<tr>
+	<th>Nombre</th>
+	<th>E-mail</th>
+	<th>Teléfono</th>
+</tr>
+{% for suscriber in entity.suscribers %}
+<tr>
+	<td>{{ suscriber.name }} {{ suscriber.surname }}</td>
+	<td>{{ suscriber.email }}</td>
+	<td>{{ suscriber.phone }}</td>
+</tr>
+{% endfor %}
+</table>
+
+        <a class="btn" href="{{ path('grupos') }}">
+            Volver atrás
+        </a>
+        <a class="btn success" href="{{ path('grupos_edit', { 'id': entity.id }) }}">
+            Edit
+        </a>
+        <form action="{{ path('grupos_delete', { 'id': entity.id }) }}" method="post">
+            {{ form_widget(delete_form) }}
+            <button class="btn danger" type="submit">Borrar</button>
+        </form>
+
+{% endblock %}
