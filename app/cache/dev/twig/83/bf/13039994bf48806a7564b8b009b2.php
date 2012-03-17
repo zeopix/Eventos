@@ -167,7 +167,10 @@ class __TwigTemplate_83bf13039994bf48806a7564b8b009b2 extends Twig_Template
             <span class=\"icon-bar\"></span>
             <span class=\"icon-bar\"></span>
           </a>
-          <a class=\"brand\" href=\"#\">dionisum</a>
+          <a class=\"brand\" href=\"#\"><img src=\"";
+        // line 50
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/coretemplate/images/logo.png"), "html", null, true);
+        echo "\" width=\"130px\"></a>
           <div class=\"nav-collapse\">
             <ul class=\"nav pull-right\">
               <li class=\"active\"><a href=\"#\">Home</a></li>
