@@ -23,27 +23,30 @@ class __TwigTemplate_83bf13039994bf48806a7564b8b009b2 extends Twig_Template
             // asset "26fbbe1_0"
             $context["asset_url"] = isset($context['assetic']['use_controller']) && $context['assetic']['use_controller'] ? $this->env->getExtension('routing')->getPath("_assetic_26fbbe1_0") : $this->env->getExtension('assets')->getAssetUrl("_controller/css/26fbbe1_bootstrap_1.css");
             // line 13
-            echo "   <link href=\"";
+            echo "   <!--<link href=\"";
             echo twig_escape_filter($this->env, $this->getContext($context, "asset_url"), "html", null, true);
-            echo "\" type=\"text/css\" rel=\"stylesheet\" media=\"all\" />
+            echo "\" type=\"text/css\" rel=\"stylesheet\" media=\"all\" />-->
 ";
         } else {
             // asset "26fbbe1"
             $context["asset_url"] = isset($context['assetic']['use_controller']) && $context['assetic']['use_controller'] ? $this->env->getExtension('routing')->getPath("_assetic_26fbbe1") : $this->env->getExtension('assets')->getAssetUrl("_controller/css/26fbbe1.css");
-            echo "   <link href=\"";
+            echo "   <!--<link href=\"";
             echo twig_escape_filter($this->env, $this->getContext($context, "asset_url"), "html", null, true);
-            echo "\" type=\"text/css\" rel=\"stylesheet\" media=\"all\" />
+            echo "\" type=\"text/css\" rel=\"stylesheet\" media=\"all\" />-->
 ";
         }
         unset($context["asset_url"]);
         // line 15
-        echo "
+        echo "   <link href=\"";
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/coretemplate/css/bootstrap.css"), "html", null, true);
+        echo "\" type=\"text/css\" rel=\"stylesheet\" media=\"all\" />
+
 ";
-        // line 16
+        // line 17
         if (isset($context['assetic']['debug']) && $context['assetic']['debug']) {
             // asset "b98098e_0"
             $context["asset_url"] = isset($context['assetic']['use_controller']) && $context['assetic']['use_controller'] ? $this->env->getExtension('routing')->getPath("_assetic_b98098e_0") : $this->env->getExtension('assets')->getAssetUrl("_controller/js/b98098e_part_1_README_1.js");
-            // line 17
+            // line 18
             echo "   <script src=\"";
             echo twig_escape_filter($this->env, $this->getContext($context, "asset_url"), "html", null, true);
             echo "\" type=\"text/javascript\" /></script>
@@ -135,15 +138,14 @@ class __TwigTemplate_83bf13039994bf48806a7564b8b009b2 extends Twig_Template
 ";
         }
         unset($context["asset_url"]);
-        // line 19
+        // line 20
         echo "
     <style type=\"text/css\">
       body {
-        padding-top: 60px;
+        padding-top: 20px;
         padding-bottom: 40px;
       }
     </style>
-    <link href=\"../assets/css/bootstrap-responsive.css\" rel=\"stylesheet\">
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
@@ -159,7 +161,15 @@ class __TwigTemplate_83bf13039994bf48806a7564b8b009b2 extends Twig_Template
 
   <body>
 
-    <div class=\"navbar navbar-fixed-top\">
+
+    <div class=\"container\">
+    
+    <img src=\"";
+        // line 45
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/coretemplate/images/logo.png"), "html", null, true);
+        echo "\" width=\"200px\">
+    
+    <div class=\"navbar \">
       <div class=\"navbar-inner\">
         <div class=\"container\">
           <a class=\"btn btn-navbar\" data-toggle=\"collapse\" data-target=\".nav-collapse\">
@@ -167,46 +177,41 @@ class __TwigTemplate_83bf13039994bf48806a7564b8b009b2 extends Twig_Template
             <span class=\"icon-bar\"></span>
             <span class=\"icon-bar\"></span>
           </a>
-          <a class=\"brand\" href=\"#\"><img src=\"";
-        // line 50
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/coretemplate/images/logo.png"), "html", null, true);
-        echo "\" width=\"130px\"></a>
           <div class=\"nav-collapse\">
-            <ul class=\"nav pull-right\">
-              <li class=\"active\"><a href=\"#\">Home</a></li>
-              <li><a href=\"#about\">About</a></li>
-              <li><a href=\"#contact\">Contact</a></li>
+            <ul class=\"nav pull-left\">
+              <li class=\"active\"><a href=\"#\">Para Todos</a></li>
+              <li><a href=\"#\">Promotores</a></li>
+              <li><a href=\"#about\">Discotecas</a></li>
+            </ul>
+            <ul class=\"nav pull-right\" style=\"margin-right: 30px\">
+              <li><a href=\"#contact\">Login</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
       </div>
     </div>
 
-    <div class=\"container\">
-
       <!-- Main hero unit for a primary marketing message or call to action -->
       <div class=\"hero-unit\">
-        <h1>Hello, world!</h1>
-        <p>This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-        <p><a class=\"btn btn-primary btn-large\">Learn more &raquo;</a></p>
+        <h1>Estamos trabajando!</h1>
+        <p>Estamos construyendo este sitio para que no sea tan difícil encontrar un sitio agradable y cercano para salir de fiesta!</p>
       </div>
 
       <!-- Example row of columns -->
       <div class=\"row\">
         <div class=\"span4\">
-          <h2>Heading</h2>
-           <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class=\"btn\" href=\"#\">View details &raquo;</a></p>
+          <h2>Eventos</h2>
+           <p>Sigue los promotores que más te interesan, encuentra eventos relevantes y compártelos a través de tu red social favorita!</p>
+
         </div>
         <div class=\"span4\">
-          <h2>Heading</h2>
-           <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class=\"btn\" href=\"#\">View details &raquo;</a></p>
+          <h2>Listas y Promociones</h2>
+           <p>Accede a promociones exclusivas de nuestra plataforma.</p>
+
        </div>
         <div class=\"span4\">
-          <h2>Heading</h2>
-          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-          <p><a class=\"btn\" href=\"#\">View details &raquo;</a></p>
+          <h2>Contenidos</h2>
+          <p>Descubre todo lo que sucedió en los eventos pasados y compártelo con tus amigos.</a></p>
         </div>
       </div>
 
