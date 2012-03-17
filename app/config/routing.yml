@@ -1,7 +1,7 @@
-CoreUserBundle:
-    resource: "@CoreUserBundle/Resources/config/routing.yml"
-    type:     annotation
-    prefix:   /profile
+#CoreUserBundle:
+#    resource: "@CoreUserBundle/Resources/config/routing.yml"
+#    type:     annotation
+#    prefix:   /profile
 
 CoreTemplateBundle:
     resource: "@CoreTemplateBundle/Controller/"

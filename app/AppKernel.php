@@ -18,6 +18,7 @@ class AppKernel extends Kernel
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new JMS\SecurityExtraBundle\JMSSecurityExtraBundle(),
             new Core\UserBundle\CoreUserBundle(),
+            new Core\TemplateBundle\CoreTemplateBundle(),
             new FOS\UserBundle\FOSUserBundle(),
         );
 
