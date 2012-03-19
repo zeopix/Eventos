@@ -1,3 +1,8 @@
+CoreFoursquareBundle:
+    resource: "@CoreFoursquareBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
 CoreUserBundle:
     resource: "@CoreUserBundle/Resources/config/routing.yml"
 
