@@ -9,11 +9,16 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 class DefaultController extends Controller
 {
     /**
-     * @Route("/hello/{name}")
-     * @Template()
+     * @Route("/route",name="user_route")
      */
-    public function indexAction($name)
+    public function routeAction()
     {
-        return array('name' => $name);
+    	if(true === $this->get('security.context')->isGranted('ROLE_ADMIN')){
+    		return $this->redirect($this->generateUrl('role_admin'));
+    	}else if(true === $this->get('security.context')->isGranted('ROLE_USER')){
+    		return $this->redirect($this->generateUrl('role_admin'));
+    	}else{
+			die("Access not granted");
+    	}
     }
 }

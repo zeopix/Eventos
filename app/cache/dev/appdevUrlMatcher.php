@@ -169,12 +169,25 @@ class appdevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         }
 
-        // core_template_default_index
-        if (rtrim($pathinfo, '/') === '') {
+        // user_route
+        if ($pathinfo === '/route') {
+            return array (  '_controller' => 'Core\\UserBundle\\Controller\\DefaultController::routeAction',  '_route' => 'user_route',);
+        }
+
+        // role_admin
+        if (rtrim($pathinfo, '/') === '/admin') {
             if (substr($pathinfo, -1) !== '/') {
-                return $this->redirect($pathinfo.'/', 'core_template_default_index');
+                return $this->redirect($pathinfo.'/', 'role_admin');
             }
-            return array (  '_controller' => 'Core\\TemplateBundle\\Controller\\DefaultController::indexAction',  '_route' => 'core_template_default_index',);
+            return array (  '_controller' => 'Role\\AdminBundle\\Controller\\DefaultController::indexAction',  '_route' => 'role_admin',);
+        }
+
+        // role_admin_user
+        if (rtrim($pathinfo, '/') === '/admin/users') {
+            if (substr($pathinfo, -1) !== '/') {
+                return $this->redirect($pathinfo.'/', 'role_admin_user');
+            }
+            return array (  '_controller' => 'Role\\AdminBundle\\Controller\\UserController::indexAction',  '_route' => 'role_admin_user',);
         }
 
         // fos_user_security_login
@@ -305,6 +318,29 @@ class appdevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             }
             not_fos_user_resetting_reset:
 
+        }
+
+        // default
+        if (rtrim($pathinfo, '/') === '') {
+            if (substr($pathinfo, -1) !== '/') {
+                return $this->redirect($pathinfo.'/', 'default');
+            }
+            return array (  '_controller' => 'Core\\TemplateBundle\\Controller\\DefaultController::indexAction',  '_route' => 'default',);
+        }
+
+        // default_success
+        if ($pathinfo === '/success') {
+            return array (  '_controller' => 'Core\\TemplateBundle\\Controller\\DefaultController::successAction',  '_route' => 'default_success',);
+        }
+
+        // default_promotores
+        if ($pathinfo === '/promotores') {
+            return array (  '_controller' => 'Core\\TemplateBundle\\Controller\\DefaultController::promotoresAction',  '_route' => 'default_promotores',);
+        }
+
+        // default_discotecas
+        if ($pathinfo === '/discotecas') {
+            return array (  '_controller' => 'Core\\TemplateBundle\\Controller\\DefaultController::discotecasAction',  '_route' => 'default_discotecas',);
         }
 
         throw 0 < count($allow) ? new MethodNotAllowedException(array_unique($allow)) : new ResourceNotFoundException();

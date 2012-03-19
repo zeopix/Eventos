@@ -1,0 +1,29 @@
+{% extends 'CoreUserBundle::layout.html.twig' %}
+{% block main %}
+<div class="row" style="margin: 0px;">
+	<div class="span11 well" style="margin-left: 20px;">
+		<div class="row">
+			<div class="span3">
+			<ul class="nav nav-list">
+  <li>
+    <a href="{{ path('role_admin') }}">
+      <i class="icon-home"></i>
+      Home
+    </a>
+  </li>
+  <li>
+    <a href="{{ path('role_admin_user') }}">
+      <i class="icon-profile"></i>
+      Usuarios
+    </a>
+  </li>
+</ul>
+			</div>
+			<div class="span8">
+				{% block panel %}
+				{% endblock %}
+			</div>
+	</div>
+</div>
+{% endblock %}
+

@@ -3,6 +3,15 @@
 /* CoreTemplateBundle::layout.html.twig */
 class __TwigTemplate_83bf13039994bf48806a7564b8b009b2 extends Twig_Template
 {
+    public function __construct(Twig_Environment $env)
+    {
+        parent::__construct($env);
+
+        $this->blocks = array(
+            'main' => array($this, 'block_main'),
+        );
+    }
+
     protected function doDisplay(array $context, array $blocks = array())
     {
         // line 1
@@ -11,7 +20,7 @@ class __TwigTemplate_83bf13039994bf48806a7564b8b009b2 extends Twig_Template
 <html lang=\"en\">
   <head>
     <meta charset=\"utf-8\">
-    <title>Bootstrap, from Twitter</title>
+    <title>Eye On Party</title>
     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
     <meta name=\"description\" content=\"\">
     <meta name=\"author\" content=\"\">
@@ -41,12 +50,14 @@ class __TwigTemplate_83bf13039994bf48806a7564b8b009b2 extends Twig_Template
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/coretemplate/css/bootstrap.css"), "html", null, true);
         echo "\" type=\"text/css\" rel=\"stylesheet\" media=\"all\" />
 
+\t<!-- jQuery -->
+\t<script src=\"http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js\"></script>
 ";
-        // line 17
+        // line 19
         if (isset($context['assetic']['debug']) && $context['assetic']['debug']) {
             // asset "b98098e_0"
             $context["asset_url"] = isset($context['assetic']['use_controller']) && $context['assetic']['use_controller'] ? $this->env->getExtension('routing')->getPath("_assetic_b98098e_0") : $this->env->getExtension('assets')->getAssetUrl("_controller/js/b98098e_part_1_README_1.js");
-            // line 18
+            // line 20
             echo "   <script src=\"";
             echo twig_escape_filter($this->env, $this->getContext($context, "asset_url"), "html", null, true);
             echo "\" type=\"text/javascript\" /></script>
@@ -138,11 +149,11 @@ class __TwigTemplate_83bf13039994bf48806a7564b8b009b2 extends Twig_Template
 ";
         }
         unset($context["asset_url"]);
-        // line 20
+        // line 22
         echo "
     <style type=\"text/css\">
       body {
-        padding-top: 20px;
+        padding-top: 10px;
         padding-bottom: 40px;
       }
     </style>
@@ -165,7 +176,7 @@ class __TwigTemplate_83bf13039994bf48806a7564b8b009b2 extends Twig_Template
     <div class=\"container\">
     
     <img src=\"";
-        // line 45
+        // line 47
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/coretemplate/images/logo.png"), "html", null, true);
         echo "\" width=\"200px\">
     
@@ -179,20 +190,107 @@ class __TwigTemplate_83bf13039994bf48806a7564b8b009b2 extends Twig_Template
           </a>
           <div class=\"nav-collapse\">
             <ul class=\"nav pull-left\">
-              <li class=\"active\"><a href=\"#\">Para Todos</a></li>
-              <li><a href=\"#\">Promotores</a></li>
-              <li><a href=\"#about\">Discotecas</a></li>
+              <li";
+        // line 59
+        if (($this->getContext($context, "active") == "todos")) {
+            echo " class=\"active\"";
+        }
+        echo "><a href=\"";
+        echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("default"), "html", null, true);
+        echo "\">Para Todos</a></li>
+              <li";
+        // line 60
+        if (($this->getContext($context, "active") == "promotores")) {
+            echo " class=\"active\"";
+        }
+        echo "><a href=\"";
+        echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("default_promotores"), "html", null, true);
+        echo "\">Promotores</a></li>
+              <li";
+        // line 61
+        if (($this->getContext($context, "active") == "discotecas")) {
+            echo " class=\"active\"";
+        }
+        echo "><a href=\"";
+        echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("default_discotecas"), "html", null, true);
+        echo "\">Discotecas</a></li>
             </ul>
+            
+            
+
+
             <ul class=\"nav pull-right\" style=\"margin-right: 30px\">
-              <li><a href=\"#contact\">Login</a></li>
+              <li";
+        // line 68
+        if (($this->getContext($context, "active") == "login")) {
+            echo " class=\"active\"";
+        }
+        echo ">";
+        if ($this->env->getExtension('security')->isGranted("IS_AUTHENTICATED_REMEMBERED")) {
+            // line 69
+            echo "              <ul class=\"nav\">
+  <li class=\"dropdown\">
+    <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">
+          ";
+            // line 72
+            echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($this->getContext($context, "app"), "user"), "username"), "html", null, true);
+            echo "
+          <b class=\"caret\"></b>
+    </a>
+    <ul class=\"dropdown-menu\">
+      \t<li><a href=\"#\"><b class=\"icon-profile\"></b> Mi Perfil</a></li>
+        <li class=\"divider\"></li>
+\t\t<li><a href=\"";
+            // line 78
+            echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("fos_user_security_logout"), "html", null, true);
+            echo "\">
+                   <b class=\"icon-off\"></b> Salir                </a></li>
+
+    </ul>
+  </li>
+</ul>
+                 
+                
+            ";
+        } else {
+            // line 87
+            echo "                <a href=\"";
+            echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("fos_user_security_login"), "html", null, true);
+            echo "\">";
+            echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("layout.login", array(), "FOSUserBundle"), "html", null, true);
+            echo "</a>
+            ";
+        }
+        // line 88
+        echo "</li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
       </div>
     </div>
+";
+        // line 94
+        $this->displayBlock('main', $context, $blocks);
+        // line 119
+        echo "      <hr>
 
-      <!-- Main hero unit for a primary marketing message or call to action -->
-      <div class=\"hero-unit\">
+      <footer>
+        <p>&copy; Company 2012</p>
+      </footer>
+
+    </div> <!-- /container -->
+
+  </body>
+</html>
+";
+    }
+
+    // line 94
+    public function block_main($context, array $blocks = array())
+    {
+        // line 95
+        echo "      <!-- Main hero unit for a primary marketing message or call to action -->
+      <div class=\"hero-unit well\">
         <h1>Estamos trabajando!</h1>
         <p>Estamos construyendo este sitio para que no sea tan difícil encontrar un sitio agradable y cercano para salir de fiesta!</p>
       </div>
@@ -214,17 +312,6 @@ class __TwigTemplate_83bf13039994bf48806a7564b8b009b2 extends Twig_Template
           <p>Descubre todo lo que sucedió en los eventos pasados y compártelo con tus amigos.</a></p>
         </div>
       </div>
-
-      <hr>
-
-      <footer>
-        <p>&copy; Company 2012</p>
-      </footer>
-
-    </div> <!-- /container -->
-
-  </body>
-</html>
 ";
     }
 

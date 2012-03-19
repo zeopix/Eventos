@@ -2,15 +2,26 @@
 #    resource: "@CoreUserBundle/Resources/config/routing.yml"
 #    type:     annotation
 #    prefix:   /profile
-
-CoreTemplateBundle:
-    resource: "@CoreTemplateBundle/Controller/"
+CoreUserCtlBundle:
+    resource: "@CoreUserBundle/Controller/"
+    type:     annotation
+    prefix:   /
+   
+RoleAdminBundle:
+    resource: "@RoleAdminBundle/Controller/"
     type:     annotation
     prefix:   /
     
 CoreUserBundle:
     resource: "@CoreUserBundle/Resources/config/routing.yml"
 
+
+
+CoreTemplateBundle:
+    resource: "@CoreTemplateBundle/Controller/"
+    type:     annotation
+    prefix:   /
+   
 # Internal routing configuration to handle ESI
 #_internal:
 #   resource: "@FrameworkBundle/Resources/config/routing/internal.xml"

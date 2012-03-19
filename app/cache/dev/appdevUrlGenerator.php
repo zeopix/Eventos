@@ -40,7 +40,9 @@ class appdevUrlGenerator extends Symfony\Component\Routing\Generator\UrlGenerato
        '_configurator_home' => true,
        '_configurator_step' => true,
        '_configurator_final' => true,
-       'core_template_default_index' => true,
+       'user_route' => true,
+       'role_admin' => true,
+       'role_admin_user' => true,
        'fos_user_security_login' => true,
        'fos_user_security_check' => true,
        'fos_user_security_logout' => true,
@@ -55,6 +57,10 @@ class appdevUrlGenerator extends Symfony\Component\Routing\Generator\UrlGenerato
        'fos_user_resetting_check_email' => true,
        'fos_user_resetting_reset' => true,
        'fos_user_change_password' => true,
+       'default' => true,
+       'default_success' => true,
+       'default_promotores' => true,
+       'default_discotecas' => true,
     );
 
     /**
@@ -213,9 +219,19 @@ class appdevUrlGenerator extends Symfony\Component\Routing\Generator\UrlGenerato
         return array(array (), array (  '_controller' => 'Sensio\\Bundle\\DistributionBundle\\Controller\\ConfiguratorController::finalAction',), array (), array (  0 =>   array (    0 => 'text',    1 => '/_configurator/final',  ),));
     }
 
-    private function getcore_template_default_indexRouteInfo()
+    private function getuser_routeRouteInfo()
     {
-        return array(array (), array (  '_controller' => 'Core\\TemplateBundle\\Controller\\DefaultController::indexAction',), array (), array (  0 =>   array (    0 => 'text',    1 => '/',  ),));
+        return array(array (), array (  '_controller' => 'Core\\UserBundle\\Controller\\DefaultController::routeAction',), array (), array (  0 =>   array (    0 => 'text',    1 => '/route',  ),));
+    }
+
+    private function getrole_adminRouteInfo()
+    {
+        return array(array (), array (  '_controller' => 'Role\\AdminBundle\\Controller\\DefaultController::indexAction',), array (), array (  0 =>   array (    0 => 'text',    1 => '/admin/',  ),));
+    }
+
+    private function getrole_admin_userRouteInfo()
+    {
+        return array(array (), array (  '_controller' => 'Role\\AdminBundle\\Controller\\UserController::indexAction',), array (), array (  0 =>   array (    0 => 'text',    1 => '/admin/users/',  ),));
     }
 
     private function getfos_user_security_loginRouteInfo()
@@ -286,5 +302,25 @@ class appdevUrlGenerator extends Symfony\Component\Routing\Generator\UrlGenerato
     private function getfos_user_change_passwordRouteInfo()
     {
         return array(array (), array (  '_controller' => 'FOS\\UserBundle\\Controller\\ChangePasswordController::changePasswordAction',), array (  '_method' => 'GET|POST',), array (  0 =>   array (    0 => 'text',    1 => '/profile/change-password',  ),));
+    }
+
+    private function getdefaultRouteInfo()
+    {
+        return array(array (), array (  '_controller' => 'Core\\TemplateBundle\\Controller\\DefaultController::indexAction',), array (), array (  0 =>   array (    0 => 'text',    1 => '/',  ),));
+    }
+
+    private function getdefault_successRouteInfo()
+    {
+        return array(array (), array (  '_controller' => 'Core\\TemplateBundle\\Controller\\DefaultController::successAction',), array (), array (  0 =>   array (    0 => 'text',    1 => '/success',  ),));
+    }
+
+    private function getdefault_promotoresRouteInfo()
+    {
+        return array(array (), array (  '_controller' => 'Core\\TemplateBundle\\Controller\\DefaultController::promotoresAction',), array (), array (  0 =>   array (    0 => 'text',    1 => '/promotores',  ),));
+    }
+
+    private function getdefault_discotecasRouteInfo()
+    {
+        return array(array (), array (  '_controller' => 'Core\\TemplateBundle\\Controller\\DefaultController::discotecasAction',), array (), array (  0 =>   array (    0 => 'text',    1 => '/discotecas',  ),));
     }
 }
