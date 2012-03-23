@@ -20,10 +20,18 @@ class AppKernel extends Kernel
             new Core\UserBundle\CoreUserBundle(),
             new Role\UserBundle\RoleUserBundle(),
             new Role\AdminBundle\RoleAdminBundle(),
+            new Core\ApiBundle\CoreApiBundle(),
             new Core\TemplateBundle\CoreTemplateBundle(),
             new FOS\UserBundle\FOSUserBundle(),
+            new App\SocialBundle\AppSocialBundle(),
+            new Google\MapsBundle\GoogleMapsBundle(),
             new Core\FoursquareBundle\CoreFoursquareBundle(),
             new Pro\CrawlerBundle\ProCrawlerBundle(),
+        new Genemu\Bundle\FormBundle\GenemuFormBundle(),
+        new FOS\CommentBundle\FOSCommentBundle(),
+         //new JMS\SerializerBundle\JMSSerializerBundle($this),
+
+
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

@@ -7,6 +7,11 @@ RoleAdminBundle:
     resource: "@RoleAdminBundle/Controller/"
     type:     annotation
     prefix:   /
+   
+RoleUserBundle:
+    resource: "@RoleUserBundle/Controller/"
+    type:     annotation
+    prefix:   /
 
 CoreFoursquareBundle:
     resource: "@CoreFoursquareBundle/Controller/"
@@ -16,12 +21,17 @@ CoreFoursquareBundle:
 CoreUserBundle:
     resource: "@CoreUserBundle/Resources/config/routing.yml"
 
+CoreApiBundle:
+    resource: "@CoreApiBundle/Controller/"
+    type:     annotation
+    prefix:   /
 
 
 CoreTemplateBundle:
     resource: "@CoreTemplateBundle/Controller/"
     type:     annotation
     prefix:   /
+    
    
 # Internal routing configuration to handle ESI
 #_internal:

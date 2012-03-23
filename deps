@@ -57,6 +57,11 @@
     target=/bundles/Sensio/Bundle/GeneratorBundle
     version=origin/2.0
 
+[JMSSerializerBundle]
+    git=git://github.com/schmittjoh/JMSSerializerBundle.git
+    target=bundles/JMS/SerializerBundle
+
+
 [AsseticBundle]
     git=http://github.com/symfony/AsseticBundle.git
     target=/bundles/Symfony/Bundle/AsseticBundle
@@ -71,3 +76,21 @@
 
 [Goutte]
     git=git://github.com/zeopix/Goutte.git
+
+[GenemuFormBundle]
+    git=git://github.com/genemu/GenemuFormBundle.git
+    target=bundles/Genemu/Bundle/FormBundle
+    version=origin/2.0
+
+[FOSRest]
+    git=git://github.com/FriendsOfSymfony/FOSRest.git
+    target=fos/FOS/Rest
+    
+
+[FOSRestBundle]
+    git=git://github.com/FriendsOfSymfony/FOSRestBundle.git
+    target=bundles/FOS/RestBundle
+
+[FOSCommentBundle]
+    git=https://github.com/FriendsOfSymfony/FOSCommentBundle.git
+    target=bundles/FOS/CommentBundle

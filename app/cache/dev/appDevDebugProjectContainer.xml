@@ -20,8 +20,15 @@
       <parameter key="CoreUserBundle">Core\UserBundle\CoreUserBundle</parameter>
       <parameter key="RoleUserBundle">Role\UserBundle\RoleUserBundle</parameter>
       <parameter key="RoleAdminBundle">Role\AdminBundle\RoleAdminBundle</parameter>
+      <parameter key="CoreApiBundle">Core\ApiBundle\CoreApiBundle</parameter>
       <parameter key="CoreTemplateBundle">Core\TemplateBundle\CoreTemplateBundle</parameter>
       <parameter key="FOSUserBundle">FOS\UserBundle\FOSUserBundle</parameter>
+      <parameter key="AppSocialBundle">App\SocialBundle\AppSocialBundle</parameter>
+      <parameter key="GoogleMapsBundle">Google\MapsBundle\GoogleMapsBundle</parameter>
+      <parameter key="CoreFoursquareBundle">Core\FoursquareBundle\CoreFoursquareBundle</parameter>
+      <parameter key="ProCrawlerBundle">Pro\CrawlerBundle\ProCrawlerBundle</parameter>
+      <parameter key="GenemuFormBundle">Genemu\Bundle\FormBundle\GenemuFormBundle</parameter>
+      <parameter key="FOSCommentBundle">FOS\CommentBundle\FOSCommentBundle</parameter>
       <parameter key="AcmeDemoBundle">Acme\DemoBundle\AcmeDemoBundle</parameter>
       <parameter key="WebProfilerBundle">Symfony\Bundle\WebProfilerBundle\WebProfilerBundle</parameter>
       <parameter key="SensioDistributionBundle">Sensio\Bundle\DistributionBundle\SensioDistributionBundle</parameter>
@@ -87,6 +94,7 @@
     <parameter key="validator.mapping.loader.xml_files_loader.mapping_files" type="collection">
       <parameter>/Applications/MAMP/htdocs/Eventos/vendor/symfony/src/Symfony/Component/Form/Resources/config/validation.xml</parameter>
       <parameter>/Applications/MAMP/htdocs/Eventos/vendor/bundles/FOS/UserBundle/Resources/config/validation.xml</parameter>
+      <parameter>/Applications/MAMP/htdocs/Eventos/vendor/bundles/FOS/CommentBundle/Resources/config/validation.xml</parameter>
     </parameter>
     <parameter key="validator.mapping.loader.yaml_files_loader.mapping_files" type="collection"/>
     <parameter key="profiler.class">Symfony\Component\HttpKernel\Profiler\Profiler</parameter>
@@ -239,6 +247,10 @@
     <parameter key="twig.exception_listener.controller">Symfony\Bundle\TwigBundle\Controller\ExceptionController::showAction</parameter>
     <parameter key="twig.form.resources" type="collection">
       <parameter>form_div_layout.html.twig</parameter>
+      <parameter>GoogleMapsBundle:Form:map.html.twig</parameter>
+      <parameter>GenemuFormBundle:Form:div_layout.html.twig</parameter>
+      <parameter>GenemuFormBundle:Form:jquery_layout.html.twig</parameter>
+      <parameter>GenemuFormBundle:Form:stylesheet_layout.html.twig</parameter>
     </parameter>
     <parameter key="twig.options" type="collection">
       <parameter key="debug">true</parameter>
@@ -433,6 +445,78 @@
       <parameter>ResetPassword</parameter>
       <parameter>Default</parameter>
     </parameter>
+    <parameter key="genemu.form.recaptcha.public_key"></parameter>
+    <parameter key="genemu.form.recaptcha.private_key"></parameter>
+    <parameter key="genemu.form.recaptcha.server_url"></parameter>
+    <parameter key="genemu.form.recaptcha.options" type="collection"/>
+    <parameter key="genemu.form.captcha.options" type="collection">
+      <parameter key="enabled">true</parameter>
+      <parameter key="driver">gd</parameter>
+      <parameter key="position">left</parameter>
+      <parameter key="width">100</parameter>
+      <parameter key="height">30</parameter>
+      <parameter key="length">4</parameter>
+      <parameter key="format">png</parameter>
+      <parameter key="chars" type="collection">
+        <parameter>0</parameter>
+        <parameter>1</parameter>
+        <parameter>2</parameter>
+        <parameter>3</parameter>
+        <parameter>4</parameter>
+        <parameter>5</parameter>
+        <parameter>6</parameter>
+        <parameter>7</parameter>
+        <parameter>8</parameter>
+        <parameter>9</parameter>
+      </parameter>
+      <parameter key="font_size">18</parameter>
+      <parameter key="font_color" type="collection">
+        <parameter>252525</parameter>
+        <parameter>8B8787</parameter>
+        <parameter>550707</parameter>
+        <parameter>3526E6</parameter>
+        <parameter>88531E</parameter>
+      </parameter>
+      <parameter key="fonts" type="collection">
+        <parameter>/Applications/MAMP/htdocs/Eventos/app/../web/bundles/genemuform/fonts/akbar.ttf</parameter>
+        <parameter>/Applications/MAMP/htdocs/Eventos/app/../web/bundles/genemuform/fonts/brushcut.ttf</parameter>
+        <parameter>/Applications/MAMP/htdocs/Eventos/app/../web/bundles/genemuform/fonts/molten.ttf</parameter>
+        <parameter>/Applications/MAMP/htdocs/Eventos/app/../web/bundles/genemuform/fonts/planetbe.ttf</parameter>
+        <parameter>/Applications/MAMP/htdocs/Eventos/app/../web/bundles/genemuform/fonts/whoobub.ttf</parameter>
+      </parameter>
+      <parameter key="background_color">DDDDDD</parameter>
+      <parameter key="border_color">000000</parameter>
+    </parameter>
+    <parameter key="genemu.form.tinymce.configs" type="collection">
+      <parameter key="theme">advanced</parameter>
+    </parameter>
+    <parameter key="genemu.form.color.options" type="collection"/>
+    <parameter key="genemu.form.date.options" type="collection"/>
+    <parameter key="genemu.form.rating.options" type="collection"/>
+    <parameter key="genemu.form.file.root_dir">/Applications/MAMP/htdocs/Eventos/app/../web</parameter>
+    <parameter key="genemu.form.file.folder">/upload</parameter>
+    <parameter key="genemu.form.file.upload_dir">/Applications/MAMP/htdocs/Eventos/app/../web/upload</parameter>
+    <parameter key="genemu.form.file.options" type="collection"/>
+    <parameter key="genemu.form.image.selected"></parameter>
+    <parameter key="genemu.form.image.thumbnails" type="collection"/>
+    <parameter key="genemu.form.image.filters" type="collection"/>
+    <parameter key="fos_comment.model.thread.class">App\SocialBundle\Entity\Thread</parameter>
+    <parameter key="fos_comment.model.comment.class">App\SocialBundle\Entity\Comment</parameter>
+    <parameter key="fos_comment.model.vote.class">FOS\CommentBundle\Entity\Vote</parameter>
+    <parameter key="fos_comment.manager.thread.default.class">FOS\CommentBundle\Entity\ThreadManager</parameter>
+    <parameter key="fos_comment.manager.comment.default.class">FOS\CommentBundle\Entity\CommentManager</parameter>
+    <parameter key="fos_comment.manager.vote.default.class">FOS\CommentBundle\Entity\VoteManager</parameter>
+    <parameter key="fos_comment.sorting_factory.class">FOS\CommentBundle\Sorting\SortingFactory</parameter>
+    <parameter key="fos_comment.sorter.date.class">FOS\CommentBundle\Sorting\DateSorting</parameter>
+    <parameter key="fos_comment.template.engine">twig</parameter>
+    <parameter key="fos_comment.model_manager_name">null</parameter>
+    <parameter key="fos_comment.form.comment.type">fos_comment.comment</parameter>
+    <parameter key="fos_comment.form.comment.name">fos_comment_comment</parameter>
+    <parameter key="fos_comment.form.thread.type">fos_comment.thread</parameter>
+    <parameter key="fos_comment.form.thread.name">fos_comment_thread</parameter>
+    <parameter key="fos_comment.form.vote.type">fos_comment.vote</parameter>
+    <parameter key="fos_comment.form.vote.name">fos_comment_vote</parameter>
+    <parameter key="fos_comment.sorting_factory.default_sorter">date_desc</parameter>
     <parameter key="web_profiler.debug_toolbar.class">Symfony\Bundle\WebProfilerBundle\EventListener\WebDebugToolbarListener</parameter>
     <parameter key="web_profiler.debug_toolbar.intercept_redirects">false</parameter>
     <parameter key="web_profiler.debug_toolbar.mode">2</parameter>
@@ -659,6 +743,54 @@
         <argument type="collection">
           <argument>fos_user.security.interactive_login_listener</argument>
           <argument>onSecurityInteractiveLogin</argument>
+        </argument>
+        <argument>0</argument>
+      </call>
+      <call method="addListenerService">
+        <argument>fos_comment.vote.pre_persist</argument>
+        <argument type="collection">
+          <argument>fos_comment.listener.comment_vote_score</argument>
+          <argument>onVotePersist</argument>
+        </argument>
+        <argument>0</argument>
+      </call>
+      <call method="addListenerService">
+        <argument>fos_comment.comment.pre_persist</argument>
+        <argument type="collection">
+          <argument>fos_comment.listener.thread_counters</argument>
+          <argument>onCommentPersist</argument>
+        </argument>
+        <argument>0</argument>
+      </call>
+      <call method="addListenerService">
+        <argument>fos_comment.thread.create</argument>
+        <argument type="collection">
+          <argument>fos_comment.listener.thread_permalink</argument>
+          <argument>onThreadCreate</argument>
+        </argument>
+        <argument>0</argument>
+      </call>
+      <call method="addListenerService">
+        <argument>fos_comment.comment.pre_persist</argument>
+        <argument type="collection">
+          <argument>fos_comment.listener.comment_blamer</argument>
+          <argument>blame</argument>
+        </argument>
+        <argument>0</argument>
+      </call>
+      <call method="addListenerService">
+        <argument>fos_comment.vote.pre_persist</argument>
+        <argument type="collection">
+          <argument>fos_comment.listener.vote_blamer</argument>
+          <argument>blame</argument>
+        </argument>
+        <argument>0</argument>
+      </call>
+      <call method="addListenerService">
+        <argument>fos_comment.comment.pre_persist</argument>
+        <argument type="collection">
+          <argument>fos_comment.listener.closed_threads</argument>
+          <argument>onCommentPersist</argument>
         </argument>
         <argument>0</argument>
       </call>
@@ -1143,6 +1275,60 @@
         <argument>sl</argument>
         <argument>validators</argument>
       </call>
+      <call method="addResource">
+        <argument>yml</argument>
+        <argument>/Applications/MAMP/htdocs/Eventos/vendor/bundles/FOS/CommentBundle/Resources/translations/FOSCommentBundle.da.yml</argument>
+        <argument>da</argument>
+        <argument>FOSCommentBundle</argument>
+      </call>
+      <call method="addResource">
+        <argument>yml</argument>
+        <argument>/Applications/MAMP/htdocs/Eventos/vendor/bundles/FOS/CommentBundle/Resources/translations/FOSCommentBundle.de.yml</argument>
+        <argument>de</argument>
+        <argument>FOSCommentBundle</argument>
+      </call>
+      <call method="addResource">
+        <argument>yml</argument>
+        <argument>/Applications/MAMP/htdocs/Eventos/vendor/bundles/FOS/CommentBundle/Resources/translations/FOSCommentBundle.en.yml</argument>
+        <argument>en</argument>
+        <argument>FOSCommentBundle</argument>
+      </call>
+      <call method="addResource">
+        <argument>yml</argument>
+        <argument>/Applications/MAMP/htdocs/Eventos/vendor/bundles/FOS/CommentBundle/Resources/translations/FOSCommentBundle.es.yml</argument>
+        <argument>es</argument>
+        <argument>FOSCommentBundle</argument>
+      </call>
+      <call method="addResource">
+        <argument>yml</argument>
+        <argument>/Applications/MAMP/htdocs/Eventos/vendor/bundles/FOS/CommentBundle/Resources/translations/FOSCommentBundle.fr.yml</argument>
+        <argument>fr</argument>
+        <argument>FOSCommentBundle</argument>
+      </call>
+      <call method="addResource">
+        <argument>yml</argument>
+        <argument>/Applications/MAMP/htdocs/Eventos/vendor/bundles/FOS/CommentBundle/Resources/translations/FOSCommentBundle.mn.yml</argument>
+        <argument>mn</argument>
+        <argument>FOSCommentBundle</argument>
+      </call>
+      <call method="addResource">
+        <argument>yml</argument>
+        <argument>/Applications/MAMP/htdocs/Eventos/vendor/bundles/FOS/CommentBundle/Resources/translations/FOSCommentBundle.pl.yml</argument>
+        <argument>pl</argument>
+        <argument>FOSCommentBundle</argument>
+      </call>
+      <call method="addResource">
+        <argument>yml</argument>
+        <argument>/Applications/MAMP/htdocs/Eventos/vendor/bundles/FOS/CommentBundle/Resources/translations/FOSCommentBundle.ru.yml</argument>
+        <argument>ru</argument>
+        <argument>FOSCommentBundle</argument>
+      </call>
+      <call method="addResource">
+        <argument>yml</argument>
+        <argument>/Applications/MAMP/htdocs/Eventos/vendor/bundles/FOS/CommentBundle/Resources/translations/FOSCommentBundle.sl.yml</argument>
+        <argument>sl</argument>
+        <argument>FOSCommentBundle</argument>
+      </call>
     </service>
     <service id="translation.loader.php" class="Symfony\Component\Translation\Loader\PhpFileLoader">
       <tag name="translation.loader" alias="php"/>
@@ -1202,6 +1388,25 @@
               <argument key="fos_user_registration">fos_user.registration.form.type</argument>
               <argument key="fos_user_change_password">fos_user.change_password.form.type</argument>
               <argument key="fos_user_resetting">fos_user.resetting.form.type</argument>
+              <argument key="genemu_recaptcha">genemu.form.core.type.recaptcha</argument>
+              <argument key="genemu_captcha">genemu.form.core.type.captcha</argument>
+              <argument key="genemu_plain">genemu.form.core.type.plain</argument>
+              <argument key="genemu_tinymce">genemu.form.core.type.tinymce</argument>
+              <argument key="genemu_ajaxmodel">genemu.form.model.type.ajaxmodel</argument>
+              <argument key="genemu_jqueryautocompleter">genemu.form.jquery.type.autocompleter</argument>
+              <argument key="genemu_jquerychosen">genemu.form.jquery.type.chosen</argument>
+              <argument key="genemu_jquerycolor">genemu.form.jquery.type.color</argument>
+              <argument key="genemu_jquerydate">genemu.form.jquery.type.date</argument>
+              <argument key="genemu_jqueryfile">genemu.form.jquery.type.file</argument>
+              <argument key="genemu_jquerygeolocation">genemu.form.jquery.type.geolocation</argument>
+              <argument key="genemu_jqueryimage">genemu.form.jquery.type.image</argument>
+              <argument key="genemu_jqueryrating">genemu.form.jquery.type.rating</argument>
+              <argument key="genemu_jqueryslider">genemu.form.jquery.type.slider</argument>
+              <argument key="genemu_jquerytokeninput">genemu.form.jquery.type.tokeninput</argument>
+              <argument key="genemu_ajaxentity">genemu.form.entity.type.ajaxentity</argument>
+              <argument key="fos_comment.comment">fos_comment.form_type.comment.default</argument>
+              <argument key="fos_comment.thread">fos_comment.form_type.thread.default</argument>
+              <argument key="fos_comment.vote">fos_comment.form_type.vote.default</argument>
             </argument>
             <argument type="collection">
               <argument key="field" type="collection">
@@ -1331,6 +1536,7 @@
             <argument key="doctrine.orm.validator.unique">doctrine.orm.validator.unique</argument>
             <argument key="fos_user.validator.unique">fos_user.validator.unique</argument>
             <argument key="fos_user.validator.password">fos_user.validator.password</argument>
+            <argument key="genemu_validator.recaptcha">genemu.form.type_recaptcha.validator</argument>
           </argument>
         </service>
       </argument>
@@ -1355,6 +1561,7 @@
                 <argument type="collection">
                   <argument>/Applications/MAMP/htdocs/Eventos/vendor/symfony/src/Symfony/Component/Form/Resources/config/validation.xml</argument>
                   <argument>/Applications/MAMP/htdocs/Eventos/vendor/bundles/FOS/UserBundle/Resources/config/validation.xml</argument>
+                  <argument>/Applications/MAMP/htdocs/Eventos/vendor/bundles/FOS/CommentBundle/Resources/config/validation.xml</argument>
                 </argument>
               </service>
             </argument>
@@ -1651,7 +1858,7 @@
         </argument>
         <argument type="service">
           <service class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
-            <argument>4f671854c77c0</argument>
+            <argument>4f6cabd4ec6aa</argument>
           </service>
         </argument>
       </argument>
@@ -1846,7 +2053,7 @@
         <argument type="service">
           <service class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
             <argument type="service" id="security.context"/>
-            <argument>4f671854c77c0</argument>
+            <argument>4f6cabd4ec6aa</argument>
             <argument type="service" id="monolog.logger.security"/>
           </service>
         </argument>
@@ -2005,6 +2212,10 @@
             <tag name="twig.extension"/>
             <argument type="collection">
               <argument>form_div_layout.html.twig</argument>
+              <argument>GoogleMapsBundle:Form:map.html.twig</argument>
+              <argument>GenemuFormBundle:Form:div_layout.html.twig</argument>
+              <argument>GenemuFormBundle:Form:jquery_layout.html.twig</argument>
+              <argument>GenemuFormBundle:Form:stylesheet_layout.html.twig</argument>
             </argument>
           </service>
         </argument>
@@ -2017,6 +2228,18 @@
             <argument type="service" id="assetic.asset_factory"/>
             <argument>true</argument>
             <argument type="collection"/>
+          </service>
+        </argument>
+      </call>
+      <call method="addExtension">
+        <argument type="service" id="genemu.twig.extension.form"/>
+      </call>
+      <call method="addExtension">
+        <argument type="service">
+          <service class="FOS\CommentBundle\Twig\CommentExtension" public="false">
+            <tag name="twig.extension"/>
+            <argument>null</argument>
+            <argument>null</argument>
           </service>
         </argument>
       </call>
@@ -2131,6 +2354,11 @@
             <argument type="collection">
               <argument key="CoreUserBundle">Core\UserBundle\Entity</argument>
               <argument key="FOSUserBundle">FOS\UserBundle\Entity</argument>
+              <argument key="AppSocialBundle">App\SocialBundle\Entity</argument>
+              <argument key="GoogleMapsBundle">Google\MapsBundle\Entity</argument>
+              <argument key="CoreFoursquareBundle">Core\FoursquareBundle\Entity</argument>
+              <argument key="ProCrawlerBundle">Pro\CrawlerBundle\Entity</argument>
+              <argument key="FOSCommentBundle">FOS\CommentBundle\Entity</argument>
             </argument>
           </call>
           <call method="setMetadataCacheImpl">
@@ -2173,6 +2401,10 @@
                       </argument>
                       <argument type="collection">
                         <argument>/Applications/MAMP/htdocs/Eventos/src/Core/UserBundle/Entity</argument>
+                        <argument>/Applications/MAMP/htdocs/Eventos/src/App/SocialBundle/Entity</argument>
+                        <argument>/Applications/MAMP/htdocs/Eventos/src/Google/MapsBundle/Entity</argument>
+                        <argument>/Applications/MAMP/htdocs/Eventos/src/Core/FoursquareBundle/Entity</argument>
+                        <argument>/Applications/MAMP/htdocs/Eventos/src/Pro/CrawlerBundle/Entity</argument>
                       </argument>
                     </service>
                   </argument>
@@ -2180,13 +2412,91 @@
                 </call>
                 <call method="addDriver">
                   <argument type="service">
+                    <service class="Doctrine\ORM\Mapping\Driver\AnnotationDriver" public="false">
+                      <argument type="service">
+                        <service class="Symfony\Bridge\Doctrine\Annotations\IndexedReader" public="false">
+                          <argument type="service" id="annotation_reader"/>
+                        </service>
+                      </argument>
+                      <argument type="collection">
+                        <argument>/Applications/MAMP/htdocs/Eventos/src/Core/UserBundle/Entity</argument>
+                        <argument>/Applications/MAMP/htdocs/Eventos/src/App/SocialBundle/Entity</argument>
+                        <argument>/Applications/MAMP/htdocs/Eventos/src/Google/MapsBundle/Entity</argument>
+                        <argument>/Applications/MAMP/htdocs/Eventos/src/Core/FoursquareBundle/Entity</argument>
+                        <argument>/Applications/MAMP/htdocs/Eventos/src/Pro/CrawlerBundle/Entity</argument>
+                      </argument>
+                    </service>
+                  </argument>
+                  <argument>App\SocialBundle\Entity</argument>
+                </call>
+                <call method="addDriver">
+                  <argument type="service">
+                    <service class="Doctrine\ORM\Mapping\Driver\AnnotationDriver" public="false">
+                      <argument type="service">
+                        <service class="Symfony\Bridge\Doctrine\Annotations\IndexedReader" public="false">
+                          <argument type="service" id="annotation_reader"/>
+                        </service>
+                      </argument>
+                      <argument type="collection">
+                        <argument>/Applications/MAMP/htdocs/Eventos/src/Core/UserBundle/Entity</argument>
+                        <argument>/Applications/MAMP/htdocs/Eventos/src/App/SocialBundle/Entity</argument>
+                        <argument>/Applications/MAMP/htdocs/Eventos/src/Google/MapsBundle/Entity</argument>
+                        <argument>/Applications/MAMP/htdocs/Eventos/src/Core/FoursquareBundle/Entity</argument>
+                        <argument>/Applications/MAMP/htdocs/Eventos/src/Pro/CrawlerBundle/Entity</argument>
+                      </argument>
+                    </service>
+                  </argument>
+                  <argument>Google\MapsBundle\Entity</argument>
+                </call>
+                <call method="addDriver">
+                  <argument type="service">
+                    <service class="Doctrine\ORM\Mapping\Driver\AnnotationDriver" public="false">
+                      <argument type="service">
+                        <service class="Symfony\Bridge\Doctrine\Annotations\IndexedReader" public="false">
+                          <argument type="service" id="annotation_reader"/>
+                        </service>
+                      </argument>
+                      <argument type="collection">
+                        <argument>/Applications/MAMP/htdocs/Eventos/src/Core/UserBundle/Entity</argument>
+                        <argument>/Applications/MAMP/htdocs/Eventos/src/App/SocialBundle/Entity</argument>
+                        <argument>/Applications/MAMP/htdocs/Eventos/src/Google/MapsBundle/Entity</argument>
+                        <argument>/Applications/MAMP/htdocs/Eventos/src/Core/FoursquareBundle/Entity</argument>
+                        <argument>/Applications/MAMP/htdocs/Eventos/src/Pro/CrawlerBundle/Entity</argument>
+                      </argument>
+                    </service>
+                  </argument>
+                  <argument>Core\FoursquareBundle\Entity</argument>
+                </call>
+                <call method="addDriver">
+                  <argument type="service">
+                    <service class="Doctrine\ORM\Mapping\Driver\AnnotationDriver" public="false">
+                      <argument type="service">
+                        <service class="Symfony\Bridge\Doctrine\Annotations\IndexedReader" public="false">
+                          <argument type="service" id="annotation_reader"/>
+                        </service>
+                      </argument>
+                      <argument type="collection">
+                        <argument>/Applications/MAMP/htdocs/Eventos/src/Core/UserBundle/Entity</argument>
+                        <argument>/Applications/MAMP/htdocs/Eventos/src/App/SocialBundle/Entity</argument>
+                        <argument>/Applications/MAMP/htdocs/Eventos/src/Google/MapsBundle/Entity</argument>
+                        <argument>/Applications/MAMP/htdocs/Eventos/src/Core/FoursquareBundle/Entity</argument>
+                        <argument>/Applications/MAMP/htdocs/Eventos/src/Pro/CrawlerBundle/Entity</argument>
+                      </argument>
+                    </service>
+                  </argument>
+                  <argument>Pro\CrawlerBundle\Entity</argument>
+                </call>
+                <call method="addDriver">
+                  <argument type="service">
                     <service class="Symfony\Bridge\Doctrine\Mapping\Driver\XmlDriver" public="false">
                       <argument type="collection">
                         <argument>/Applications/MAMP/htdocs/Eventos/vendor/bundles/FOS/UserBundle/Resources/config/doctrine</argument>
+                        <argument>/Applications/MAMP/htdocs/Eventos/vendor/bundles/FOS/CommentBundle/Resources/config/doctrine</argument>
                       </argument>
                       <call method="setNamespacePrefixes">
                         <argument type="collection">
                           <argument key="/Applications/MAMP/htdocs/Eventos/vendor/bundles/FOS/UserBundle/Resources/config/doctrine">FOS\UserBundle\Entity</argument>
+                          <argument key="/Applications/MAMP/htdocs/Eventos/vendor/bundles/FOS/CommentBundle/Resources/config/doctrine">FOS\CommentBundle\Entity</argument>
                         </argument>
                       </call>
                       <call method="setGlobalBasename">
@@ -2195,6 +2505,26 @@
                     </service>
                   </argument>
                   <argument>FOS\UserBundle\Entity</argument>
+                </call>
+                <call method="addDriver">
+                  <argument type="service">
+                    <service class="Symfony\Bridge\Doctrine\Mapping\Driver\XmlDriver" public="false">
+                      <argument type="collection">
+                        <argument>/Applications/MAMP/htdocs/Eventos/vendor/bundles/FOS/UserBundle/Resources/config/doctrine</argument>
+                        <argument>/Applications/MAMP/htdocs/Eventos/vendor/bundles/FOS/CommentBundle/Resources/config/doctrine</argument>
+                      </argument>
+                      <call method="setNamespacePrefixes">
+                        <argument type="collection">
+                          <argument key="/Applications/MAMP/htdocs/Eventos/vendor/bundles/FOS/UserBundle/Resources/config/doctrine">FOS\UserBundle\Entity</argument>
+                          <argument key="/Applications/MAMP/htdocs/Eventos/vendor/bundles/FOS/CommentBundle/Resources/config/doctrine">FOS\CommentBundle\Entity</argument>
+                        </argument>
+                      </call>
+                      <call method="setGlobalBasename">
+                        <argument>mapping</argument>
+                      </call>
+                    </service>
+                  </argument>
+                  <argument>FOS\CommentBundle\Entity</argument>
                 </call>
               </service>
             </argument>
@@ -2578,6 +2908,33 @@
               <argument type="service">
                 <service class="%assetic.directory_resource.class%" public="false">
                   <argument type="service" id="templating.loader"/>
+                  <argument>CoreApiBundle</argument>
+                  <argument>/Applications/MAMP/htdocs/Eventos/app/Resources/CoreApiBundle/views</argument>
+                  <argument>/^[^.]+\.[^.]+\.twig$/</argument>
+                </service>
+              </argument>
+              <argument type="service">
+                <service class="%assetic.directory_resource.class%" public="false">
+                  <argument type="service" id="templating.loader"/>
+                  <argument>CoreApiBundle</argument>
+                  <argument>/Applications/MAMP/htdocs/Eventos/src/Core/ApiBundle/Resources/views</argument>
+                  <argument>/^[^.]+\.[^.]+\.twig$/</argument>
+                </service>
+              </argument>
+            </argument>
+          </service>
+        </argument>
+        <argument>twig</argument>
+      </call>
+      <call method="addResource">
+        <argument type="service">
+          <service class="Symfony\Bundle\AsseticBundle\Factory\Resource\CoalescingDirectoryResource" public="false">
+            <tag name="assetic.templating.twig"/>
+            <tag name="assetic.formula_resource" loader="twig"/>
+            <argument type="collection">
+              <argument type="service">
+                <service class="%assetic.directory_resource.class%" public="false">
+                  <argument type="service" id="templating.loader"/>
                   <argument>CoreTemplateBundle</argument>
                   <argument>/Applications/MAMP/htdocs/Eventos/app/Resources/CoreTemplateBundle/views</argument>
                   <argument>/^[^.]+\.[^.]+\.twig$/</argument>
@@ -2615,6 +2972,168 @@
                   <argument type="service" id="templating.loader"/>
                   <argument>FOSUserBundle</argument>
                   <argument>/Applications/MAMP/htdocs/Eventos/vendor/bundles/FOS/UserBundle/Resources/views</argument>
+                  <argument>/^[^.]+\.[^.]+\.twig$/</argument>
+                </service>
+              </argument>
+            </argument>
+          </service>
+        </argument>
+        <argument>twig</argument>
+      </call>
+      <call method="addResource">
+        <argument type="service">
+          <service class="Symfony\Bundle\AsseticBundle\Factory\Resource\CoalescingDirectoryResource" public="false">
+            <tag name="assetic.templating.twig"/>
+            <tag name="assetic.formula_resource" loader="twig"/>
+            <argument type="collection">
+              <argument type="service">
+                <service class="%assetic.directory_resource.class%" public="false">
+                  <argument type="service" id="templating.loader"/>
+                  <argument>AppSocialBundle</argument>
+                  <argument>/Applications/MAMP/htdocs/Eventos/app/Resources/AppSocialBundle/views</argument>
+                  <argument>/^[^.]+\.[^.]+\.twig$/</argument>
+                </service>
+              </argument>
+              <argument type="service">
+                <service class="%assetic.directory_resource.class%" public="false">
+                  <argument type="service" id="templating.loader"/>
+                  <argument>AppSocialBundle</argument>
+                  <argument>/Applications/MAMP/htdocs/Eventos/src/App/SocialBundle/Resources/views</argument>
+                  <argument>/^[^.]+\.[^.]+\.twig$/</argument>
+                </service>
+              </argument>
+            </argument>
+          </service>
+        </argument>
+        <argument>twig</argument>
+      </call>
+      <call method="addResource">
+        <argument type="service">
+          <service class="Symfony\Bundle\AsseticBundle\Factory\Resource\CoalescingDirectoryResource" public="false">
+            <tag name="assetic.templating.twig"/>
+            <tag name="assetic.formula_resource" loader="twig"/>
+            <argument type="collection">
+              <argument type="service">
+                <service class="%assetic.directory_resource.class%" public="false">
+                  <argument type="service" id="templating.loader"/>
+                  <argument>GoogleMapsBundle</argument>
+                  <argument>/Applications/MAMP/htdocs/Eventos/app/Resources/GoogleMapsBundle/views</argument>
+                  <argument>/^[^.]+\.[^.]+\.twig$/</argument>
+                </service>
+              </argument>
+              <argument type="service">
+                <service class="%assetic.directory_resource.class%" public="false">
+                  <argument type="service" id="templating.loader"/>
+                  <argument>GoogleMapsBundle</argument>
+                  <argument>/Applications/MAMP/htdocs/Eventos/src/Google/MapsBundle/Resources/views</argument>
+                  <argument>/^[^.]+\.[^.]+\.twig$/</argument>
+                </service>
+              </argument>
+            </argument>
+          </service>
+        </argument>
+        <argument>twig</argument>
+      </call>
+      <call method="addResource">
+        <argument type="service">
+          <service class="Symfony\Bundle\AsseticBundle\Factory\Resource\CoalescingDirectoryResource" public="false">
+            <tag name="assetic.templating.twig"/>
+            <tag name="assetic.formula_resource" loader="twig"/>
+            <argument type="collection">
+              <argument type="service">
+                <service class="%assetic.directory_resource.class%" public="false">
+                  <argument type="service" id="templating.loader"/>
+                  <argument>CoreFoursquareBundle</argument>
+                  <argument>/Applications/MAMP/htdocs/Eventos/app/Resources/CoreFoursquareBundle/views</argument>
+                  <argument>/^[^.]+\.[^.]+\.twig$/</argument>
+                </service>
+              </argument>
+              <argument type="service">
+                <service class="%assetic.directory_resource.class%" public="false">
+                  <argument type="service" id="templating.loader"/>
+                  <argument>CoreFoursquareBundle</argument>
+                  <argument>/Applications/MAMP/htdocs/Eventos/src/Core/FoursquareBundle/Resources/views</argument>
+                  <argument>/^[^.]+\.[^.]+\.twig$/</argument>
+                </service>
+              </argument>
+            </argument>
+          </service>
+        </argument>
+        <argument>twig</argument>
+      </call>
+      <call method="addResource">
+        <argument type="service">
+          <service class="Symfony\Bundle\AsseticBundle\Factory\Resource\CoalescingDirectoryResource" public="false">
+            <tag name="assetic.templating.twig"/>
+            <tag name="assetic.formula_resource" loader="twig"/>
+            <argument type="collection">
+              <argument type="service">
+                <service class="%assetic.directory_resource.class%" public="false">
+                  <argument type="service" id="templating.loader"/>
+                  <argument>ProCrawlerBundle</argument>
+                  <argument>/Applications/MAMP/htdocs/Eventos/app/Resources/ProCrawlerBundle/views</argument>
+                  <argument>/^[^.]+\.[^.]+\.twig$/</argument>
+                </service>
+              </argument>
+              <argument type="service">
+                <service class="%assetic.directory_resource.class%" public="false">
+                  <argument type="service" id="templating.loader"/>
+                  <argument>ProCrawlerBundle</argument>
+                  <argument>/Applications/MAMP/htdocs/Eventos/src/Pro/CrawlerBundle/Resources/views</argument>
+                  <argument>/^[^.]+\.[^.]+\.twig$/</argument>
+                </service>
+              </argument>
+            </argument>
+          </service>
+        </argument>
+        <argument>twig</argument>
+      </call>
+      <call method="addResource">
+        <argument type="service">
+          <service class="Symfony\Bundle\AsseticBundle\Factory\Resource\CoalescingDirectoryResource" public="false">
+            <tag name="assetic.templating.twig"/>
+            <tag name="assetic.formula_resource" loader="twig"/>
+            <argument type="collection">
+              <argument type="service">
+                <service class="%assetic.directory_resource.class%" public="false">
+                  <argument type="service" id="templating.loader"/>
+                  <argument>GenemuFormBundle</argument>
+                  <argument>/Applications/MAMP/htdocs/Eventos/app/Resources/GenemuFormBundle/views</argument>
+                  <argument>/^[^.]+\.[^.]+\.twig$/</argument>
+                </service>
+              </argument>
+              <argument type="service">
+                <service class="%assetic.directory_resource.class%" public="false">
+                  <argument type="service" id="templating.loader"/>
+                  <argument>GenemuFormBundle</argument>
+                  <argument>/Applications/MAMP/htdocs/Eventos/vendor/bundles/Genemu/Bundle/FormBundle/Resources/views</argument>
+                  <argument>/^[^.]+\.[^.]+\.twig$/</argument>
+                </service>
+              </argument>
+            </argument>
+          </service>
+        </argument>
+        <argument>twig</argument>
+      </call>
+      <call method="addResource">
+        <argument type="service">
+          <service class="Symfony\Bundle\AsseticBundle\Factory\Resource\CoalescingDirectoryResource" public="false">
+            <tag name="assetic.templating.twig"/>
+            <tag name="assetic.formula_resource" loader="twig"/>
+            <argument type="collection">
+              <argument type="service">
+                <service class="%assetic.directory_resource.class%" public="false">
+                  <argument type="service" id="templating.loader"/>
+                  <argument>FOSCommentBundle</argument>
+                  <argument>/Applications/MAMP/htdocs/Eventos/app/Resources/FOSCommentBundle/views</argument>
+                  <argument>/^[^.]+\.[^.]+\.twig$/</argument>
+                </service>
+              </argument>
+              <argument type="service">
+                <service class="%assetic.directory_resource.class%" public="false">
+                  <argument type="service" id="templating.loader"/>
+                  <argument>FOSCommentBundle</argument>
+                  <argument>/Applications/MAMP/htdocs/Eventos/vendor/bundles/FOS/CommentBundle/Resources/views</argument>
                   <argument>/^[^.]+\.[^.]+\.twig$/</argument>
                 </service>
               </argument>
@@ -2952,6 +3471,199 @@
     <service id="fos_user.resetting.form.type" class="FOS\UserBundle\Form\Type\ResettingFormType">
       <tag name="form.type" alias="fos_user_resetting"/>
     </service>
+    <service id="pro_crawler.parser.zonadeluxe" class="Pro\CrawlerBundle\Parser\zonaDeluxe">
+      <argument type="service" id="service_container"/>
+    </service>
+    <service id="genemu.twig.extension.form" class="Genemu\Bundle\FormBundle\Twig\Extension\FormExtension">
+      <tag name="twig.extension"/>
+      <argument type="collection">
+        <argument>form_div_layout.html.twig</argument>
+        <argument>GoogleMapsBundle:Form:map.html.twig</argument>
+        <argument>GenemuFormBundle:Form:div_layout.html.twig</argument>
+        <argument>GenemuFormBundle:Form:jquery_layout.html.twig</argument>
+        <argument>GenemuFormBundle:Form:stylesheet_layout.html.twig</argument>
+      </argument>
+    </service>
+    <service id="genemu.gd.captcha" class="Genemu\Bundle\FormBundle\Gd\Type\Captcha">
+      <argument type="service" id="session"/>
+      <argument>ThisTokenIsNotSoSecretChangeIt</argument>
+    </service>
+    <service id="genemu.form.type_recaptcha.validator" class="Genemu\Bundle\FormBundle\Form\Core\Validator\ReCaptchaValidator">
+      <tag name="validator.constraint_validator" alias="genemu_validator.recaptcha"/>
+      <argument type="service" id="request"/>
+      <argument></argument>
+    </service>
+    <service id="genemu.form.core.type.recaptcha" class="Genemu\Bundle\FormBundle\Form\Core\Type\ReCaptchaType">
+      <tag name="form.type" alias="genemu_recaptcha"/>
+      <argument type="service" id="genemu.form.type_recaptcha.validator"/>
+      <argument></argument>
+      <argument></argument>
+      <argument type="collection"/>
+    </service>
+    <service id="genemu.form.core.type.captcha" class="Genemu\Bundle\FormBundle\Form\Core\Type\CaptchaType">
+      <tag name="form.type" alias="genemu_captcha"/>
+      <argument type="service" id="genemu.gd.captcha"/>
+      <argument type="collection">
+        <argument key="enabled">true</argument>
+        <argument key="driver">gd</argument>
+        <argument key="position">left</argument>
+        <argument key="width">100</argument>
+        <argument key="height">30</argument>
+        <argument key="length">4</argument>
+        <argument key="format">png</argument>
+        <argument key="chars" type="collection">
+          <argument>0</argument>
+          <argument>1</argument>
+          <argument>2</argument>
+          <argument>3</argument>
+          <argument>4</argument>
+          <argument>5</argument>
+          <argument>6</argument>
+          <argument>7</argument>
+          <argument>8</argument>
+          <argument>9</argument>
+        </argument>
+        <argument key="font_size">18</argument>
+        <argument key="font_color" type="collection">
+          <argument>252525</argument>
+          <argument>8B8787</argument>
+          <argument>550707</argument>
+          <argument>3526E6</argument>
+          <argument>88531E</argument>
+        </argument>
+        <argument key="fonts" type="collection">
+          <argument>/Applications/MAMP/htdocs/Eventos/app/../web/bundles/genemuform/fonts/akbar.ttf</argument>
+          <argument>/Applications/MAMP/htdocs/Eventos/app/../web/bundles/genemuform/fonts/brushcut.ttf</argument>
+          <argument>/Applications/MAMP/htdocs/Eventos/app/../web/bundles/genemuform/fonts/molten.ttf</argument>
+          <argument>/Applications/MAMP/htdocs/Eventos/app/../web/bundles/genemuform/fonts/planetbe.ttf</argument>
+          <argument>/Applications/MAMP/htdocs/Eventos/app/../web/bundles/genemuform/fonts/whoobub.ttf</argument>
+        </argument>
+        <argument key="background_color">DDDDDD</argument>
+        <argument key="border_color">000000</argument>
+      </argument>
+    </service>
+    <service id="genemu.form.core.type.plain" class="Genemu\Bundle\FormBundle\Form\Core\Type\PlainType">
+      <tag name="form.type" alias="genemu_plain"/>
+    </service>
+    <service id="genemu.form.core.type.tinymce" class="Genemu\Bundle\FormBundle\Form\Core\Type\TinymceType">
+      <tag name="form.type" alias="genemu_tinymce"/>
+      <argument type="collection">
+        <argument key="theme">advanced</argument>
+      </argument>
+    </service>
+    <service id="genemu.form.model.type.ajaxmodel" class="Genemu\Bundle\FormBundle\Form\Model\Type\AjaxModelType">
+      <tag name="form.type" alias="genemu_ajaxmodel"/>
+    </service>
+    <service id="genemu.form.jquery.type.autocompleter" class="Genemu\Bundle\FormBundle\Form\JQuery\Type\AutocompleterType">
+      <tag name="form.type" alias="genemu_jqueryautocompleter"/>
+    </service>
+    <service id="genemu.form.jquery.type.chosen" class="Genemu\Bundle\FormBundle\Form\JQuery\Type\ChosenType">
+      <tag name="form.type" alias="genemu_jquerychosen"/>
+    </service>
+    <service id="genemu.form.jquery.type.color" class="Genemu\Bundle\FormBundle\Form\JQuery\Type\ColorType">
+      <tag name="form.type" alias="genemu_jquerycolor"/>
+      <argument type="collection"/>
+    </service>
+    <service id="genemu.form.jquery.type.date" class="Genemu\Bundle\FormBundle\Form\JQuery\Type\DateType">
+      <tag name="form.type" alias="genemu_jquerydate"/>
+      <argument type="collection"/>
+    </service>
+    <service id="genemu.form.jquery.type.file" class="Genemu\Bundle\FormBundle\Form\JQuery\Type\FileType">
+      <tag name="form.type" alias="genemu_jqueryfile"/>
+      <argument type="collection"/>
+      <argument>/Applications/MAMP/htdocs/Eventos/app/../web</argument>
+    </service>
+    <service id="genemu.form.jquery.type.geolocation" class="Genemu\Bundle\FormBundle\Form\JQuery\Type\GeolocationType">
+      <tag name="form.type" alias="genemu_jquerygeolocation"/>
+    </service>
+    <service id="genemu.form.jquery.type.image" class="Genemu\Bundle\FormBundle\Form\JQuery\Type\ImageType">
+      <tag name="form.type" alias="genemu_jqueryimage"/>
+      <argument></argument>
+      <argument type="collection"/>
+      <argument type="collection"/>
+    </service>
+    <service id="genemu.form.jquery.type.rating" class="Genemu\Bundle\FormBundle\Form\JQuery\Type\RatingType">
+      <tag name="form.type" alias="genemu_jqueryrating"/>
+      <argument type="collection"/>
+    </service>
+    <service id="genemu.form.jquery.type.slider" class="Genemu\Bundle\FormBundle\Form\JQuery\Type\SliderType">
+      <tag name="form.type" alias="genemu_jqueryslider"/>
+    </service>
+    <service id="genemu.form.jquery.type.tokeninput" class="Genemu\Bundle\FormBundle\Form\JQuery\Type\TokeninputType">
+      <tag name="form.type" alias="genemu_jquerytokeninput"/>
+    </service>
+    <service id="genemu.form.entity.type.ajaxentity" class="Genemu\Bundle\FormBundle\Form\Doctrine\Type\AjaxEntityType">
+      <tag name="form.type" alias="genemu_ajaxentity"/>
+      <argument type="service" id="doctrine"/>
+    </service>
+    <service id="fos_comment.entity_manager" class="Doctrine\ORM\EntityManager" factory-method="getEntityManager" factory-service="doctrine" public="false">
+      <argument>null</argument>
+    </service>
+    <service id="fos_comment.manager.thread.default" class="FOS\CommentBundle\Entity\ThreadManager">
+      <argument type="service" id="event_dispatcher"/>
+      <argument type="service" id="fos_comment.entity_manager"/>
+      <argument>App\SocialBundle\Entity\Thread</argument>
+    </service>
+    <service id="fos_comment.manager.comment.default" class="FOS\CommentBundle\Entity\CommentManager">
+      <argument type="service" id="event_dispatcher"/>
+      <argument type="service" id="fos_comment.sorting_factory"/>
+      <argument type="service" id="fos_comment.entity_manager"/>
+      <argument>App\SocialBundle\Entity\Comment</argument>
+    </service>
+    <service id="fos_comment.manager.vote.default" class="FOS\CommentBundle\Entity\VoteManager">
+      <argument type="service" id="event_dispatcher"/>
+      <argument type="service" id="fos_comment.entity_manager"/>
+      <argument>FOS\CommentBundle\Entity\Vote</argument>
+    </service>
+    <service id="fos_comment.listener.comment_vote_score" class="FOS\CommentBundle\EventListener\CommentVoteScoreListener">
+      <tag name="kernel.event_listener" event="fos_comment.vote.pre_persist" method="onVotePersist"/>
+    </service>
+    <service id="fos_comment.listener.thread_counters" class="FOS\CommentBundle\EventListener\ThreadCountersListener">
+      <tag name="kernel.event_listener" event="fos_comment.comment.pre_persist" method="onCommentPersist"/>
+    </service>
+    <service id="fos_comment.listener.thread_permalink" class="FOS\CommentBundle\EventListener\ThreadPermalinkListener" scope="request">
+      <tag name="kernel.event_listener" event="fos_comment.thread.create" method="onThreadCreate"/>
+      <argument type="service" id="request"/>
+    </service>
+    <service id="fos_comment.listener.comment_blamer" class="FOS\CommentBundle\EventListener\CommentBlamerListener">
+      <tag name="kernel.event_listener" event="fos_comment.comment.pre_persist" method="blame"/>
+      <argument type="service" id="security.context"/>
+      <argument type="service" id="logger"/>
+    </service>
+    <service id="fos_comment.listener.vote_blamer" class="FOS\CommentBundle\EventListener\VoteBlamerListener">
+      <tag name="kernel.event_listener" event="fos_comment.vote.pre_persist" method="blame"/>
+      <argument type="service" id="security.context"/>
+      <argument type="service" id="logger"/>
+    </service>
+    <service id="fos_comment.listener.closed_threads" class="FOS\CommentBundle\EventListener\ClosedThreadListener">
+      <tag name="kernel.event_listener" event="fos_comment.comment.pre_persist" method="onCommentPersist"/>
+    </service>
+    <service id="fos_comment.form_type.comment.default" class="FOS\CommentBundle\Form\CommentType">
+      <tag name="form.type" alias="fos_comment.comment"/>
+    </service>
+    <service id="fos_comment.form_type.thread.default" class="FOS\CommentBundle\Form\ThreadType">
+      <tag name="form.type" alias="fos_comment.thread"/>
+    </service>
+    <service id="fos_comment.form_type.vote.default" class="FOS\CommentBundle\Form\VoteType">
+      <tag name="form.type" alias="fos_comment.vote"/>
+    </service>
+    <service id="fos_comment.sorting_factory" class="FOS\CommentBundle\Sorting\SortingFactory">
+      <argument type="collection">
+        <argument key="date_asc" type="service">
+          <service class="FOS\CommentBundle\Sorting\DateSorting" public="false">
+            <tag name="fos_comment.sorter" alias="date_asc"/>
+            <argument>ASC</argument>
+          </service>
+        </argument>
+        <argument key="date_desc" type="service">
+          <service class="FOS\CommentBundle\Sorting\DateSorting" public="false">
+            <tag name="fos_comment.sorter" alias="date_desc"/>
+            <argument>DESC</argument>
+          </service>
+        </argument>
+      </argument>
+      <argument>date_desc</argument>
+    </service>
     <service id="twig.extension.acme.demo" class="Acme\DemoBundle\Twig\Extension\DemoExtension" public="false">
       <tag name="twig.extension"/>
       <argument type="service" id="twig.loader"/>
@@ -3214,11 +3926,29 @@
       <argument type="service" id="request"/>
       <argument type="service" id="fos_user.user_manager"/>
     </service>
+    <service id="fos_comment.form_factory.comment" class="FOS\CommentBundle\FormFactory\CommentFormFactory">
+      <argument type="service" id="form.factory"/>
+      <argument>fos_comment.comment</argument>
+      <argument>fos_comment_comment</argument>
+    </service>
+    <service id="fos_comment.form_factory.thread" class="FOS\CommentBundle\FormFactory\ThreadFormFactory">
+      <argument type="service" id="form.factory"/>
+      <argument>fos_comment.thread</argument>
+      <argument>fos_comment_thread</argument>
+    </service>
+    <service id="fos_comment.form_factory.vote" class="FOS\CommentBundle\FormFactory\VoteFormFactory">
+      <argument type="service" id="form.factory"/>
+      <argument>fos_comment.vote</argument>
+      <argument>fos_comment_vote</argument>
+    </service>
     <service id="debug.event_dispatcher" alias="event_dispatcher"/>
     <service id="translator" alias="translator.default"/>
     <service id="database_connection" alias="doctrine.dbal.default_connection"/>
     <service id="doctrine.orm.entity_manager" alias="doctrine.orm.default_entity_manager"/>
     <service id="fos_user.util.username_canonicalizer" alias="fos_user.util.email_canonicalizer"/>
     <service id="fos_user.change_password.form.handler" alias="fos_user.change_password.form.handler.default"/>
+    <service id="fos_comment.manager.thread" alias="fos_comment.manager.thread.default"/>
+    <service id="fos_comment.manager.comment" alias="fos_comment.manager.comment.default"/>
+    <service id="fos_comment.manager.vote" alias="fos_comment.manager.vote.default"/>
   </services>
 </container>

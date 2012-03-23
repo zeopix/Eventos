@@ -84,8 +84,15 @@ class appDevDebugProjectContainer extends Container
         $instance->addResource(new \Symfony\Bundle\AsseticBundle\Factory\Resource\CoalescingDirectoryResource(array(0 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'CoreUserBundle', '/Applications/MAMP/htdocs/Eventos/app/Resources/CoreUserBundle/views', '/^[^.]+\\.[^.]+\\.twig$/'), 1 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'CoreUserBundle', '/Applications/MAMP/htdocs/Eventos/src/Core/UserBundle/Resources/views', '/^[^.]+\\.[^.]+\\.twig$/'))), 'twig');
         $instance->addResource(new \Symfony\Bundle\AsseticBundle\Factory\Resource\CoalescingDirectoryResource(array(0 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'RoleUserBundle', '/Applications/MAMP/htdocs/Eventos/app/Resources/RoleUserBundle/views', '/^[^.]+\\.[^.]+\\.twig$/'), 1 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'RoleUserBundle', '/Applications/MAMP/htdocs/Eventos/src/Role/UserBundle/Resources/views', '/^[^.]+\\.[^.]+\\.twig$/'))), 'twig');
         $instance->addResource(new \Symfony\Bundle\AsseticBundle\Factory\Resource\CoalescingDirectoryResource(array(0 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'RoleAdminBundle', '/Applications/MAMP/htdocs/Eventos/app/Resources/RoleAdminBundle/views', '/^[^.]+\\.[^.]+\\.twig$/'), 1 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'RoleAdminBundle', '/Applications/MAMP/htdocs/Eventos/src/Role/AdminBundle/Resources/views', '/^[^.]+\\.[^.]+\\.twig$/'))), 'twig');
+        $instance->addResource(new \Symfony\Bundle\AsseticBundle\Factory\Resource\CoalescingDirectoryResource(array(0 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'CoreApiBundle', '/Applications/MAMP/htdocs/Eventos/app/Resources/CoreApiBundle/views', '/^[^.]+\\.[^.]+\\.twig$/'), 1 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'CoreApiBundle', '/Applications/MAMP/htdocs/Eventos/src/Core/ApiBundle/Resources/views', '/^[^.]+\\.[^.]+\\.twig$/'))), 'twig');
         $instance->addResource(new \Symfony\Bundle\AsseticBundle\Factory\Resource\CoalescingDirectoryResource(array(0 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'CoreTemplateBundle', '/Applications/MAMP/htdocs/Eventos/app/Resources/CoreTemplateBundle/views', '/^[^.]+\\.[^.]+\\.twig$/'), 1 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'CoreTemplateBundle', '/Applications/MAMP/htdocs/Eventos/src/Core/TemplateBundle/Resources/views', '/^[^.]+\\.[^.]+\\.twig$/'))), 'twig');
         $instance->addResource(new \Symfony\Bundle\AsseticBundle\Factory\Resource\CoalescingDirectoryResource(array(0 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'FOSUserBundle', '/Applications/MAMP/htdocs/Eventos/app/Resources/FOSUserBundle/views', '/^[^.]+\\.[^.]+\\.twig$/'), 1 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'FOSUserBundle', '/Applications/MAMP/htdocs/Eventos/vendor/bundles/FOS/UserBundle/Resources/views', '/^[^.]+\\.[^.]+\\.twig$/'))), 'twig');
+        $instance->addResource(new \Symfony\Bundle\AsseticBundle\Factory\Resource\CoalescingDirectoryResource(array(0 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'AppSocialBundle', '/Applications/MAMP/htdocs/Eventos/app/Resources/AppSocialBundle/views', '/^[^.]+\\.[^.]+\\.twig$/'), 1 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'AppSocialBundle', '/Applications/MAMP/htdocs/Eventos/src/App/SocialBundle/Resources/views', '/^[^.]+\\.[^.]+\\.twig$/'))), 'twig');
+        $instance->addResource(new \Symfony\Bundle\AsseticBundle\Factory\Resource\CoalescingDirectoryResource(array(0 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'GoogleMapsBundle', '/Applications/MAMP/htdocs/Eventos/app/Resources/GoogleMapsBundle/views', '/^[^.]+\\.[^.]+\\.twig$/'), 1 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'GoogleMapsBundle', '/Applications/MAMP/htdocs/Eventos/src/Google/MapsBundle/Resources/views', '/^[^.]+\\.[^.]+\\.twig$/'))), 'twig');
+        $instance->addResource(new \Symfony\Bundle\AsseticBundle\Factory\Resource\CoalescingDirectoryResource(array(0 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'CoreFoursquareBundle', '/Applications/MAMP/htdocs/Eventos/app/Resources/CoreFoursquareBundle/views', '/^[^.]+\\.[^.]+\\.twig$/'), 1 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'CoreFoursquareBundle', '/Applications/MAMP/htdocs/Eventos/src/Core/FoursquareBundle/Resources/views', '/^[^.]+\\.[^.]+\\.twig$/'))), 'twig');
+        $instance->addResource(new \Symfony\Bundle\AsseticBundle\Factory\Resource\CoalescingDirectoryResource(array(0 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'ProCrawlerBundle', '/Applications/MAMP/htdocs/Eventos/app/Resources/ProCrawlerBundle/views', '/^[^.]+\\.[^.]+\\.twig$/'), 1 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'ProCrawlerBundle', '/Applications/MAMP/htdocs/Eventos/src/Pro/CrawlerBundle/Resources/views', '/^[^.]+\\.[^.]+\\.twig$/'))), 'twig');
+        $instance->addResource(new \Symfony\Bundle\AsseticBundle\Factory\Resource\CoalescingDirectoryResource(array(0 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'GenemuFormBundle', '/Applications/MAMP/htdocs/Eventos/app/Resources/GenemuFormBundle/views', '/^[^.]+\\.[^.]+\\.twig$/'), 1 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'GenemuFormBundle', '/Applications/MAMP/htdocs/Eventos/vendor/bundles/Genemu/Bundle/FormBundle/Resources/views', '/^[^.]+\\.[^.]+\\.twig$/'))), 'twig');
+        $instance->addResource(new \Symfony\Bundle\AsseticBundle\Factory\Resource\CoalescingDirectoryResource(array(0 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'FOSCommentBundle', '/Applications/MAMP/htdocs/Eventos/app/Resources/FOSCommentBundle/views', '/^[^.]+\\.[^.]+\\.twig$/'), 1 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'FOSCommentBundle', '/Applications/MAMP/htdocs/Eventos/vendor/bundles/FOS/CommentBundle/Resources/views', '/^[^.]+\\.[^.]+\\.twig$/'))), 'twig');
         $instance->addResource(new \Symfony\Bundle\AsseticBundle\Factory\Resource\CoalescingDirectoryResource(array(0 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'AcmeDemoBundle', '/Applications/MAMP/htdocs/Eventos/app/Resources/AcmeDemoBundle/views', '/^[^.]+\\.[^.]+\\.twig$/'), 1 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'AcmeDemoBundle', '/Applications/MAMP/htdocs/Eventos/src/Acme/DemoBundle/Resources/views', '/^[^.]+\\.[^.]+\\.twig$/'))), 'twig');
         $instance->addResource(new \Symfony\Bundle\AsseticBundle\Factory\Resource\CoalescingDirectoryResource(array(0 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'WebProfilerBundle', '/Applications/MAMP/htdocs/Eventos/app/Resources/WebProfilerBundle/views', '/^[^.]+\\.[^.]+\\.twig$/'), 1 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'WebProfilerBundle', '/Applications/MAMP/htdocs/Eventos/vendor/symfony/src/Symfony/Bundle/WebProfilerBundle/Resources/views', '/^[^.]+\\.[^.]+\\.twig$/'))), 'twig');
         $instance->addResource(new \Symfony\Bundle\AsseticBundle\Factory\Resource\CoalescingDirectoryResource(array(0 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'SensioDistributionBundle', '/Applications/MAMP/htdocs/Eventos/app/Resources/SensioDistributionBundle/views', '/^[^.]+\\.[^.]+\\.twig$/'), 1 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'SensioDistributionBundle', '/Applications/MAMP/htdocs/Eventos/vendor/bundles/Sensio/Bundle/DistributionBundle/Resources/views', '/^[^.]+\\.[^.]+\\.twig$/'))), 'twig');
@@ -285,8 +292,7 @@ class appDevDebugProjectContainer extends Container
      */
     protected function getDoctrine_Orm_DefaultEntityManagerService()
     {
-        $a = new \Doctrine\Common\Cache\ArrayCache();
-        $a->setNamespace('sf2orm_default_5a0df805c1f8d75c7cf3831c68beecf0');
+        $a = $this->get('annotation_reader');
 
         $b = new \Doctrine\Common\Cache\ArrayCache();
         $b->setNamespace('sf2orm_default_5a0df805c1f8d75c7cf3831c68beecf0');
@@ -294,26 +300,38 @@ class appDevDebugProjectContainer extends Container
         $c = new \Doctrine\Common\Cache\ArrayCache();
         $c->setNamespace('sf2orm_default_5a0df805c1f8d75c7cf3831c68beecf0');
 
-        $d = new \Symfony\Bridge\Doctrine\Mapping\Driver\XmlDriver(array(0 => '/Applications/MAMP/htdocs/Eventos/vendor/bundles/FOS/UserBundle/Resources/config/doctrine'));
-        $d->setNamespacePrefixes(array('/Applications/MAMP/htdocs/Eventos/vendor/bundles/FOS/UserBundle/Resources/config/doctrine' => 'FOS\\UserBundle\\Entity'));
-        $d->setGlobalBasename('mapping');
+        $d = new \Doctrine\Common\Cache\ArrayCache();
+        $d->setNamespace('sf2orm_default_5a0df805c1f8d75c7cf3831c68beecf0');
 
-        $e = new \Doctrine\ORM\Mapping\Driver\DriverChain();
-        $e->addDriver(new \Doctrine\ORM\Mapping\Driver\AnnotationDriver(new \Symfony\Bridge\Doctrine\Annotations\IndexedReader($this->get('annotation_reader')), array(0 => '/Applications/MAMP/htdocs/Eventos/src/Core/UserBundle/Entity')), 'Core\\UserBundle\\Entity');
-        $e->addDriver($d, 'FOS\\UserBundle\\Entity');
+        $e = new \Symfony\Bridge\Doctrine\Annotations\IndexedReader($a);
 
-        $f = new \Doctrine\ORM\Configuration();
-        $f->setEntityNamespaces(array('CoreUserBundle' => 'Core\\UserBundle\\Entity', 'FOSUserBundle' => 'FOS\\UserBundle\\Entity'));
-        $f->setMetadataCacheImpl($a);
-        $f->setQueryCacheImpl($b);
-        $f->setResultCacheImpl($c);
-        $f->setMetadataDriverImpl($e);
-        $f->setProxyDir('/Applications/MAMP/htdocs/Eventos/app/cache/dev/doctrine/orm/Proxies');
-        $f->setProxyNamespace('Proxies');
-        $f->setAutoGenerateProxyClasses(true);
-        $f->setClassMetadataFactoryName('Doctrine\\ORM\\Mapping\\ClassMetadataFactory');
+        $f = new \Doctrine\ORM\Mapping\Driver\AnnotationDriver($e, array(0 => '/Applications/MAMP/htdocs/Eventos/src/Core/UserBundle/Entity', 1 => '/Applications/MAMP/htdocs/Eventos/src/App/SocialBundle/Entity', 2 => '/Applications/MAMP/htdocs/Eventos/src/Google/MapsBundle/Entity', 3 => '/Applications/MAMP/htdocs/Eventos/src/Core/FoursquareBundle/Entity', 4 => '/Applications/MAMP/htdocs/Eventos/src/Pro/CrawlerBundle/Entity'));
 
-        return $this->services['doctrine.orm.default_entity_manager'] = call_user_func(array('Doctrine\\ORM\\EntityManager', 'create'), $this->get('doctrine.dbal.default_connection'), $f);
+        $g = new \Symfony\Bridge\Doctrine\Mapping\Driver\XmlDriver(array(0 => '/Applications/MAMP/htdocs/Eventos/vendor/bundles/FOS/UserBundle/Resources/config/doctrine', 1 => '/Applications/MAMP/htdocs/Eventos/vendor/bundles/FOS/CommentBundle/Resources/config/doctrine'));
+        $g->setNamespacePrefixes(array('/Applications/MAMP/htdocs/Eventos/vendor/bundles/FOS/UserBundle/Resources/config/doctrine' => 'FOS\\UserBundle\\Entity', '/Applications/MAMP/htdocs/Eventos/vendor/bundles/FOS/CommentBundle/Resources/config/doctrine' => 'FOS\\CommentBundle\\Entity'));
+        $g->setGlobalBasename('mapping');
+
+        $h = new \Doctrine\ORM\Mapping\Driver\DriverChain();
+        $h->addDriver($f, 'Core\\UserBundle\\Entity');
+        $h->addDriver($f, 'App\\SocialBundle\\Entity');
+        $h->addDriver($f, 'Google\\MapsBundle\\Entity');
+        $h->addDriver($f, 'Core\\FoursquareBundle\\Entity');
+        $h->addDriver($f, 'Pro\\CrawlerBundle\\Entity');
+        $h->addDriver($g, 'FOS\\UserBundle\\Entity');
+        $h->addDriver($g, 'FOS\\CommentBundle\\Entity');
+
+        $i = new \Doctrine\ORM\Configuration();
+        $i->setEntityNamespaces(array('CoreUserBundle' => 'Core\\UserBundle\\Entity', 'FOSUserBundle' => 'FOS\\UserBundle\\Entity', 'AppSocialBundle' => 'App\\SocialBundle\\Entity', 'GoogleMapsBundle' => 'Google\\MapsBundle\\Entity', 'CoreFoursquareBundle' => 'Core\\FoursquareBundle\\Entity', 'ProCrawlerBundle' => 'Pro\\CrawlerBundle\\Entity', 'FOSCommentBundle' => 'FOS\\CommentBundle\\Entity'));
+        $i->setMetadataCacheImpl($b);
+        $i->setQueryCacheImpl($c);
+        $i->setResultCacheImpl($d);
+        $i->setMetadataDriverImpl($h);
+        $i->setProxyDir('/Applications/MAMP/htdocs/Eventos/app/cache/dev/doctrine/orm/Proxies');
+        $i->setProxyNamespace('Proxies');
+        $i->setAutoGenerateProxyClasses(true);
+        $i->setClassMetadataFactoryName('Doctrine\\ORM\\Mapping\\ClassMetadataFactory');
+
+        return $this->services['doctrine.orm.default_entity_manager'] = call_user_func(array('Doctrine\\ORM\\EntityManager', 'create'), $this->get('doctrine.dbal.default_connection'), $i);
     }
 
     /**
@@ -374,6 +392,12 @@ class appDevDebugProjectContainer extends Container
         $instance->addListenerService('kernel.response', array(0 => 'sensio_framework_extra.cache.listener', 1 => 'onKernelResponse'), 0);
         $instance->addListenerService('kernel.controller', array(0 => 'security.extra.controller_listener', 1 => 'onCoreController'), -255);
         $instance->addListenerService('security.interactive_login', array(0 => 'fos_user.security.interactive_login_listener', 1 => 'onSecurityInteractiveLogin'), 0);
+        $instance->addListenerService('fos_comment.vote.pre_persist', array(0 => 'fos_comment.listener.comment_vote_score', 1 => 'onVotePersist'), 0);
+        $instance->addListenerService('fos_comment.comment.pre_persist', array(0 => 'fos_comment.listener.thread_counters', 1 => 'onCommentPersist'), 0);
+        $instance->addListenerService('fos_comment.thread.create', array(0 => 'fos_comment.listener.thread_permalink', 1 => 'onThreadCreate'), 0);
+        $instance->addListenerService('fos_comment.comment.pre_persist', array(0 => 'fos_comment.listener.comment_blamer', 1 => 'blame'), 0);
+        $instance->addListenerService('fos_comment.vote.pre_persist', array(0 => 'fos_comment.listener.vote_blamer', 1 => 'blame'), 0);
+        $instance->addListenerService('fos_comment.comment.pre_persist', array(0 => 'fos_comment.listener.closed_threads', 1 => 'onCommentPersist'), 0);
         $instance->addListenerService('kernel.controller', array(0 => 'acme.demo.listener', 1 => 'onKernelController'), 0);
         $instance->addListenerService('kernel.response', array(0 => 'web_profiler.debug_toolbar', 1 => 'onKernelResponse'), -128);
 
@@ -429,7 +453,7 @@ class appDevDebugProjectContainer extends Container
      */
     protected function getForm_FactoryService()
     {
-        return $this->services['form.factory'] = new \Symfony\Component\Form\FormFactory(array(0 => new \Symfony\Component\Form\Extension\DependencyInjection\DependencyInjectionExtension($this, array('field' => 'form.type.field', 'form' => 'form.type.form', 'birthday' => 'form.type.birthday', 'checkbox' => 'form.type.checkbox', 'choice' => 'form.type.choice', 'collection' => 'form.type.collection', 'country' => 'form.type.country', 'date' => 'form.type.date', 'datetime' => 'form.type.datetime', 'email' => 'form.type.email', 'file' => 'form.type.file', 'hidden' => 'form.type.hidden', 'integer' => 'form.type.integer', 'language' => 'form.type.language', 'locale' => 'form.type.locale', 'money' => 'form.type.money', 'number' => 'form.type.number', 'password' => 'form.type.password', 'percent' => 'form.type.percent', 'radio' => 'form.type.radio', 'repeated' => 'form.type.repeated', 'search' => 'form.type.search', 'textarea' => 'form.type.textarea', 'text' => 'form.type.text', 'time' => 'form.type.time', 'timezone' => 'form.type.timezone', 'url' => 'form.type.url', 'csrf' => 'form.type.csrf', 'entity' => 'form.type.entity', 'fos_user_username' => 'fos_user.username_form_type', 'fos_user_profile' => 'fos_user.profile.form.type', 'fos_user_registration' => 'fos_user.registration.form.type', 'fos_user_change_password' => 'fos_user.change_password.form.type', 'fos_user_resetting' => 'fos_user.resetting.form.type'), array('field' => array(0 => 'form.type_extension.field'), 'form' => array(0 => 'form.type_extension.csrf')), array(0 => 'form.type_guesser.validator', 1 => 'form.type_guesser.doctrine'))));
+        return $this->services['form.factory'] = new \Symfony\Component\Form\FormFactory(array(0 => new \Symfony\Component\Form\Extension\DependencyInjection\DependencyInjectionExtension($this, array('field' => 'form.type.field', 'form' => 'form.type.form', 'birthday' => 'form.type.birthday', 'checkbox' => 'form.type.checkbox', 'choice' => 'form.type.choice', 'collection' => 'form.type.collection', 'country' => 'form.type.country', 'date' => 'form.type.date', 'datetime' => 'form.type.datetime', 'email' => 'form.type.email', 'file' => 'form.type.file', 'hidden' => 'form.type.hidden', 'integer' => 'form.type.integer', 'language' => 'form.type.language', 'locale' => 'form.type.locale', 'money' => 'form.type.money', 'number' => 'form.type.number', 'password' => 'form.type.password', 'percent' => 'form.type.percent', 'radio' => 'form.type.radio', 'repeated' => 'form.type.repeated', 'search' => 'form.type.search', 'textarea' => 'form.type.textarea', 'text' => 'form.type.text', 'time' => 'form.type.time', 'timezone' => 'form.type.timezone', 'url' => 'form.type.url', 'csrf' => 'form.type.csrf', 'entity' => 'form.type.entity', 'fos_user_username' => 'fos_user.username_form_type', 'fos_user_profile' => 'fos_user.profile.form.type', 'fos_user_registration' => 'fos_user.registration.form.type', 'fos_user_change_password' => 'fos_user.change_password.form.type', 'fos_user_resetting' => 'fos_user.resetting.form.type', 'genemu_recaptcha' => 'genemu.form.core.type.recaptcha', 'genemu_captcha' => 'genemu.form.core.type.captcha', 'genemu_plain' => 'genemu.form.core.type.plain', 'genemu_tinymce' => 'genemu.form.core.type.tinymce', 'genemu_ajaxmodel' => 'genemu.form.model.type.ajaxmodel', 'genemu_jqueryautocompleter' => 'genemu.form.jquery.type.autocompleter', 'genemu_jquerychosen' => 'genemu.form.jquery.type.chosen', 'genemu_jquerycolor' => 'genemu.form.jquery.type.color', 'genemu_jquerydate' => 'genemu.form.jquery.type.date', 'genemu_jqueryfile' => 'genemu.form.jquery.type.file', 'genemu_jquerygeolocation' => 'genemu.form.jquery.type.geolocation', 'genemu_jqueryimage' => 'genemu.form.jquery.type.image', 'genemu_jqueryrating' => 'genemu.form.jquery.type.rating', 'genemu_jqueryslider' => 'genemu.form.jquery.type.slider', 'genemu_jquerytokeninput' => 'genemu.form.jquery.type.tokeninput', 'genemu_ajaxentity' => 'genemu.form.entity.type.ajaxentity', 'fos_comment.comment' => 'fos_comment.form_type.comment.default', 'fos_comment.thread' => 'fos_comment.form_type.thread.default', 'fos_comment.vote' => 'fos_comment.form_type.vote.default'), array('field' => array(0 => 'form.type_extension.field'), 'form' => array(0 => 'form.type_extension.csrf')), array(0 => 'form.type_guesser.validator', 1 => 'form.type_guesser.doctrine'))));
     }
 
     /**
@@ -862,6 +886,218 @@ class appDevDebugProjectContainer extends Container
     }
 
     /**
+     * Gets the 'fos_comment.form_factory.comment' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return FOS\CommentBundle\FormFactory\CommentFormFactory A FOS\CommentBundle\FormFactory\CommentFormFactory instance.
+     */
+    protected function getFosComment_FormFactory_CommentService()
+    {
+        return $this->services['fos_comment.form_factory.comment'] = new \FOS\CommentBundle\FormFactory\CommentFormFactory($this->get('form.factory'), 'fos_comment.comment', 'fos_comment_comment');
+    }
+
+    /**
+     * Gets the 'fos_comment.form_factory.thread' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return FOS\CommentBundle\FormFactory\ThreadFormFactory A FOS\CommentBundle\FormFactory\ThreadFormFactory instance.
+     */
+    protected function getFosComment_FormFactory_ThreadService()
+    {
+        return $this->services['fos_comment.form_factory.thread'] = new \FOS\CommentBundle\FormFactory\ThreadFormFactory($this->get('form.factory'), 'fos_comment.thread', 'fos_comment_thread');
+    }
+
+    /**
+     * Gets the 'fos_comment.form_factory.vote' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return FOS\CommentBundle\FormFactory\VoteFormFactory A FOS\CommentBundle\FormFactory\VoteFormFactory instance.
+     */
+    protected function getFosComment_FormFactory_VoteService()
+    {
+        return $this->services['fos_comment.form_factory.vote'] = new \FOS\CommentBundle\FormFactory\VoteFormFactory($this->get('form.factory'), 'fos_comment.vote', 'fos_comment_vote');
+    }
+
+    /**
+     * Gets the 'fos_comment.form_type.comment.default' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return FOS\CommentBundle\Form\CommentType A FOS\CommentBundle\Form\CommentType instance.
+     */
+    protected function getFosComment_FormType_Comment_DefaultService()
+    {
+        return $this->services['fos_comment.form_type.comment.default'] = new \FOS\CommentBundle\Form\CommentType();
+    }
+
+    /**
+     * Gets the 'fos_comment.form_type.thread.default' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return FOS\CommentBundle\Form\ThreadType A FOS\CommentBundle\Form\ThreadType instance.
+     */
+    protected function getFosComment_FormType_Thread_DefaultService()
+    {
+        return $this->services['fos_comment.form_type.thread.default'] = new \FOS\CommentBundle\Form\ThreadType();
+    }
+
+    /**
+     * Gets the 'fos_comment.form_type.vote.default' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return FOS\CommentBundle\Form\VoteType A FOS\CommentBundle\Form\VoteType instance.
+     */
+    protected function getFosComment_FormType_Vote_DefaultService()
+    {
+        return $this->services['fos_comment.form_type.vote.default'] = new \FOS\CommentBundle\Form\VoteType();
+    }
+
+    /**
+     * Gets the 'fos_comment.listener.closed_threads' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return FOS\CommentBundle\EventListener\ClosedThreadListener A FOS\CommentBundle\EventListener\ClosedThreadListener instance.
+     */
+    protected function getFosComment_Listener_ClosedThreadsService()
+    {
+        return $this->services['fos_comment.listener.closed_threads'] = new \FOS\CommentBundle\EventListener\ClosedThreadListener();
+    }
+
+    /**
+     * Gets the 'fos_comment.listener.comment_blamer' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return FOS\CommentBundle\EventListener\CommentBlamerListener A FOS\CommentBundle\EventListener\CommentBlamerListener instance.
+     */
+    protected function getFosComment_Listener_CommentBlamerService()
+    {
+        return $this->services['fos_comment.listener.comment_blamer'] = new \FOS\CommentBundle\EventListener\CommentBlamerListener($this->get('security.context'), $this->get('logger'));
+    }
+
+    /**
+     * Gets the 'fos_comment.listener.comment_vote_score' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return FOS\CommentBundle\EventListener\CommentVoteScoreListener A FOS\CommentBundle\EventListener\CommentVoteScoreListener instance.
+     */
+    protected function getFosComment_Listener_CommentVoteScoreService()
+    {
+        return $this->services['fos_comment.listener.comment_vote_score'] = new \FOS\CommentBundle\EventListener\CommentVoteScoreListener();
+    }
+
+    /**
+     * Gets the 'fos_comment.listener.thread_counters' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return FOS\CommentBundle\EventListener\ThreadCountersListener A FOS\CommentBundle\EventListener\ThreadCountersListener instance.
+     */
+    protected function getFosComment_Listener_ThreadCountersService()
+    {
+        return $this->services['fos_comment.listener.thread_counters'] = new \FOS\CommentBundle\EventListener\ThreadCountersListener();
+    }
+
+    /**
+     * Gets the 'fos_comment.listener.thread_permalink' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return FOS\CommentBundle\EventListener\ThreadPermalinkListener A FOS\CommentBundle\EventListener\ThreadPermalinkListener instance.
+     */
+    protected function getFosComment_Listener_ThreadPermalinkService()
+    {
+        if (!isset($this->scopedServices['request'])) {
+            throw new InactiveScopeException('fos_comment.listener.thread_permalink', 'request');
+        }
+
+        return $this->services['fos_comment.listener.thread_permalink'] = $this->scopedServices['request']['fos_comment.listener.thread_permalink'] = new \FOS\CommentBundle\EventListener\ThreadPermalinkListener($this->get('request'));
+    }
+
+    /**
+     * Gets the 'fos_comment.listener.vote_blamer' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return FOS\CommentBundle\EventListener\VoteBlamerListener A FOS\CommentBundle\EventListener\VoteBlamerListener instance.
+     */
+    protected function getFosComment_Listener_VoteBlamerService()
+    {
+        return $this->services['fos_comment.listener.vote_blamer'] = new \FOS\CommentBundle\EventListener\VoteBlamerListener($this->get('security.context'), $this->get('logger'));
+    }
+
+    /**
+     * Gets the 'fos_comment.manager.comment.default' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return FOS\CommentBundle\Entity\CommentManager A FOS\CommentBundle\Entity\CommentManager instance.
+     */
+    protected function getFosComment_Manager_Comment_DefaultService()
+    {
+        return $this->services['fos_comment.manager.comment.default'] = new \FOS\CommentBundle\Entity\CommentManager($this->get('event_dispatcher'), $this->get('fos_comment.sorting_factory'), $this->get('fos_comment.entity_manager'), 'App\\SocialBundle\\Entity\\Comment');
+    }
+
+    /**
+     * Gets the 'fos_comment.manager.thread.default' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return FOS\CommentBundle\Entity\ThreadManager A FOS\CommentBundle\Entity\ThreadManager instance.
+     */
+    protected function getFosComment_Manager_Thread_DefaultService()
+    {
+        return $this->services['fos_comment.manager.thread.default'] = new \FOS\CommentBundle\Entity\ThreadManager($this->get('event_dispatcher'), $this->get('fos_comment.entity_manager'), 'App\\SocialBundle\\Entity\\Thread');
+    }
+
+    /**
+     * Gets the 'fos_comment.manager.vote.default' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return FOS\CommentBundle\Entity\VoteManager A FOS\CommentBundle\Entity\VoteManager instance.
+     */
+    protected function getFosComment_Manager_Vote_DefaultService()
+    {
+        return $this->services['fos_comment.manager.vote.default'] = new \FOS\CommentBundle\Entity\VoteManager($this->get('event_dispatcher'), $this->get('fos_comment.entity_manager'), 'FOS\\CommentBundle\\Entity\\Vote');
+    }
+
+    /**
+     * Gets the 'fos_comment.sorting_factory' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return FOS\CommentBundle\Sorting\SortingFactory A FOS\CommentBundle\Sorting\SortingFactory instance.
+     */
+    protected function getFosComment_SortingFactoryService()
+    {
+        return $this->services['fos_comment.sorting_factory'] = new \FOS\CommentBundle\Sorting\SortingFactory(array('date_asc' => new \FOS\CommentBundle\Sorting\DateSorting('ASC'), 'date_desc' => new \FOS\CommentBundle\Sorting\DateSorting('DESC')), 'date_desc');
+    }
+
+    /**
      * Gets the 'fos_user.change_password.form' service.
      *
      * This service is shared.
@@ -1157,6 +1393,253 @@ class appDevDebugProjectContainer extends Container
     }
 
     /**
+     * Gets the 'genemu.form.core.type.captcha' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return Genemu\Bundle\FormBundle\Form\Core\Type\CaptchaType A Genemu\Bundle\FormBundle\Form\Core\Type\CaptchaType instance.
+     */
+    protected function getGenemu_Form_Core_Type_CaptchaService()
+    {
+        return $this->services['genemu.form.core.type.captcha'] = new \Genemu\Bundle\FormBundle\Form\Core\Type\CaptchaType($this->get('genemu.gd.captcha'), array('enabled' => true, 'driver' => 'gd', 'position' => 'left', 'width' => 100, 'height' => 30, 'length' => 4, 'format' => 'png', 'chars' => array(0 => 0, 1 => 1, 2 => 2, 3 => 3, 4 => 4, 5 => 5, 6 => 6, 7 => 7, 8 => 8, 9 => 9), 'font_size' => 18, 'font_color' => array(0 => '252525', 1 => '8B8787', 2 => '550707', 3 => '3526E6', 4 => '88531E'), 'fonts' => array(0 => '/Applications/MAMP/htdocs/Eventos/app/../web/bundles/genemuform/fonts/akbar.ttf', 1 => '/Applications/MAMP/htdocs/Eventos/app/../web/bundles/genemuform/fonts/brushcut.ttf', 2 => '/Applications/MAMP/htdocs/Eventos/app/../web/bundles/genemuform/fonts/molten.ttf', 3 => '/Applications/MAMP/htdocs/Eventos/app/../web/bundles/genemuform/fonts/planetbe.ttf', 4 => '/Applications/MAMP/htdocs/Eventos/app/../web/bundles/genemuform/fonts/whoobub.ttf'), 'background_color' => 'DDDDDD', 'border_color' => '000000'));
+    }
+
+    /**
+     * Gets the 'genemu.form.core.type.plain' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return Genemu\Bundle\FormBundle\Form\Core\Type\PlainType A Genemu\Bundle\FormBundle\Form\Core\Type\PlainType instance.
+     */
+    protected function getGenemu_Form_Core_Type_PlainService()
+    {
+        return $this->services['genemu.form.core.type.plain'] = new \Genemu\Bundle\FormBundle\Form\Core\Type\PlainType();
+    }
+
+    /**
+     * Gets the 'genemu.form.core.type.recaptcha' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return Genemu\Bundle\FormBundle\Form\Core\Type\ReCaptchaType A Genemu\Bundle\FormBundle\Form\Core\Type\ReCaptchaType instance.
+     */
+    protected function getGenemu_Form_Core_Type_RecaptchaService()
+    {
+        return $this->services['genemu.form.core.type.recaptcha'] = new \Genemu\Bundle\FormBundle\Form\Core\Type\ReCaptchaType($this->get('genemu.form.type_recaptcha.validator'), '', '', array());
+    }
+
+    /**
+     * Gets the 'genemu.form.core.type.tinymce' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return Genemu\Bundle\FormBundle\Form\Core\Type\TinymceType A Genemu\Bundle\FormBundle\Form\Core\Type\TinymceType instance.
+     */
+    protected function getGenemu_Form_Core_Type_TinymceService()
+    {
+        return $this->services['genemu.form.core.type.tinymce'] = new \Genemu\Bundle\FormBundle\Form\Core\Type\TinymceType(array('theme' => 'advanced'));
+    }
+
+    /**
+     * Gets the 'genemu.form.entity.type.ajaxentity' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return Genemu\Bundle\FormBundle\Form\Doctrine\Type\AjaxEntityType A Genemu\Bundle\FormBundle\Form\Doctrine\Type\AjaxEntityType instance.
+     */
+    protected function getGenemu_Form_Entity_Type_AjaxentityService()
+    {
+        return $this->services['genemu.form.entity.type.ajaxentity'] = new \Genemu\Bundle\FormBundle\Form\Doctrine\Type\AjaxEntityType($this->get('doctrine'));
+    }
+
+    /**
+     * Gets the 'genemu.form.jquery.type.autocompleter' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return Genemu\Bundle\FormBundle\Form\JQuery\Type\AutocompleterType A Genemu\Bundle\FormBundle\Form\JQuery\Type\AutocompleterType instance.
+     */
+    protected function getGenemu_Form_Jquery_Type_AutocompleterService()
+    {
+        return $this->services['genemu.form.jquery.type.autocompleter'] = new \Genemu\Bundle\FormBundle\Form\JQuery\Type\AutocompleterType();
+    }
+
+    /**
+     * Gets the 'genemu.form.jquery.type.chosen' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return Genemu\Bundle\FormBundle\Form\JQuery\Type\ChosenType A Genemu\Bundle\FormBundle\Form\JQuery\Type\ChosenType instance.
+     */
+    protected function getGenemu_Form_Jquery_Type_ChosenService()
+    {
+        return $this->services['genemu.form.jquery.type.chosen'] = new \Genemu\Bundle\FormBundle\Form\JQuery\Type\ChosenType();
+    }
+
+    /**
+     * Gets the 'genemu.form.jquery.type.color' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return Genemu\Bundle\FormBundle\Form\JQuery\Type\ColorType A Genemu\Bundle\FormBundle\Form\JQuery\Type\ColorType instance.
+     */
+    protected function getGenemu_Form_Jquery_Type_ColorService()
+    {
+        return $this->services['genemu.form.jquery.type.color'] = new \Genemu\Bundle\FormBundle\Form\JQuery\Type\ColorType(array());
+    }
+
+    /**
+     * Gets the 'genemu.form.jquery.type.date' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return Genemu\Bundle\FormBundle\Form\JQuery\Type\DateType A Genemu\Bundle\FormBundle\Form\JQuery\Type\DateType instance.
+     */
+    protected function getGenemu_Form_Jquery_Type_DateService()
+    {
+        return $this->services['genemu.form.jquery.type.date'] = new \Genemu\Bundle\FormBundle\Form\JQuery\Type\DateType(array());
+    }
+
+    /**
+     * Gets the 'genemu.form.jquery.type.file' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return Genemu\Bundle\FormBundle\Form\JQuery\Type\FileType A Genemu\Bundle\FormBundle\Form\JQuery\Type\FileType instance.
+     */
+    protected function getGenemu_Form_Jquery_Type_FileService()
+    {
+        return $this->services['genemu.form.jquery.type.file'] = new \Genemu\Bundle\FormBundle\Form\JQuery\Type\FileType(array(), '/Applications/MAMP/htdocs/Eventos/app/../web');
+    }
+
+    /**
+     * Gets the 'genemu.form.jquery.type.geolocation' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return Genemu\Bundle\FormBundle\Form\JQuery\Type\GeolocationType A Genemu\Bundle\FormBundle\Form\JQuery\Type\GeolocationType instance.
+     */
+    protected function getGenemu_Form_Jquery_Type_GeolocationService()
+    {
+        return $this->services['genemu.form.jquery.type.geolocation'] = new \Genemu\Bundle\FormBundle\Form\JQuery\Type\GeolocationType();
+    }
+
+    /**
+     * Gets the 'genemu.form.jquery.type.image' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return Genemu\Bundle\FormBundle\Form\JQuery\Type\ImageType A Genemu\Bundle\FormBundle\Form\JQuery\Type\ImageType instance.
+     */
+    protected function getGenemu_Form_Jquery_Type_ImageService()
+    {
+        return $this->services['genemu.form.jquery.type.image'] = new \Genemu\Bundle\FormBundle\Form\JQuery\Type\ImageType('', array(), array());
+    }
+
+    /**
+     * Gets the 'genemu.form.jquery.type.rating' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return Genemu\Bundle\FormBundle\Form\JQuery\Type\RatingType A Genemu\Bundle\FormBundle\Form\JQuery\Type\RatingType instance.
+     */
+    protected function getGenemu_Form_Jquery_Type_RatingService()
+    {
+        return $this->services['genemu.form.jquery.type.rating'] = new \Genemu\Bundle\FormBundle\Form\JQuery\Type\RatingType(array());
+    }
+
+    /**
+     * Gets the 'genemu.form.jquery.type.slider' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return Genemu\Bundle\FormBundle\Form\JQuery\Type\SliderType A Genemu\Bundle\FormBundle\Form\JQuery\Type\SliderType instance.
+     */
+    protected function getGenemu_Form_Jquery_Type_SliderService()
+    {
+        return $this->services['genemu.form.jquery.type.slider'] = new \Genemu\Bundle\FormBundle\Form\JQuery\Type\SliderType();
+    }
+
+    /**
+     * Gets the 'genemu.form.jquery.type.tokeninput' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return Genemu\Bundle\FormBundle\Form\JQuery\Type\TokeninputType A Genemu\Bundle\FormBundle\Form\JQuery\Type\TokeninputType instance.
+     */
+    protected function getGenemu_Form_Jquery_Type_TokeninputService()
+    {
+        return $this->services['genemu.form.jquery.type.tokeninput'] = new \Genemu\Bundle\FormBundle\Form\JQuery\Type\TokeninputType();
+    }
+
+    /**
+     * Gets the 'genemu.form.model.type.ajaxmodel' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return Genemu\Bundle\FormBundle\Form\Model\Type\AjaxModelType A Genemu\Bundle\FormBundle\Form\Model\Type\AjaxModelType instance.
+     */
+    protected function getGenemu_Form_Model_Type_AjaxmodelService()
+    {
+        return $this->services['genemu.form.model.type.ajaxmodel'] = new \Genemu\Bundle\FormBundle\Form\Model\Type\AjaxModelType();
+    }
+
+    /**
+     * Gets the 'genemu.form.type_recaptcha.validator' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return Genemu\Bundle\FormBundle\Form\Core\Validator\ReCaptchaValidator A Genemu\Bundle\FormBundle\Form\Core\Validator\ReCaptchaValidator instance.
+     */
+    protected function getGenemu_Form_TypeRecaptcha_ValidatorService()
+    {
+        return $this->services['genemu.form.type_recaptcha.validator'] = new \Genemu\Bundle\FormBundle\Form\Core\Validator\ReCaptchaValidator($this->get('request'), '');
+    }
+
+    /**
+     * Gets the 'genemu.gd.captcha' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return Genemu\Bundle\FormBundle\Gd\Type\Captcha A Genemu\Bundle\FormBundle\Gd\Type\Captcha instance.
+     */
+    protected function getGenemu_Gd_CaptchaService()
+    {
+        return $this->services['genemu.gd.captcha'] = new \Genemu\Bundle\FormBundle\Gd\Type\Captcha($this->get('session'), 'ThisTokenIsNotSoSecretChangeIt');
+    }
+
+    /**
+     * Gets the 'genemu.twig.extension.form' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return Genemu\Bundle\FormBundle\Twig\Extension\FormExtension A Genemu\Bundle\FormBundle\Twig\Extension\FormExtension instance.
+     */
+    protected function getGenemu_Twig_Extension_FormService()
+    {
+        return $this->services['genemu.twig.extension.form'] = new \Genemu\Bundle\FormBundle\Twig\Extension\FormExtension(array(0 => 'form_div_layout.html.twig', 1 => 'GoogleMapsBundle:Form:map.html.twig', 2 => 'GenemuFormBundle:Form:div_layout.html.twig', 3 => 'GenemuFormBundle:Form:jquery_layout.html.twig', 4 => 'GenemuFormBundle:Form:stylesheet_layout.html.twig'));
+    }
+
+    /**
      * Gets the 'http_kernel' service.
      *
      * This service is shared.
@@ -1387,6 +1870,19 @@ class appDevDebugProjectContainer extends Container
     }
 
     /**
+     * Gets the 'pro_crawler.parser.zonadeluxe' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return Pro\CrawlerBundle\Parser\zonaDeluxe A Pro\CrawlerBundle\Parser\zonaDeluxe instance.
+     */
+    protected function getProCrawler_Parser_ZonadeluxeService()
+    {
+        return $this->services['pro_crawler.parser.zonadeluxe'] = new \Pro\CrawlerBundle\Parser\zonaDeluxe($this);
+    }
+
+    /**
      * Gets the 'profiler' service.
      *
      * This service is shared.
@@ -1614,7 +2110,7 @@ class appDevDebugProjectContainer extends Container
         $l = new \Symfony\Component\Security\Http\Firewall\LogoutListener($b, $k, '/logout', '/', NULL);
         $l->addHandler(new \Symfony\Component\Security\Http\Logout\SessionLogoutHandler());
 
-        return $this->services['security.firewall.map.context.main'] = new \Symfony\Bundle\SecurityBundle\Security\FirewallContext(array(0 => new \Symfony\Component\Security\Http\Firewall\ChannelListener($j, new \Symfony\Component\Security\Http\EntryPoint\RetryAuthenticationEntryPoint(), $a), 1 => new \Symfony\Component\Security\Http\Firewall\ContextListener($b, array(0 => $this->get('fos_user.user_manager')), 'main', $a, $c), 2 => $l, 3 => new \Symfony\Component\Security\Http\Firewall\UsernamePasswordFormAuthenticationListener($b, $e, new \Symfony\Component\Security\Http\Session\SessionAuthenticationStrategy('migrate'), $k, 'main', array('check_path' => '/login_check', 'login_path' => '/login', 'use_forward' => false, 'always_use_default_target_path' => false, 'default_target_path' => '/', 'target_path_parameter' => '_target_path', 'use_referer' => false, 'failure_path' => NULL, 'failure_forward' => false, 'username_parameter' => '_username', 'password_parameter' => '_password', 'csrf_parameter' => '_csrf_token', 'intention' => 'authenticate', 'post_only' => true), NULL, NULL, $a, $c, $this->get('form.csrf_provider')), 4 => new \Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener($b, '4f671854c77c0', $a), 5 => new \Symfony\Component\Security\Http\Firewall\AccessListener($b, $this->get('security.access.decision_manager'), $j, $e, $a)), new \Symfony\Component\Security\Http\Firewall\ExceptionListener($b, $this->get('security.authentication.trust_resolver'), $k, new \Symfony\Component\Security\Http\EntryPoint\FormAuthenticationEntryPoint($this->get('http_kernel'), $k, '/login', false), NULL, NULL, $a));
+        return $this->services['security.firewall.map.context.main'] = new \Symfony\Bundle\SecurityBundle\Security\FirewallContext(array(0 => new \Symfony\Component\Security\Http\Firewall\ChannelListener($j, new \Symfony\Component\Security\Http\EntryPoint\RetryAuthenticationEntryPoint(), $a), 1 => new \Symfony\Component\Security\Http\Firewall\ContextListener($b, array(0 => $this->get('fos_user.user_manager')), 'main', $a, $c), 2 => $l, 3 => new \Symfony\Component\Security\Http\Firewall\UsernamePasswordFormAuthenticationListener($b, $e, new \Symfony\Component\Security\Http\Session\SessionAuthenticationStrategy('migrate'), $k, 'main', array('check_path' => '/login_check', 'login_path' => '/login', 'use_forward' => false, 'always_use_default_target_path' => false, 'default_target_path' => '/', 'target_path_parameter' => '_target_path', 'use_referer' => false, 'failure_path' => NULL, 'failure_forward' => false, 'username_parameter' => '_username', 'password_parameter' => '_password', 'csrf_parameter' => '_csrf_token', 'intention' => 'authenticate', 'post_only' => true), NULL, NULL, $a, $c, $this->get('form.csrf_provider')), 4 => new \Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener($b, '4f6cabd4ec6aa', $a), 5 => new \Symfony\Component\Security\Http\Firewall\AccessListener($b, $this->get('security.access.decision_manager'), $j, $e, $a)), new \Symfony\Component\Security\Http\Firewall\ExceptionListener($b, $this->get('security.authentication.trust_resolver'), $k, new \Symfony\Component\Security\Http\EntryPoint\FormAuthenticationEntryPoint($this->get('http_kernel'), $k, '/login', false), NULL, NULL, $a));
     }
 
     /**
@@ -2131,6 +2627,15 @@ class appDevDebugProjectContainer extends Container
         $instance->addResource('yml', '/Applications/MAMP/htdocs/Eventos/vendor/bundles/FOS/UserBundle/Resources/translations/validators.pt_BR.yml', 'pt_BR', 'validators');
         $instance->addResource('yml', '/Applications/MAMP/htdocs/Eventos/vendor/bundles/FOS/UserBundle/Resources/translations/validators.ru.yml', 'ru', 'validators');
         $instance->addResource('yml', '/Applications/MAMP/htdocs/Eventos/vendor/bundles/FOS/UserBundle/Resources/translations/validators.sl.yml', 'sl', 'validators');
+        $instance->addResource('yml', '/Applications/MAMP/htdocs/Eventos/vendor/bundles/FOS/CommentBundle/Resources/translations/FOSCommentBundle.da.yml', 'da', 'FOSCommentBundle');
+        $instance->addResource('yml', '/Applications/MAMP/htdocs/Eventos/vendor/bundles/FOS/CommentBundle/Resources/translations/FOSCommentBundle.de.yml', 'de', 'FOSCommentBundle');
+        $instance->addResource('yml', '/Applications/MAMP/htdocs/Eventos/vendor/bundles/FOS/CommentBundle/Resources/translations/FOSCommentBundle.en.yml', 'en', 'FOSCommentBundle');
+        $instance->addResource('yml', '/Applications/MAMP/htdocs/Eventos/vendor/bundles/FOS/CommentBundle/Resources/translations/FOSCommentBundle.es.yml', 'es', 'FOSCommentBundle');
+        $instance->addResource('yml', '/Applications/MAMP/htdocs/Eventos/vendor/bundles/FOS/CommentBundle/Resources/translations/FOSCommentBundle.fr.yml', 'fr', 'FOSCommentBundle');
+        $instance->addResource('yml', '/Applications/MAMP/htdocs/Eventos/vendor/bundles/FOS/CommentBundle/Resources/translations/FOSCommentBundle.mn.yml', 'mn', 'FOSCommentBundle');
+        $instance->addResource('yml', '/Applications/MAMP/htdocs/Eventos/vendor/bundles/FOS/CommentBundle/Resources/translations/FOSCommentBundle.pl.yml', 'pl', 'FOSCommentBundle');
+        $instance->addResource('yml', '/Applications/MAMP/htdocs/Eventos/vendor/bundles/FOS/CommentBundle/Resources/translations/FOSCommentBundle.ru.yml', 'ru', 'FOSCommentBundle');
+        $instance->addResource('yml', '/Applications/MAMP/htdocs/Eventos/vendor/bundles/FOS/CommentBundle/Resources/translations/FOSCommentBundle.sl.yml', 'sl', 'FOSCommentBundle');
 
         return $instance;
     }
@@ -2154,8 +2659,10 @@ class appDevDebugProjectContainer extends Container
         $instance->addExtension(new \Symfony\Bundle\TwigBundle\Extension\CodeExtension($this));
         $instance->addExtension(new \Symfony\Bridge\Twig\Extension\RoutingExtension($this->get('router')));
         $instance->addExtension(new \Symfony\Bridge\Twig\Extension\YamlExtension());
-        $instance->addExtension(new \Symfony\Bridge\Twig\Extension\FormExtension(array(0 => 'form_div_layout.html.twig')));
+        $instance->addExtension(new \Symfony\Bridge\Twig\Extension\FormExtension(array(0 => 'form_div_layout.html.twig', 1 => 'GoogleMapsBundle:Form:map.html.twig', 2 => 'GenemuFormBundle:Form:div_layout.html.twig', 3 => 'GenemuFormBundle:Form:jquery_layout.html.twig', 4 => 'GenemuFormBundle:Form:stylesheet_layout.html.twig')));
         $instance->addExtension(new \Symfony\Bundle\AsseticBundle\Twig\AsseticExtension($this->get('assetic.asset_factory'), true, array()));
+        $instance->addExtension($this->get('genemu.twig.extension.form'));
+        $instance->addExtension(new \FOS\CommentBundle\Twig\CommentExtension(NULL, NULL));
         $instance->addExtension($this->get('twig.extension.acme.demo'));
 
         return $instance;
@@ -2201,7 +2708,7 @@ class appDevDebugProjectContainer extends Container
      */
     protected function getValidatorService()
     {
-        return $this->services['validator'] = new \Symfony\Component\Validator\Validator($this->get('validator.mapping.class_metadata_factory'), new \Symfony\Bundle\FrameworkBundle\Validator\ConstraintValidatorFactory($this, array('doctrine.orm.validator.unique' => 'doctrine.orm.validator.unique', 'fos_user.validator.unique' => 'fos_user.validator.unique', 'fos_user.validator.password' => 'fos_user.validator.password')), array(0 => $this->get('doctrine.orm.validator_initializer')));
+        return $this->services['validator'] = new \Symfony\Component\Validator\Validator($this->get('validator.mapping.class_metadata_factory'), new \Symfony\Bundle\FrameworkBundle\Validator\ConstraintValidatorFactory($this, array('doctrine.orm.validator.unique' => 'doctrine.orm.validator.unique', 'fos_user.validator.unique' => 'fos_user.validator.unique', 'fos_user.validator.password' => 'fos_user.validator.password', 'genemu_validator.recaptcha' => 'genemu.form.type_recaptcha.validator')), array(0 => $this->get('doctrine.orm.validator_initializer')));
     }
 
     /**
@@ -2245,6 +2752,36 @@ class appDevDebugProjectContainer extends Container
     protected function getDoctrine_Orm_EntityManagerService()
     {
         return $this->get('doctrine.orm.default_entity_manager');
+    }
+
+    /**
+     * Gets the fos_comment.manager.comment service alias.
+     *
+     * @return FOS\CommentBundle\Entity\CommentManager An instance of the fos_comment.manager.comment.default service
+     */
+    protected function getFosComment_Manager_CommentService()
+    {
+        return $this->get('fos_comment.manager.comment.default');
+    }
+
+    /**
+     * Gets the fos_comment.manager.thread service alias.
+     *
+     * @return FOS\CommentBundle\Entity\ThreadManager An instance of the fos_comment.manager.thread.default service
+     */
+    protected function getFosComment_Manager_ThreadService()
+    {
+        return $this->get('fos_comment.manager.thread.default');
+    }
+
+    /**
+     * Gets the fos_comment.manager.vote service alias.
+     *
+     * @return FOS\CommentBundle\Entity\VoteManager An instance of the fos_comment.manager.vote.default service
+     */
+    protected function getFosComment_Manager_VoteService()
+    {
+        return $this->get('fos_comment.manager.vote.default');
     }
 
     /**
@@ -2350,6 +2887,23 @@ class appDevDebugProjectContainer extends Container
     }
 
     /**
+     * Gets the 'fos_comment.entity_manager' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * This service is private.
+     * If you want to be able to request this service from the container directly,
+     * make it public, otherwise you might end up with broken code.
+     *
+     * @return Doctrine\ORM\EntityManager A Doctrine\ORM\EntityManager instance.
+     */
+    protected function getFosComment_EntityManagerService()
+    {
+        return $this->services['fos_comment.entity_manager'] = $this->get('doctrine')->getEntityManager(NULL);
+    }
+
+    /**
      * Gets the 'security.access.decision_manager' service.
      *
      * This service is shared.
@@ -2380,7 +2934,7 @@ class appDevDebugProjectContainer extends Container
      */
     protected function getSecurity_Authentication_ManagerService()
     {
-        return $this->services['security.authentication.manager'] = new \Symfony\Component\Security\Core\Authentication\AuthenticationProviderManager(array(0 => new \Symfony\Component\Security\Core\Authentication\Provider\DaoAuthenticationProvider($this->get('fos_user.user_manager'), $this->get('fos_user.user_checker'), 'main', $this->get('security.encoder_factory'), true), 1 => new \Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider('4f671854c77c0')));
+        return $this->services['security.authentication.manager'] = new \Symfony\Component\Security\Core\Authentication\AuthenticationProviderManager(array(0 => new \Symfony\Component\Security\Core\Authentication\Provider\DaoAuthenticationProvider($this->get('fos_user.user_manager'), $this->get('fos_user.user_checker'), 'main', $this->get('security.encoder_factory'), true), 1 => new \Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider('4f6cabd4ec6aa')));
     }
 
     /**
@@ -2448,7 +3002,7 @@ class appDevDebugProjectContainer extends Container
      */
     protected function getValidator_Mapping_ClassMetadataFactoryService()
     {
-        return $this->services['validator.mapping.class_metadata_factory'] = new \Symfony\Component\Validator\Mapping\ClassMetadataFactory(new \Symfony\Component\Validator\Mapping\Loader\LoaderChain(array(0 => new \Symfony\Component\Validator\Mapping\Loader\AnnotationLoader($this->get('annotation_reader')), 1 => new \Symfony\Component\Validator\Mapping\Loader\StaticMethodLoader(), 2 => new \Symfony\Component\Validator\Mapping\Loader\XmlFilesLoader(array(0 => '/Applications/MAMP/htdocs/Eventos/vendor/symfony/src/Symfony/Component/Form/Resources/config/validation.xml', 1 => '/Applications/MAMP/htdocs/Eventos/vendor/bundles/FOS/UserBundle/Resources/config/validation.xml')), 3 => new \Symfony\Component\Validator\Mapping\Loader\YamlFilesLoader(array()))), NULL);
+        return $this->services['validator.mapping.class_metadata_factory'] = new \Symfony\Component\Validator\Mapping\ClassMetadataFactory(new \Symfony\Component\Validator\Mapping\Loader\LoaderChain(array(0 => new \Symfony\Component\Validator\Mapping\Loader\AnnotationLoader($this->get('annotation_reader')), 1 => new \Symfony\Component\Validator\Mapping\Loader\StaticMethodLoader(), 2 => new \Symfony\Component\Validator\Mapping\Loader\XmlFilesLoader(array(0 => '/Applications/MAMP/htdocs/Eventos/vendor/symfony/src/Symfony/Component/Form/Resources/config/validation.xml', 1 => '/Applications/MAMP/htdocs/Eventos/vendor/bundles/FOS/UserBundle/Resources/config/validation.xml', 2 => '/Applications/MAMP/htdocs/Eventos/vendor/bundles/FOS/CommentBundle/Resources/config/validation.xml')), 3 => new \Symfony\Component\Validator\Mapping\Loader\YamlFilesLoader(array()))), NULL);
     }
 
     /**
@@ -2519,8 +3073,15 @@ class appDevDebugProjectContainer extends Container
                 'CoreUserBundle' => 'Core\\UserBundle\\CoreUserBundle',
                 'RoleUserBundle' => 'Role\\UserBundle\\RoleUserBundle',
                 'RoleAdminBundle' => 'Role\\AdminBundle\\RoleAdminBundle',
+                'CoreApiBundle' => 'Core\\ApiBundle\\CoreApiBundle',
                 'CoreTemplateBundle' => 'Core\\TemplateBundle\\CoreTemplateBundle',
                 'FOSUserBundle' => 'FOS\\UserBundle\\FOSUserBundle',
+                'AppSocialBundle' => 'App\\SocialBundle\\AppSocialBundle',
+                'GoogleMapsBundle' => 'Google\\MapsBundle\\GoogleMapsBundle',
+                'CoreFoursquareBundle' => 'Core\\FoursquareBundle\\CoreFoursquareBundle',
+                'ProCrawlerBundle' => 'Pro\\CrawlerBundle\\ProCrawlerBundle',
+                'GenemuFormBundle' => 'Genemu\\Bundle\\FormBundle\\GenemuFormBundle',
+                'FOSCommentBundle' => 'FOS\\CommentBundle\\FOSCommentBundle',
                 'AcmeDemoBundle' => 'Acme\\DemoBundle\\AcmeDemoBundle',
                 'WebProfilerBundle' => 'Symfony\\Bundle\\WebProfilerBundle\\WebProfilerBundle',
                 'SensioDistributionBundle' => 'Sensio\\Bundle\\DistributionBundle\\SensioDistributionBundle',
@@ -2588,6 +3149,7 @@ class appDevDebugProjectContainer extends Container
             'validator.mapping.loader.xml_files_loader.mapping_files' => array(
                 0 => '/Applications/MAMP/htdocs/Eventos/vendor/symfony/src/Symfony/Component/Form/Resources/config/validation.xml',
                 1 => '/Applications/MAMP/htdocs/Eventos/vendor/bundles/FOS/UserBundle/Resources/config/validation.xml',
+                2 => '/Applications/MAMP/htdocs/Eventos/vendor/bundles/FOS/CommentBundle/Resources/config/validation.xml',
             ),
             'validator.mapping.loader.yaml_files_loader.mapping_files' => array(
 
@@ -2742,6 +3304,10 @@ class appDevDebugProjectContainer extends Container
             'twig.exception_listener.controller' => 'Symfony\\Bundle\\TwigBundle\\Controller\\ExceptionController::showAction',
             'twig.form.resources' => array(
                 0 => 'form_div_layout.html.twig',
+                1 => 'GoogleMapsBundle:Form:map.html.twig',
+                2 => 'GenemuFormBundle:Form:div_layout.html.twig',
+                3 => 'GenemuFormBundle:Form:jquery_layout.html.twig',
+                4 => 'GenemuFormBundle:Form:stylesheet_layout.html.twig',
             ),
             'twig.options' => array(
                 'debug' => true,
@@ -2944,6 +3510,92 @@ class appDevDebugProjectContainer extends Container
                 0 => 'ResetPassword',
                 1 => 'Default',
             ),
+            'genemu.form.recaptcha.public_key' => '',
+            'genemu.form.recaptcha.private_key' => '',
+            'genemu.form.recaptcha.server_url' => '',
+            'genemu.form.recaptcha.options' => array(
+
+            ),
+            'genemu.form.captcha.options' => array(
+                'enabled' => true,
+                'driver' => 'gd',
+                'position' => 'left',
+                'width' => 100,
+                'height' => 30,
+                'length' => 4,
+                'format' => 'png',
+                'chars' => array(
+                    0 => 0,
+                    1 => 1,
+                    2 => 2,
+                    3 => 3,
+                    4 => 4,
+                    5 => 5,
+                    6 => 6,
+                    7 => 7,
+                    8 => 8,
+                    9 => 9,
+                ),
+                'font_size' => 18,
+                'font_color' => array(
+                    0 => '252525',
+                    1 => '8B8787',
+                    2 => '550707',
+                    3 => '3526E6',
+                    4 => '88531E',
+                ),
+                'fonts' => array(
+                    0 => '/Applications/MAMP/htdocs/Eventos/app/../web/bundles/genemuform/fonts/akbar.ttf',
+                    1 => '/Applications/MAMP/htdocs/Eventos/app/../web/bundles/genemuform/fonts/brushcut.ttf',
+                    2 => '/Applications/MAMP/htdocs/Eventos/app/../web/bundles/genemuform/fonts/molten.ttf',
+                    3 => '/Applications/MAMP/htdocs/Eventos/app/../web/bundles/genemuform/fonts/planetbe.ttf',
+                    4 => '/Applications/MAMP/htdocs/Eventos/app/../web/bundles/genemuform/fonts/whoobub.ttf',
+                ),
+                'background_color' => 'DDDDDD',
+                'border_color' => '000000',
+            ),
+            'genemu.form.tinymce.configs' => array(
+                'theme' => 'advanced',
+            ),
+            'genemu.form.color.options' => array(
+
+            ),
+            'genemu.form.date.options' => array(
+
+            ),
+            'genemu.form.rating.options' => array(
+
+            ),
+            'genemu.form.file.root_dir' => '/Applications/MAMP/htdocs/Eventos/app/../web',
+            'genemu.form.file.folder' => '/upload',
+            'genemu.form.file.upload_dir' => '/Applications/MAMP/htdocs/Eventos/app/../web/upload',
+            'genemu.form.file.options' => array(
+
+            ),
+            'genemu.form.image.selected' => '',
+            'genemu.form.image.thumbnails' => array(
+
+            ),
+            'genemu.form.image.filters' => array(
+
+            ),
+            'fos_comment.model.thread.class' => 'App\\SocialBundle\\Entity\\Thread',
+            'fos_comment.model.comment.class' => 'App\\SocialBundle\\Entity\\Comment',
+            'fos_comment.model.vote.class' => 'FOS\\CommentBundle\\Entity\\Vote',
+            'fos_comment.manager.thread.default.class' => 'FOS\\CommentBundle\\Entity\\ThreadManager',
+            'fos_comment.manager.comment.default.class' => 'FOS\\CommentBundle\\Entity\\CommentManager',
+            'fos_comment.manager.vote.default.class' => 'FOS\\CommentBundle\\Entity\\VoteManager',
+            'fos_comment.sorting_factory.class' => 'FOS\\CommentBundle\\Sorting\\SortingFactory',
+            'fos_comment.sorter.date.class' => 'FOS\\CommentBundle\\Sorting\\DateSorting',
+            'fos_comment.template.engine' => 'twig',
+            'fos_comment.model_manager_name' => NULL,
+            'fos_comment.form.comment.type' => 'fos_comment.comment',
+            'fos_comment.form.comment.name' => 'fos_comment_comment',
+            'fos_comment.form.thread.type' => 'fos_comment.thread',
+            'fos_comment.form.thread.name' => 'fos_comment_thread',
+            'fos_comment.form.vote.type' => 'fos_comment.vote',
+            'fos_comment.form.vote.name' => 'fos_comment_vote',
+            'fos_comment.sorting_factory.default_sorter' => 'date_desc',
             'web_profiler.debug_toolbar.class' => 'Symfony\\Bundle\\WebProfilerBundle\\EventListener\\WebDebugToolbarListener',
             'web_profiler.debug_toolbar.intercept_redirects' => false,
             'web_profiler.debug_toolbar.mode' => 2,

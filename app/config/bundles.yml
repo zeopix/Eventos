@@ -2,3 +2,13 @@ fos_user:
     db_driver: orm
     firewall_name: main
     user_class: Core\UserBundle\Entity\User
+
+genemu_form: ~
+
+
+fos_comment:
+    db_driver: orm
+    class:
+        model:
+            comment: App\SocialBundle\Entity\Comment
+            thread: App\SocialBundle\Entity\Thread
