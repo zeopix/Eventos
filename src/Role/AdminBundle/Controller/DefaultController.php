@@ -8,9 +8,6 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 
 use Genemu\Bundle\FormBundle\Form\JQuery\Type\GeolocationType;
 
-/**
-* @Route("/admin")
-*/
 class DefaultController extends Controller
 {
     /**

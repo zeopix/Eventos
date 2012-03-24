@@ -13,8 +13,6 @@ use Symfony\Component\Routing\Exception\RouteNotFoundException;
 class appdevUrlGenerator extends Symfony\Component\Routing\Generator\UrlGenerator
 {
     static private $declaredRouteNames = array(
-       '_assetic_26fbbe1' => true,
-       '_assetic_26fbbe1_0' => true,
        '_assetic_b98098e' => true,
        '_assetic_b98098e_0' => true,
        '_assetic_b98098e_1' => true,
@@ -87,16 +85,6 @@ class appdevUrlGenerator extends Symfony\Component\Routing\Generator\UrlGenerato
         list($variables, $defaults, $requirements, $tokens) = $this->{'get'.$escapedName.'RouteInfo'}();
 
         return $this->doGenerate($variables, $defaults, $requirements, $tokens, $parameters, $name, $absolute);
-    }
-
-    private function get_assetic_26fbbe1RouteInfo()
-    {
-        return array(array (), array (  '_controller' => 'assetic.controller:render',  'name' => '26fbbe1',  'pos' => NULL,  '_format' => 'css',), array (), array (  0 =>   array (    0 => 'text',    1 => '/css/26fbbe1.css',  ),));
-    }
-
-    private function get_assetic_26fbbe1_0RouteInfo()
-    {
-        return array(array (), array (  '_controller' => 'assetic.controller:render',  'name' => '26fbbe1',  'pos' => 0,  '_format' => 'css',), array (), array (  0 =>   array (    0 => 'text',    1 => '/css/26fbbe1_bootstrap_1.css',  ),));
     }
 
     private function get_assetic_b98098eRouteInfo()

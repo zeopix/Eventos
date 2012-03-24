@@ -7,7 +7,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 
 /**
-* @Route("/admin/users")
+* @Route("/users")
 */
 class UserController extends Controller
 {
