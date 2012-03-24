@@ -15,6 +15,21 @@ class appdevUrlGenerator extends Symfony\Component\Routing\Generator\UrlGenerato
     static private $declaredRouteNames = array(
        '_assetic_26fbbe1' => true,
        '_assetic_26fbbe1_0' => true,
+       '_assetic_b98098e' => true,
+       '_assetic_b98098e_0' => true,
+       '_assetic_b98098e_1' => true,
+       '_assetic_b98098e_2' => true,
+       '_assetic_b98098e_3' => true,
+       '_assetic_b98098e_4' => true,
+       '_assetic_b98098e_5' => true,
+       '_assetic_b98098e_6' => true,
+       '_assetic_b98098e_7' => true,
+       '_assetic_b98098e_8' => true,
+       '_assetic_b98098e_9' => true,
+       '_assetic_b98098e_10' => true,
+       '_assetic_b98098e_11' => true,
+       '_assetic_b98098e_12' => true,
+       '_assetic_b98098e_13' => true,
        '_assetic_35a8e64' => true,
        '_assetic_35a8e64_0' => true,
        '_wdt' => true,
@@ -46,7 +61,7 @@ class appdevUrlGenerator extends Symfony\Component\Routing\Generator\UrlGenerato
        'fos_user_resetting_check_email' => true,
        'fos_user_resetting_reset' => true,
        'fos_user_change_password' => true,
-       'core_api_login' => true,
+       'core_api' => true,
        'default' => true,
        'default_success' => true,
        'default_promotores' => true,
@@ -82,6 +97,81 @@ class appdevUrlGenerator extends Symfony\Component\Routing\Generator\UrlGenerato
     private function get_assetic_26fbbe1_0RouteInfo()
     {
         return array(array (), array (  '_controller' => 'assetic.controller:render',  'name' => '26fbbe1',  'pos' => 0,  '_format' => 'css',), array (), array (  0 =>   array (    0 => 'text',    1 => '/css/26fbbe1_bootstrap_1.css',  ),));
+    }
+
+    private function get_assetic_b98098eRouteInfo()
+    {
+        return array(array (), array (  '_controller' => 'assetic.controller:render',  'name' => 'b98098e',  'pos' => NULL,  '_format' => 'js',), array (), array (  0 =>   array (    0 => 'text',    1 => '/js/b98098e.js',  ),));
+    }
+
+    private function get_assetic_b98098e_0RouteInfo()
+    {
+        return array(array (), array (  '_controller' => 'assetic.controller:render',  'name' => 'b98098e',  'pos' => 0,  '_format' => 'js',), array (), array (  0 =>   array (    0 => 'text',    1 => '/js/b98098e_part_1_README_1.js',  ),));
+    }
+
+    private function get_assetic_b98098e_1RouteInfo()
+    {
+        return array(array (), array (  '_controller' => 'assetic.controller:render',  'name' => 'b98098e',  'pos' => 1,  '_format' => 'js',), array (), array (  0 =>   array (    0 => 'text',    1 => '/js/b98098e_part_1_bootstrap-alert_2.js',  ),));
+    }
+
+    private function get_assetic_b98098e_2RouteInfo()
+    {
+        return array(array (), array (  '_controller' => 'assetic.controller:render',  'name' => 'b98098e',  'pos' => 2,  '_format' => 'js',), array (), array (  0 =>   array (    0 => 'text',    1 => '/js/b98098e_part_1_bootstrap-button_3.js',  ),));
+    }
+
+    private function get_assetic_b98098e_3RouteInfo()
+    {
+        return array(array (), array (  '_controller' => 'assetic.controller:render',  'name' => 'b98098e',  'pos' => 3,  '_format' => 'js',), array (), array (  0 =>   array (    0 => 'text',    1 => '/js/b98098e_part_1_bootstrap-carousel_4.js',  ),));
+    }
+
+    private function get_assetic_b98098e_4RouteInfo()
+    {
+        return array(array (), array (  '_controller' => 'assetic.controller:render',  'name' => 'b98098e',  'pos' => 4,  '_format' => 'js',), array (), array (  0 =>   array (    0 => 'text',    1 => '/js/b98098e_part_1_bootstrap-collapse_5.js',  ),));
+    }
+
+    private function get_assetic_b98098e_5RouteInfo()
+    {
+        return array(array (), array (  '_controller' => 'assetic.controller:render',  'name' => 'b98098e',  'pos' => 5,  '_format' => 'js',), array (), array (  0 =>   array (    0 => 'text',    1 => '/js/b98098e_part_1_bootstrap-dropdown_6.js',  ),));
+    }
+
+    private function get_assetic_b98098e_6RouteInfo()
+    {
+        return array(array (), array (  '_controller' => 'assetic.controller:render',  'name' => 'b98098e',  'pos' => 6,  '_format' => 'js',), array (), array (  0 =>   array (    0 => 'text',    1 => '/js/b98098e_part_1_bootstrap-modal_7.js',  ),));
+    }
+
+    private function get_assetic_b98098e_7RouteInfo()
+    {
+        return array(array (), array (  '_controller' => 'assetic.controller:render',  'name' => 'b98098e',  'pos' => 7,  '_format' => 'js',), array (), array (  0 =>   array (    0 => 'text',    1 => '/js/b98098e_part_1_bootstrap-popover_8.js',  ),));
+    }
+
+    private function get_assetic_b98098e_8RouteInfo()
+    {
+        return array(array (), array (  '_controller' => 'assetic.controller:render',  'name' => 'b98098e',  'pos' => 8,  '_format' => 'js',), array (), array (  0 =>   array (    0 => 'text',    1 => '/js/b98098e_part_1_bootstrap-scrollspy_9.js',  ),));
+    }
+
+    private function get_assetic_b98098e_9RouteInfo()
+    {
+        return array(array (), array (  '_controller' => 'assetic.controller:render',  'name' => 'b98098e',  'pos' => 9,  '_format' => 'js',), array (), array (  0 =>   array (    0 => 'text',    1 => '/js/b98098e_part_1_bootstrap-tab_10.js',  ),));
+    }
+
+    private function get_assetic_b98098e_10RouteInfo()
+    {
+        return array(array (), array (  '_controller' => 'assetic.controller:render',  'name' => 'b98098e',  'pos' => 10,  '_format' => 'js',), array (), array (  0 =>   array (    0 => 'text',    1 => '/js/b98098e_part_1_bootstrap-tooltip_11.js',  ),));
+    }
+
+    private function get_assetic_b98098e_11RouteInfo()
+    {
+        return array(array (), array (  '_controller' => 'assetic.controller:render',  'name' => 'b98098e',  'pos' => 11,  '_format' => 'js',), array (), array (  0 =>   array (    0 => 'text',    1 => '/js/b98098e_part_1_bootstrap-transition_12.js',  ),));
+    }
+
+    private function get_assetic_b98098e_12RouteInfo()
+    {
+        return array(array (), array (  '_controller' => 'assetic.controller:render',  'name' => 'b98098e',  'pos' => 12,  '_format' => 'js',), array (), array (  0 =>   array (    0 => 'text',    1 => '/js/b98098e_part_1_bootstrap-typeahead_13.js',  ),));
+    }
+
+    private function get_assetic_b98098e_13RouteInfo()
+    {
+        return array(array (), array (  '_controller' => 'assetic.controller:render',  'name' => 'b98098e',  'pos' => 13,  '_format' => 'js',), array (), array (  0 =>   array (    0 => 'text',    1 => '/js/b98098e_part_1_tests_14.js',  ),));
     }
 
     private function get_assetic_35a8e64RouteInfo()
@@ -151,17 +241,17 @@ class appdevUrlGenerator extends Symfony\Component\Routing\Generator\UrlGenerato
 
     private function getrole_adminRouteInfo()
     {
-        return array(array (), array (  '_controller' => 'Role\\AdminBundle\\Controller\\DefaultController::indexAction',), array (), array (  0 =>   array (    0 => 'text',    1 => '/admin/',  ),));
+        return array(array (), array (  '_controller' => 'Role\\AdminBundle\\Controller\\DefaultController::indexAction',), array (), array (  0 =>   array (    0 => 'text',    1 => '/admin/admin/',  ),));
     }
 
     private function getrole_admin_userRouteInfo()
     {
-        return array(array (), array (  '_controller' => 'Role\\AdminBundle\\Controller\\UserController::indexAction',), array (), array (  0 =>   array (    0 => 'text',    1 => '/admin/users/',  ),));
+        return array(array (), array (  '_controller' => 'Role\\AdminBundle\\Controller\\UserController::indexAction',), array (), array (  0 =>   array (    0 => 'text',    1 => '/admin/admin/users/',  ),));
     }
 
     private function getrole_userRouteInfo()
     {
-        return array(array (), array (  '_controller' => 'Role\\UserBundle\\Controller\\DefaultController::indexAction',), array (), array (  0 =>   array (    0 => 'text',    1 => '//',  ),));
+        return array(array (), array (  '_controller' => 'Role\\UserBundle\\Controller\\DefaultController::indexAction',), array (), array (  0 =>   array (    0 => 'text',    1 => '/secured/',  ),));
     }
 
     private function getcore_foursquare_default_indexRouteInfo()
@@ -239,9 +329,9 @@ class appdevUrlGenerator extends Symfony\Component\Routing\Generator\UrlGenerato
         return array(array (), array (  '_controller' => 'FOS\\UserBundle\\Controller\\ChangePasswordController::changePasswordAction',), array (  '_method' => 'GET|POST',), array (  0 =>   array (    0 => 'text',    1 => '/profile/change-password',  ),));
     }
 
-    private function getcore_api_loginRouteInfo()
+    private function getcore_apiRouteInfo()
     {
-        return array(array (), array (  '_controller' => 'Core\\ApiBundle\\Controller\\RestController::loginAction',), array (), array (  0 =>   array (    0 => 'text',    1 => '/api/login',  ),));
+        return array(array (), array (  '_controller' => 'Core\\ApiBundle\\Controller\\RestController::indexAction',), array (), array (  0 =>   array (    0 => 'text',    1 => '/api/',  ),));
     }
 
     private function getdefaultRouteInfo()

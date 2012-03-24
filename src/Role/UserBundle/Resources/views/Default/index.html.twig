@@ -1,0 +1,22 @@
+{% extends 'CoreTemplateBundle::layout.html.twig' %}
+{% set active = 'home' %}
+{% block main %}
+<div class="row">
+<div class="span6 offset1 well">
+<h2>Accede con tu smartphone!</h2>
+Tu cuenta ya está activa y lista para funcionar, accede a <span class="label">http://eyeonparty.com</span> desde tu smartphone y prueba la aplicación.<br><br>
+Esperamos que nos dejes tu opinión en nuestra página de facebook:
+<br><br>
+<a href="http://www.facebook.com/eyeonparty">http://www.facebook.com/eyeonparty</a>
+<br>
+<div class="fb-like" data-href="http://www.facebook.com/eyeonparty" data-send="false" data-width="450" data-show-faces="true" data-font="arial"></div>
+<br><br>
+<div class="alert alert-warning"><b>Nota Importante</b><br>Esta aplicación aún está en fase de pruebas, por favor, si detectas alguna incidencia envíanos un correo a <span class="label label-info">info@eyeonparty.com</span>.<br> <br> Gracias !</div>
+</div>
+<div class="span3">
+<h6>Deja tu comentario!</h6>
+<hr>
+<div class="fb-comments" data-href="http://eyeonparty.com/secured/" data-num-posts="10" data-width="300"></div>
+</div>
+</div>
+{% endblock %}

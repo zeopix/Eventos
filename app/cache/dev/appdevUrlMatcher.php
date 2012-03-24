@@ -35,6 +35,81 @@ class appdevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             return array (  '_controller' => 'assetic.controller:render',  'name' => '26fbbe1',  'pos' => 0,  '_format' => 'css',  '_route' => '_assetic_26fbbe1_0',);
         }
 
+        // _assetic_b98098e
+        if ($pathinfo === '/js/b98098e.js') {
+            return array (  '_controller' => 'assetic.controller:render',  'name' => 'b98098e',  'pos' => NULL,  '_format' => 'js',  '_route' => '_assetic_b98098e',);
+        }
+
+        // _assetic_b98098e_0
+        if ($pathinfo === '/js/b98098e_part_1_README_1.js') {
+            return array (  '_controller' => 'assetic.controller:render',  'name' => 'b98098e',  'pos' => 0,  '_format' => 'js',  '_route' => '_assetic_b98098e_0',);
+        }
+
+        // _assetic_b98098e_1
+        if ($pathinfo === '/js/b98098e_part_1_bootstrap-alert_2.js') {
+            return array (  '_controller' => 'assetic.controller:render',  'name' => 'b98098e',  'pos' => 1,  '_format' => 'js',  '_route' => '_assetic_b98098e_1',);
+        }
+
+        // _assetic_b98098e_2
+        if ($pathinfo === '/js/b98098e_part_1_bootstrap-button_3.js') {
+            return array (  '_controller' => 'assetic.controller:render',  'name' => 'b98098e',  'pos' => 2,  '_format' => 'js',  '_route' => '_assetic_b98098e_2',);
+        }
+
+        // _assetic_b98098e_3
+        if ($pathinfo === '/js/b98098e_part_1_bootstrap-carousel_4.js') {
+            return array (  '_controller' => 'assetic.controller:render',  'name' => 'b98098e',  'pos' => 3,  '_format' => 'js',  '_route' => '_assetic_b98098e_3',);
+        }
+
+        // _assetic_b98098e_4
+        if ($pathinfo === '/js/b98098e_part_1_bootstrap-collapse_5.js') {
+            return array (  '_controller' => 'assetic.controller:render',  'name' => 'b98098e',  'pos' => 4,  '_format' => 'js',  '_route' => '_assetic_b98098e_4',);
+        }
+
+        // _assetic_b98098e_5
+        if ($pathinfo === '/js/b98098e_part_1_bootstrap-dropdown_6.js') {
+            return array (  '_controller' => 'assetic.controller:render',  'name' => 'b98098e',  'pos' => 5,  '_format' => 'js',  '_route' => '_assetic_b98098e_5',);
+        }
+
+        // _assetic_b98098e_6
+        if ($pathinfo === '/js/b98098e_part_1_bootstrap-modal_7.js') {
+            return array (  '_controller' => 'assetic.controller:render',  'name' => 'b98098e',  'pos' => 6,  '_format' => 'js',  '_route' => '_assetic_b98098e_6',);
+        }
+
+        // _assetic_b98098e_7
+        if ($pathinfo === '/js/b98098e_part_1_bootstrap-popover_8.js') {
+            return array (  '_controller' => 'assetic.controller:render',  'name' => 'b98098e',  'pos' => 7,  '_format' => 'js',  '_route' => '_assetic_b98098e_7',);
+        }
+
+        // _assetic_b98098e_8
+        if ($pathinfo === '/js/b98098e_part_1_bootstrap-scrollspy_9.js') {
+            return array (  '_controller' => 'assetic.controller:render',  'name' => 'b98098e',  'pos' => 8,  '_format' => 'js',  '_route' => '_assetic_b98098e_8',);
+        }
+
+        // _assetic_b98098e_9
+        if ($pathinfo === '/js/b98098e_part_1_bootstrap-tab_10.js') {
+            return array (  '_controller' => 'assetic.controller:render',  'name' => 'b98098e',  'pos' => 9,  '_format' => 'js',  '_route' => '_assetic_b98098e_9',);
+        }
+
+        // _assetic_b98098e_10
+        if ($pathinfo === '/js/b98098e_part_1_bootstrap-tooltip_11.js') {
+            return array (  '_controller' => 'assetic.controller:render',  'name' => 'b98098e',  'pos' => 10,  '_format' => 'js',  '_route' => '_assetic_b98098e_10',);
+        }
+
+        // _assetic_b98098e_11
+        if ($pathinfo === '/js/b98098e_part_1_bootstrap-transition_12.js') {
+            return array (  '_controller' => 'assetic.controller:render',  'name' => 'b98098e',  'pos' => 11,  '_format' => 'js',  '_route' => '_assetic_b98098e_11',);
+        }
+
+        // _assetic_b98098e_12
+        if ($pathinfo === '/js/b98098e_part_1_bootstrap-typeahead_13.js') {
+            return array (  '_controller' => 'assetic.controller:render',  'name' => 'b98098e',  'pos' => 12,  '_format' => 'js',  '_route' => '_assetic_b98098e_12',);
+        }
+
+        // _assetic_b98098e_13
+        if ($pathinfo === '/js/b98098e_part_1_tests_14.js') {
+            return array (  '_controller' => 'assetic.controller:render',  'name' => 'b98098e',  'pos' => 13,  '_format' => 'js',  '_route' => '_assetic_b98098e_13',);
+        }
+
         // _assetic_35a8e64
         if ($pathinfo === '/js/35a8e64.js') {
             return array (  '_controller' => 'assetic.controller:render',  'name' => '35a8e64',  'pos' => NULL,  '_format' => 'js',  '_route' => '_assetic_35a8e64',);
@@ -109,24 +184,27 @@ class appdevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             return array (  '_controller' => 'Core\\UserBundle\\Controller\\DefaultController::routeAction',  '_route' => 'user_route',);
         }
 
-        // role_admin
-        if (rtrim($pathinfo, '/') === '/admin') {
-            if (substr($pathinfo, -1) !== '/') {
-                return $this->redirect($pathinfo.'/', 'role_admin');
+        if (0 === strpos($pathinfo, '/admin')) {
+            // role_admin
+            if (rtrim($pathinfo, '/') === '/admin/admin') {
+                if (substr($pathinfo, -1) !== '/') {
+                    return $this->redirect($pathinfo.'/', 'role_admin');
+                }
+                return array (  '_controller' => 'Role\\AdminBundle\\Controller\\DefaultController::indexAction',  '_route' => 'role_admin',);
             }
-            return array (  '_controller' => 'Role\\AdminBundle\\Controller\\DefaultController::indexAction',  '_route' => 'role_admin',);
-        }
 
-        // role_admin_user
-        if (rtrim($pathinfo, '/') === '/admin/users') {
-            if (substr($pathinfo, -1) !== '/') {
-                return $this->redirect($pathinfo.'/', 'role_admin_user');
+            // role_admin_user
+            if (rtrim($pathinfo, '/') === '/admin/admin/users') {
+                if (substr($pathinfo, -1) !== '/') {
+                    return $this->redirect($pathinfo.'/', 'role_admin_user');
+                }
+                return array (  '_controller' => 'Role\\AdminBundle\\Controller\\UserController::indexAction',  '_route' => 'role_admin_user',);
             }
-            return array (  '_controller' => 'Role\\AdminBundle\\Controller\\UserController::indexAction',  '_route' => 'role_admin_user',);
+
         }
 
         // role_user
-        if (rtrim($pathinfo, '/') === '') {
+        if (rtrim($pathinfo, '/') === '/secured') {
             if (substr($pathinfo, -1) !== '/') {
                 return $this->redirect($pathinfo.'/', 'role_user');
             }
@@ -268,9 +346,12 @@ class appdevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         }
 
-        // core_api_login
-        if ($pathinfo === '/api/login') {
-            return array (  '_controller' => 'Core\\ApiBundle\\Controller\\RestController::loginAction',  '_route' => 'core_api_login',);
+        // core_api
+        if (rtrim($pathinfo, '/') === '/api') {
+            if (substr($pathinfo, -1) !== '/') {
+                return $this->redirect($pathinfo.'/', 'core_api');
+            }
+            return array (  '_controller' => 'Core\\ApiBundle\\Controller\\RestController::indexAction',  '_route' => 'core_api',);
         }
 
         // default

@@ -16,7 +16,7 @@ class DefaultController extends Controller
     	if(true === $this->get('security.context')->isGranted('ROLE_ADMIN')){
     		return $this->redirect($this->generateUrl('role_admin'));
     	}else if(true === $this->get('security.context')->isGranted('ROLE_USER')){
-    		return $this->redirect($this->generateUrl('role_admin'));
+    		return $this->redirect($this->generateUrl('role_user'));
     	}else{
 			die("Access not granted");
     	}

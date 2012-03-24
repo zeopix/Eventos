@@ -15,30 +15,13 @@ use Core\ApiBundle\Form\LoginType;
 class RestController extends Controller
 {
     /**
-     * @Route("/login",name="core_api_login")
+     * @Route("/",name="core_api")
      */
-    public function loginAction()
+    public function indexAction()
     {
-    	$request = $this->getRequest();
-
-    	$form = $this->createForm(new LoginType());
+    
     		
-		    		
-    	if($request->getMethod() == "POST"){
-    		//we proceed to login
-    		//
-    		$username = $request->request->get('username');
-    		$response = Array(
-    			'status' => 200,
-    			'responseText' => "Login status: " . $username
-    		);
-    	}else{
-    		
-    		return $this->render('CoreApiBundle:Form:login.json.twig',array('form' => $form->createView()));
-    	
-    	
-    	}
-    	
+		$response = "welcome!";
     	
     	
     	return new Response(json_encode($response));

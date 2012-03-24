@@ -6,12 +6,12 @@ CoreUserCtlBundle:
 RoleAdminBundle:
     resource: "@RoleAdminBundle/Controller/"
     type:     annotation
-    prefix:   /
+    prefix:   /admin
    
 RoleUserBundle:
     resource: "@RoleUserBundle/Controller/"
     type:     annotation
-    prefix:   /
+    prefix:   /secured
 
 CoreFoursquareBundle:
     resource: "@CoreFoursquareBundle/Controller/"
