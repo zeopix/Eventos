@@ -24,7 +24,6 @@ class AppKernel extends Kernel
             new Core\TemplateBundle\CoreTemplateBundle(),
             new FOS\UserBundle\FOSUserBundle(),
             new App\SocialBundle\AppSocialBundle(),
-            new Google\MapsBundle\GoogleMapsBundle(),
             new Core\FoursquareBundle\CoreFoursquareBundle(),
             new Pro\CrawlerBundle\ProCrawlerBundle(),
         new Genemu\Bundle\FormBundle\GenemuFormBundle(),
