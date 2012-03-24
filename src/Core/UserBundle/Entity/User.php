@@ -1,6 +1,4 @@
 <?php
-// src/Jet/UserBundle/Entity/User.php
-
 namespace Core\UserBundle\Entity;
 
 use FOS\UserBundle\Entity\User as BaseUser;
@@ -46,6 +44,9 @@ class User extends BaseUser
      * @ORM\Column(name="birthday", type="date", nullable=true)
      */
     private $birthday;
+    private $birthday_day;
+    private $birthday_month;
+    private $birthday_year;
 
     /**
      * @var boolean $isMale
@@ -164,4 +165,19 @@ class User extends BaseUser
     {
         return $this->surname;
     }
+    
+    public function convertBirthday(){
+    
+    	$date = new \DateTime();
+    	$date->setDate($this->birthday_day,$this->birthday_month,$this->birthday_year);
+    	$this->setBirthday($date);
+    
+    }
+    
+    public function getBirthdayMonth(){ return $this->birthday_month; }
+    public function getBirthdayDay(){ return $this->birthday_day; }
+    public function getBirthdayYear(){ return $this->birthday_year; }
+    public function setBirthdayMonth($elm){ $this->birthday_month = $elm; }
+    public function setBirthdayDay($elm){ $this->birthday_day = $elm; }
+    public function setBirthdayYear($elm){ $this->birthday_year = $elm; }
 }

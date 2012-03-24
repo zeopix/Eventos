@@ -19,7 +19,7 @@ class RegistrationType extends AbstractType
             'type' => 'password',
             'first_name' => 'Elija una contraseña',
             'second_name' => 'Repita la contraseña'
-        ));
+        ))->add('birthday_day','hidden')->add('birthday_month','hidden')->add('birthday_year','hidden');
 
     }
 

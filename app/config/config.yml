@@ -21,9 +21,6 @@ framework:
 twig:
     debug:            %kernel.debug%
     strict_variables: %kernel.debug%
-    form:
-       resources:
-           - 'GoogleMapsBundle:Form:map.html.twig'
 
 # Assetic Configuration
 assetic:
