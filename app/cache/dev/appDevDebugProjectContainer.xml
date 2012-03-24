@@ -24,7 +24,6 @@
       <parameter key="CoreTemplateBundle">Core\TemplateBundle\CoreTemplateBundle</parameter>
       <parameter key="FOSUserBundle">FOS\UserBundle\FOSUserBundle</parameter>
       <parameter key="AppSocialBundle">App\SocialBundle\AppSocialBundle</parameter>
-      <parameter key="GoogleMapsBundle">Google\MapsBundle\GoogleMapsBundle</parameter>
       <parameter key="CoreFoursquareBundle">Core\FoursquareBundle\CoreFoursquareBundle</parameter>
       <parameter key="ProCrawlerBundle">Pro\CrawlerBundle\ProCrawlerBundle</parameter>
       <parameter key="GenemuFormBundle">Genemu\Bundle\FormBundle\GenemuFormBundle</parameter>
@@ -1858,7 +1857,7 @@
         </argument>
         <argument type="service">
           <service class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
-            <argument>4f6dd9d894143</argument>
+            <argument>4f6ddfb38757a</argument>
           </service>
         </argument>
       </argument>
@@ -2064,7 +2063,7 @@
         <argument type="service">
           <service class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
             <argument type="service" id="security.context"/>
-            <argument>4f6dd9d894143</argument>
+            <argument>4f6ddfb38757a</argument>
             <argument type="service" id="monolog.logger.security"/>
           </service>
         </argument>
@@ -2377,7 +2376,6 @@
               <argument key="CoreUserBundle">Core\UserBundle\Entity</argument>
               <argument key="FOSUserBundle">FOS\UserBundle\Entity</argument>
               <argument key="AppSocialBundle">App\SocialBundle\Entity</argument>
-              <argument key="GoogleMapsBundle">Google\MapsBundle\Entity</argument>
               <argument key="CoreFoursquareBundle">Core\FoursquareBundle\Entity</argument>
               <argument key="ProCrawlerBundle">Pro\CrawlerBundle\Entity</argument>
               <argument key="FOSCommentBundle">FOS\CommentBundle\Entity</argument>
@@ -2424,7 +2422,6 @@
                       <argument type="collection">
                         <argument>/Applications/MAMP/htdocs/Eventos/src/Core/UserBundle/Entity</argument>
                         <argument>/Applications/MAMP/htdocs/Eventos/src/App/SocialBundle/Entity</argument>
-                        <argument>/Applications/MAMP/htdocs/Eventos/src/Google/MapsBundle/Entity</argument>
                         <argument>/Applications/MAMP/htdocs/Eventos/src/Core/FoursquareBundle/Entity</argument>
                         <argument>/Applications/MAMP/htdocs/Eventos/src/Pro/CrawlerBundle/Entity</argument>
                       </argument>
@@ -2443,7 +2440,6 @@
                       <argument type="collection">
                         <argument>/Applications/MAMP/htdocs/Eventos/src/Core/UserBundle/Entity</argument>
                         <argument>/Applications/MAMP/htdocs/Eventos/src/App/SocialBundle/Entity</argument>
-                        <argument>/Applications/MAMP/htdocs/Eventos/src/Google/MapsBundle/Entity</argument>
                         <argument>/Applications/MAMP/htdocs/Eventos/src/Core/FoursquareBundle/Entity</argument>
                         <argument>/Applications/MAMP/htdocs/Eventos/src/Pro/CrawlerBundle/Entity</argument>
                       </argument>
@@ -2462,26 +2458,6 @@
                       <argument type="collection">
                         <argument>/Applications/MAMP/htdocs/Eventos/src/Core/UserBundle/Entity</argument>
                         <argument>/Applications/MAMP/htdocs/Eventos/src/App/SocialBundle/Entity</argument>
-                        <argument>/Applications/MAMP/htdocs/Eventos/src/Google/MapsBundle/Entity</argument>
-                        <argument>/Applications/MAMP/htdocs/Eventos/src/Core/FoursquareBundle/Entity</argument>
-                        <argument>/Applications/MAMP/htdocs/Eventos/src/Pro/CrawlerBundle/Entity</argument>
-                      </argument>
-                    </service>
-                  </argument>
-                  <argument>Google\MapsBundle\Entity</argument>
-                </call>
-                <call method="addDriver">
-                  <argument type="service">
-                    <service class="Doctrine\ORM\Mapping\Driver\AnnotationDriver" public="false">
-                      <argument type="service">
-                        <service class="Symfony\Bridge\Doctrine\Annotations\IndexedReader" public="false">
-                          <argument type="service" id="annotation_reader"/>
-                        </service>
-                      </argument>
-                      <argument type="collection">
-                        <argument>/Applications/MAMP/htdocs/Eventos/src/Core/UserBundle/Entity</argument>
-                        <argument>/Applications/MAMP/htdocs/Eventos/src/App/SocialBundle/Entity</argument>
-                        <argument>/Applications/MAMP/htdocs/Eventos/src/Google/MapsBundle/Entity</argument>
                         <argument>/Applications/MAMP/htdocs/Eventos/src/Core/FoursquareBundle/Entity</argument>
                         <argument>/Applications/MAMP/htdocs/Eventos/src/Pro/CrawlerBundle/Entity</argument>
                       </argument>
@@ -2500,7 +2476,6 @@
                       <argument type="collection">
                         <argument>/Applications/MAMP/htdocs/Eventos/src/Core/UserBundle/Entity</argument>
                         <argument>/Applications/MAMP/htdocs/Eventos/src/App/SocialBundle/Entity</argument>
-                        <argument>/Applications/MAMP/htdocs/Eventos/src/Google/MapsBundle/Entity</argument>
                         <argument>/Applications/MAMP/htdocs/Eventos/src/Core/FoursquareBundle/Entity</argument>
                         <argument>/Applications/MAMP/htdocs/Eventos/src/Pro/CrawlerBundle/Entity</argument>
                       </argument>
@@ -3021,33 +2996,6 @@
                   <argument type="service" id="templating.loader"/>
                   <argument>AppSocialBundle</argument>
                   <argument>/Applications/MAMP/htdocs/Eventos/src/App/SocialBundle/Resources/views</argument>
-                  <argument>/^[^.]+\.[^.]+\.twig$/</argument>
-                </service>
-              </argument>
-            </argument>
-          </service>
-        </argument>
-        <argument>twig</argument>
-      </call>
-      <call method="addResource">
-        <argument type="service">
-          <service class="Symfony\Bundle\AsseticBundle\Factory\Resource\CoalescingDirectoryResource" public="false">
-            <tag name="assetic.templating.twig"/>
-            <tag name="assetic.formula_resource" loader="twig"/>
-            <argument type="collection">
-              <argument type="service">
-                <service class="%assetic.directory_resource.class%" public="false">
-                  <argument type="service" id="templating.loader"/>
-                  <argument>GoogleMapsBundle</argument>
-                  <argument>/Applications/MAMP/htdocs/Eventos/app/Resources/GoogleMapsBundle/views</argument>
-                  <argument>/^[^.]+\.[^.]+\.twig$/</argument>
-                </service>
-              </argument>
-              <argument type="service">
-                <service class="%assetic.directory_resource.class%" public="false">
-                  <argument type="service" id="templating.loader"/>
-                  <argument>GoogleMapsBundle</argument>
-                  <argument>/Applications/MAMP/htdocs/Eventos/src/Google/MapsBundle/Resources/views</argument>
                   <argument>/^[^.]+\.[^.]+\.twig$/</argument>
                 </service>
               </argument>
