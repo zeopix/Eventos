@@ -38,8 +38,9 @@ class zonaDeluxe
             $discotecas[$i]["title"]=$images[$i][0];
             preg_match("#_\d*#is", $images[$i][1], $aux);
             preg_match("#[^_]\d*#is", $aux[0], $aux1);
+            preg_match("#(png)|(jpg)#is",$images[$i][1], $aux2);
             $discotecas[$i]["id"]=$aux1[0];
-            $discotecas[$i]["image"]="http://www.zonadeluxe.com/logos/".$discotecas[$i]["id"].".png";
+            $discotecas[$i]["image"]="http://www.zonadeluxe.com/logos/".$discotecas[$i]["id"].$aux2[0];
             $latlog = $this->getLatLog($discotecas[$i]["url"]);
             $discotecas[$i]["lat"] = $latlog["lat"];
             $discotecas[$i]["lng"] = $latlog["lng"];

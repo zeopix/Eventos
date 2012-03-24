@@ -12,14 +12,20 @@ class VenuesSearch
 
     private $clientSecret;
 
+    private $client;
+
     private $parameters = Array();
 
     public function __construct($clientId="FXZ0YOZZJ525TEVS2U055IAO32SD52BTI0GOOQIULZHYQRUT", $clientSecret="45RPLWS1DSXZ2HPEUME4RBNFZ20UKTXMIQ1YPQ3TRLVRBIFQ")
     {
         $this->clientId = $clientId;
         $this->clientSecret = $clientSecret;
+        $this->client = new Client();
     }
 
+    public function send($parmaters)
+    {
 
+    }
 
 }

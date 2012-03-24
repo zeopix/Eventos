@@ -15,8 +15,6 @@ class DefaultController extends Controller
      */
     public function indexAction()
     {
-        $hola = new zonaDeluxe($this->container);
-        $hola->getLatLog("http://www.zonadeluxe.com/discotecas/barcelona/setdenit/");
         return array();
     }
 }
