@@ -1,18 +1,18 @@
 <container xmlns="http://symfony.com/schema/dic/services"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
 
-   <services>
-       <service id="wsse.security.authentication.provider"
-         class="Core\ApiBundle\Security\Authentication\Provider\WsseProvider" public="false">
-           <argument /> <!-- User Provider -->
-           <argument>%kernel.cache_dir%/security/nonces</argument>
-       </service>
+    <services>
+        <service id="wsse.security.authentication.provider"
+                 class="Core\ApiBundle\Security\Authentication\Provider\WsseProvider" public="false">
+            <argument /> <!-- User Provider -->
+            <argument>%kernel.cache_dir%/security/nonces</argument>
+        </service>
 
-       <service id="wsse.security.authentication.listener"
-         class="Core\ApiBundle\Security\Firewall\WsseListener" public="false">
-           <argument type="service" id="security.context"/>
-           <argument type="service" id="security.authentication.manager" />
-       </service>
-   </services>
+        <service id="wsse.security.authentication.listener"
+                 class="Core\ApiBundle\Security\Firewall\WsseListener" public="false">
+            <argument type="service" id="security.context"/>
+            <argument type="service" id="security.authentication.manager" />
+        </service>
+    </services>
 </container>
