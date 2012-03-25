@@ -1,6 +1,6 @@
 security:
     factories:
-        - "%kernel.root_dir%/../src/Core/ApiBundle/Resources/config/security_factories.yml"
+        - "%kernel.root_dir%/../src/Core/ApiBundle/Resources/config/security_factories.xml"
 
     providers:
         fos_userbundle:
