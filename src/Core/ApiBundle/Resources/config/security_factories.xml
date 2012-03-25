@@ -4,7 +4,7 @@
 
     <services>
         <service id="security.authentication.factory.wsse"
-          class="Acme\DemoBundle\DependencyInjection\Security\Factory\WsseFactory" public="false">
+          class="Core\ApiBundle\DependencyInjection\Security\Factory\WsseFactory" public="false">
             <tag name="security.listener.factory" />
         </service>
     </services>
