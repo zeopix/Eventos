@@ -9,6 +9,7 @@ use Symfony\Component\HttpFoundation\Response;
 
 use Core\ApiBundle\Form\LoginType;
 
+//now is JSONP
 class RestController extends Controller
 {
     /**
@@ -38,6 +39,7 @@ class RestController extends Controller
     	
     	$latitude = $request->query->get('latitude');
     	$longitude = $request->query->get('longitude');
+    	$callback = $request->query->get('callback');
     	if(!empty($latitude) && !empty($longitude)){
     		//do specified query
     		
@@ -73,7 +75,9 @@ class RestController extends Controller
     		'results' => $results
     	);
     	
-    	return new Response(json_encode($response));
+    	$plainResponse = (!empty($callback)) ? $callback . "(" . json_encode($response) . ");" : json_encode($response);
+    	
+    	return new Response($plainResponse);
     	
     	
     	
