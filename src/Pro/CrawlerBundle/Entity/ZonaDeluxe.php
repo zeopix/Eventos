@@ -29,6 +29,12 @@ class ZonaDeluxe
     private $url;
 
     /**
+     * @var string $url
+     * @ORM\Column(name="distance", type="string", nullable=true, length=255)
+     */
+    private $distance;
+
+    /**
      * @var string $name
      *
      * @ORM\Column(name="name", type="string", length=255)
@@ -247,5 +253,24 @@ class ZonaDeluxe
     public function getComment()
     {
         return $this->comment;
+    }
+    
+    public function setDistance($distance){
+    	$this->distance = $distance;
+    }
+    public function getDistance(){
+    	return $this->distance;
+    }
+    
+    public function __toArray(){
+    	return Array(
+    		'url' => $this->url,
+    		'name' => $this->name,
+    		'id_local' => $this->id_local,
+    		'url_images' => $this->url_images,
+    		'lat' => $this->lat,
+    		'lng' => $this->lng,
+    		'comment' => strip_tags($this->comment),
+    	);
     }
 }

@@ -24,7 +24,7 @@ CoreUserBundle:
 CoreApiBundle:
     resource: "@CoreApiBundle/Controller/"
     type:     annotation
-    prefix:   /
+    prefix:   /api
 
 
 CoreTemplateBundle:
