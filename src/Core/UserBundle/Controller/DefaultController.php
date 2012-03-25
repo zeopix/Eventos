@@ -13,10 +13,10 @@ class DefaultController extends Controller
      */
     public function routeAction()
     {
-    	if(true === $this->get('security.context')->isGranted('ROLE_ADMIN')){
-    		return $this->redirect($this->generateUrl('role_admin'));
-    	}else if(true === $this->get('security.context')->isGranted('ROLE_USER')){
+    	if(true === $this->get('security.context')->isGranted('ROLE_USER')){
     		return $this->redirect($this->generateUrl('role_user'));
+    	}else if(true === $this->get('security.context')->isGranted('ROLE_ADMIN')){
+    		return $this->redirect($this->generateUrl('role_admin'));
     	}else{
 			die("Access not granted");
     	}

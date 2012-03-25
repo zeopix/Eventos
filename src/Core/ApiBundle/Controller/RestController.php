@@ -46,6 +46,7 @@ class RestController extends Controller
 			$rsm->addFieldResult('v', 'id', 'id');
 			$rsm->addFieldResult('v', 'name', 'name');
 			$rsm->addFieldResult('v', 'url', 'url');
+			$rsm->addFieldResult('v', 'url_images', 'url_images');
 			$rsm->addFieldResult('v', 'id_local', 'id_local');
 			$rsm->addFieldResult('v', 'lat', 'lat');
 			$rsm->addFieldResult('v', 'lng', 'lng');
@@ -57,7 +58,6 @@ class RestController extends Controller
 			$query->setParameter('lng', $longitude);
 
 			$em_venues = $query->getResult();
-			die(print_r($em_venues));
 
     	}else{
     		$em_venues = $em->getRepository('ProCrawlerBundle:ZonaDeluxe')->findAll();
