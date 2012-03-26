@@ -169,7 +169,8 @@ class User extends BaseUser
     public function convertBirthday(){
     
     	$date = new \DateTime();
-    	$date->setDate($this->birthday_day,$this->birthday_month,$this->birthday_year);
+    	
+    	$date->setDate($this->birthday_year,$this->birthday_month,$this->birthday_day);
     	$this->setBirthday($date);
     
     }

@@ -884,3 +884,8 @@
 [2012-03-25 16:34:50] security.DEBUG: Username "zeopix" was reloaded from user provider. [] []
 [2012-03-25 16:34:50] request.ERROR: Symfony\Component\HttpKernel\Exception\NotFoundHttpException: No route found for "GET /bundles/coretemplate/img/glyphicons-halflings.png" (uncaught exception) at /Applications/MAMP/htdocs/Eventos/app/cache/prod/classes.php line 4564 [] []
 [2012-03-25 16:34:50] security.DEBUG: Write SecurityContext in the session [] []
+[2012-03-26 22:28:20] security.DEBUG: Read SecurityContext from the session [] []
+[2012-03-26 22:28:20] security.DEBUG: Reloading user from user provider. [] []
+[2012-03-26 22:28:20] security.DEBUG: Username "zeopix" was reloaded from user provider. [] []
+[2012-03-26 22:28:20] request.ERROR: Symfony\Component\HttpKernel\Exception\NotFoundHttpException: No route found for "GET /bundles/coretemplate/img/glyphicons-halflings.png" (uncaught exception) at /Applications/MAMP/htdocs/Eventos/app/cache/prod/classes.php line 4564 [] []
+[2012-03-26 22:28:20] security.DEBUG: Write SecurityContext in the session [] []
