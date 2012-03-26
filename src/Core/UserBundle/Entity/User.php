@@ -37,6 +37,13 @@ class User extends BaseUser
      * @ORM\Column(name="surname", type="string", length=255, nullable=true)
      */
     private $surname;
+
+    /**
+     * @var string $surname
+     *
+     * @ORM\Column(name="last_ip", type="string", length=255, nullable=true)
+     */
+    private $last_ip;
     
     /**
      * @var date $birthday
@@ -174,7 +181,8 @@ class User extends BaseUser
     	$this->setBirthday($date);
     
     }
-    
+      public function getLastIp(){ return $this->last_ip; }
+    public function setLastIp($elm){ $this->last_ip = $elm; }  
     public function getBirthdayMonth(){ return $this->birthday_month; }
     public function getBirthdayDay(){ return $this->birthday_day; }
     public function getBirthdayYear(){ return $this->birthday_year; }
