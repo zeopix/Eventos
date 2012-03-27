@@ -5,7 +5,10 @@ security:
     providers:
         fos_userbundle:
             id: fos_user.user_manager
-           
+
+        wsse_provider:
+            entity:
+                 class: Core\UserBundle\Entity\User
 
     encoders:
         "FOS\UserBundle\Model\UserInterface": sha512
@@ -14,7 +17,7 @@ security:
         wsse_secured:
             pattern:   ^/api/.*
             wsse:      true
-            provider: fos_userbundle
+            provider: wsse_provider
             
         main:
             pattern: ^/
