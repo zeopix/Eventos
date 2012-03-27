@@ -5,6 +5,7 @@ security:
     providers:
         fos_userbundle:
             id: fos_user.user_manager
+           
 
     encoders:
         "FOS\UserBundle\Model\UserInterface": sha512
@@ -13,6 +14,7 @@ security:
         wsse_secured:
             pattern:   ^/api/.*
             wsse:      true
+               provider: fos_userbundle
             
         main:
             pattern: ^/
