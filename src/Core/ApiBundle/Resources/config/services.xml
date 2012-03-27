@@ -5,7 +5,7 @@
     <services>
         <service id="wsse.security.authentication.provider"
                  class="Core\ApiBundle\Security\Authentication\Provider\WsseProvider" public="false">
-            <argument /> <!-- User Provider -->
+            <argument type="service" id="security.providers.fos_userbundle" /> <!-- User Provider -->
             <argument>%kernel.cache_dir%/security/nonces</argument>
         </service>
 
