@@ -23,8 +23,12 @@ class WsseProvider implements AuthenticationProviderInterface
     {
 
         $user = $this->userProvider->loadUserByUsername($token->getUsername());
+        
+        $encoder = new \Symfony\Component\Security\Core\Encoder\MessageDigestPasswordEncoder;
+        
+        $password = $encoder->encodePassword($token->digest,$user->getSalt());
 
-        if ($user && $this->validateDigest($token->digest, $token->nonce, $token->created, $user->getPassword())) {
+        if ($user && ($password === $user->getPassword())) {
             $authenticatedToken = new WsseUserToken($user->getRoles());
             $authenticatedToken->setUser($user);
 
@@ -33,6 +37,7 @@ class WsseProvider implements AuthenticationProviderInterface
 
         throw new AuthenticationException('The WSSE authentication failed.');
     }
+    
 
     protected function validateDigest($digest, $nonce, $created, $secret)
     {
