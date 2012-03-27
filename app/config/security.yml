@@ -14,7 +14,7 @@ security:
         wsse_secured:
             pattern:   ^/api/.*
             wsse:      true
-               provider: fos_userbundle
+            provider: fos_userbundle
             
         main:
             pattern: ^/

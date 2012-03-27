@@ -21,6 +21,7 @@ class WsseProvider implements AuthenticationProviderInterface
 
     public function authenticate(TokenInterface $token)
     {
+
         $user = $this->userProvider->loadUserByUsername($token->getUsername());
 
         if ($user && $this->validateDigest($token->digest, $token->nonce, $token->created, $user->getPassword())) {
