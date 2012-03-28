@@ -49,8 +49,7 @@ class WsseListener implements ListenerInterface
                     // you might log something here
                 }
             }
-        }
-
+        }        
         $response = new Response();
         $response->setStatusCode(403);
         $event->setResponse($response);
