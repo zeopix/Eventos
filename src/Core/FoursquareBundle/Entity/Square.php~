@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Core\FoursquareBundle\Entity\Square
  *
- * @ORM\Table()
+ * @ORM\Table(name="core_4square_square")
  * @ORM\Entity
  */
 class Square
@@ -227,5 +227,25 @@ class Square
     public function getParent()
     {
         return $this->parent;
+    }
+
+    /**
+     * Set complete
+     *
+     * @param boolean $complete
+     */
+    public function setComplete($complete)
+    {
+        $this->complete = $complete;
+    }
+
+    /**
+     * Get complete
+     *
+     * @return boolean 
+     */
+    public function getComplete()
+    {
+        return $this->complete;
     }
 }

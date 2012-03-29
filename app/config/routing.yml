@@ -1,3 +1,8 @@
+CoreLocalBundle:
+    resource: "@CoreLocalBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
 CoreUserCtlBundle:
     resource: "@CoreUserBundle/Controller/"
     type:     annotation

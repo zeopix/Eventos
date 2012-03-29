@@ -26,11 +26,10 @@ class AppKernel extends Kernel
             new App\SocialBundle\AppSocialBundle(),
             new Core\FoursquareBundle\CoreFoursquareBundle(),
             new Pro\CrawlerBundle\ProCrawlerBundle(),
-        new Genemu\Bundle\FormBundle\GenemuFormBundle(),
-        new FOS\CommentBundle\FOSCommentBundle(),
+            new Genemu\Bundle\FormBundle\GenemuFormBundle(),
+            new FOS\CommentBundle\FOSCommentBundle(),
          //new JMS\SerializerBundle\JMSSerializerBundle($this),
-
-
+            new Core\LocalBundle\CoreLocalBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
