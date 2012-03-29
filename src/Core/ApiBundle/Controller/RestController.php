@@ -16,14 +16,15 @@ class RestController extends Controller
      * @Route("/",name="core_api")
      */
     public function indexAction()
-    {
-    
-    		
-		$response = "welcome!";
+    {	
     	
+    	$response = Array(
+    		'status' => 200
+    	);
     	
-    	return new Response(json_encode($response));
+    	$plainResponse = (!empty($callback)) ? $callback . "(" . json_encode($response) . ");" : json_encode($response);
     	
+    	return new Response($plainResponse);
     	
     	
     }
