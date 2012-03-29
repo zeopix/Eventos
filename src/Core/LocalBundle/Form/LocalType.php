@@ -11,7 +11,7 @@ class LocalType extends AbstractType
     {
         $builder
             ->add('localname')
-            ->add('email', 'email')
+            ->add('email', 'email', array('required'  => false))
             ->add('comment')
             ->add('telephone')
             ->add('latitude')
