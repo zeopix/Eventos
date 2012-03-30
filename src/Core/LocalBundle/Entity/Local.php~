@@ -38,14 +38,14 @@ class Local
     /**
      * @var string $email
      *
-     * @ORM\Column(name="email", type="string", length=255)
+     * @ORM\Column(name="email", type="string", length=255, nullable=true)
      */
     private $email;
 
     /**
      * @var string $email_canonical
      *
-     * @ORM\Column(name="email_canonical", type="string", length=255)
+     * @ORM\Column(name="email_canonical", type="string", length=255, nullable=true)
      */
     private $email_canonical;
 
@@ -59,49 +59,49 @@ class Local
     /**
      * @var text $comment
      *
-     * @ORM\Column(name="comment", type="text")
+     * @ORM\Column(name="comment", type="text", nullable=true)
      */
     private $comment;
 
     /**
      * @var string $telephone
      *
-     * @ORM\Column(name="telephone", type="string", length=20)
+     * @ORM\Column(name="telephone", type="string", length=20, nullable=true)
      */
     private $telephone;
 
     /**
-     * @var decimal $latitude
+     * @var float $latitude
      *
-     * @ORM\Column(name="latitude", type="decimal")
+     * @ORM\Column(name="latitude", type="float", nullable=true)
      */
     private $latitude;
 
     /**
-     * @var decimal $longitude
+     * @var float $longitude
      *
-     * @ORM\Column(name="longitude", type="decimal")
+     * @ORM\Column(name="longitude", type="float", nullable=true)
      */
     private $longitude;
 
     /**
      * @var string $adress
      *
-     * @ORM\Column(name="adress", type="string", length=255)
+     * @ORM\Column(name="adress", type="string", length=255, nullable=true)
      */
     private $adress;
 
 	/**
      * @var string $web
      *
-     * @ORM\Column(name="web", type="string", length=255)
+     * @ORM\Column(name="web", type="string", length=255, nullable=true)
      */
     private $web;
 
     /**
      * @var string $web_canonical
      *
-     * @ORM\Column(name="web_canonical", type="string", length=255)
+     * @ORM\Column(name="web_canonical", type="string", length=255, nullable=true)
      */
     private $web_canonical;
     
@@ -258,7 +258,7 @@ class Local
     /**
      * Set latitude
      *
-     * @param decimal $latitude
+     * @param float $latitude
      */
     public function setLatitude($latitude)
     {
@@ -268,7 +268,7 @@ class Local
     /**
      * Get latitude
      *
-     * @return decimal 
+     * @return float 
      */
     public function getLatitude()
     {
@@ -278,7 +278,7 @@ class Local
     /**
      * Set longitude
      *
-     * @param decimal $longitude
+     * @param float $longitude
      */
     public function setLongitude($longitude)
     {
@@ -288,7 +288,7 @@ class Local
     /**
      * Get longitude
      *
-     * @return decimal 
+     * @return float 
      */
     public function getLongitude()
     {
@@ -313,5 +313,45 @@ class Local
     public function getAdress()
     {
         return $this->adress;
+    }
+
+    /**
+     * Set web
+     *
+     * @param string $web
+     */
+    public function setWeb($web)
+    {
+        $this->web = $web;
+    }
+
+    /**
+     * Get web
+     *
+     * @return string 
+     */
+    public function getWeb()
+    {
+        return $this->web;
+    }
+
+    /**
+     * Set web_canonical
+     *
+     * @param string $webCanonical
+     */
+    public function setWebCanonical($webCanonical)
+    {
+        $this->web_canonical = $webCanonical;
+    }
+
+    /**
+     * Get web_canonical
+     *
+     * @return string 
+     */
+    public function getWebCanonical()
+    {
+        return $this->web_canonical;
     }
 }

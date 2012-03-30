@@ -73,14 +73,14 @@ class Local
     /**
      * @var decimal $latitude
      *
-     * @ORM\Column(name="latitude", type="decimal", nullable=true)
+     * @ORM\Column(name="latitude", type="decimal", scale=7, nullable=true)
      */
     private $latitude;
 
     /**
      * @var decimal $longitude
      *
-     * @ORM\Column(name="longitude", type="decimal", nullable=true)
+     * @ORM\Column(name="longitude", type="decimal", scale=7, nullable=true)
      */
     private $longitude;
 
