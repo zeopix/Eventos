@@ -71,16 +71,16 @@ class Local
     private $telephone;
 
     /**
-     * @var decimal $latitude
+     * @var float $latitude
      *
-     * @ORM\Column(name="latitude", type="decimal", scale=7, nullable=true)
+     * @ORM\Column(name="latitude", type="float", nullable=true)
      */
     private $latitude;
 
     /**
-     * @var decimal $longitude
+     * @var float $longitude
      *
-     * @ORM\Column(name="longitude", type="decimal", scale=7, nullable=true)
+     * @ORM\Column(name="longitude", type="float", nullable=true)
      */
     private $longitude;
 
@@ -258,7 +258,7 @@ class Local
     /**
      * Set latitude
      *
-     * @param decimal $latitude
+     * @param float $latitude
      */
     public function setLatitude($latitude)
     {
@@ -268,7 +268,7 @@ class Local
     /**
      * Get latitude
      *
-     * @return decimal 
+     * @return float 
      */
     public function getLatitude()
     {
@@ -278,7 +278,7 @@ class Local
     /**
      * Set longitude
      *
-     * @param decimal $longitude
+     * @param float $longitude
      */
     public function setLongitude($longitude)
     {
@@ -288,7 +288,7 @@ class Local
     /**
      * Get longitude
      *
-     * @return decimal 
+     * @return float 
      */
     public function getLongitude()
     {
