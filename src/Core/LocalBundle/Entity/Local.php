@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Core\LocalBundle\Entity\Local
  *
- * @ORM\Table()
+ * @ORM\Table(name="core_local_local")
  * @ORM\Entity
  */
 class Local
@@ -90,6 +90,48 @@ class Local
      * @ORM\Column(name="adress", type="string", length=255, nullable=true)
      */
     private $adress;
+    
+    /**
+     * @var string $numero
+     *
+     * @ORM\Column(name="numero", type="string", length=100, nullable=true)
+     */
+    private $numero;
+
+    /**
+     * @var integer $piso
+     *
+     * @ORM\Column(name="piso", type="integer", nullable=true)
+     */
+    private $piso;
+
+    /**
+     * @var string $puerta
+     *
+     * @ORM\Column(name="puerta", type="string", length=5, nullable=true)
+     */
+    private $puerta;
+
+    /**
+     * @var string $poblacion
+     *
+     * @ORM\Column(name="poblacion", type="string", length=50, nullable=true)
+     */
+    private $poblacion;
+
+    /**
+     * @var string $provincia
+     *
+     * @ORM\Column(name="provincia", type="string", length=50, nullable=true)
+     */
+    private $provincia;
+
+    /**
+     * @var string $codigo_postal
+     *
+     * @ORM\Column(name="codigo_postal", type="string", length=5, nullable=true)
+     */
+    private $codigo_postal;
 
 	/**
      * @var string $web
@@ -353,5 +395,125 @@ class Local
     public function getWebCanonical()
     {
         return $this->web_canonical;
+    }
+
+    /**
+     * Set numero
+     *
+     * @param string $numero
+     */
+    public function setNumero($numero)
+    {
+        $this->numero = $numero;
+    }
+
+    /**
+     * Get numero
+     *
+     * @return string 
+     */
+    public function getNumero()
+    {
+        return $this->numero;
+    }
+
+    /**
+     * Set piso
+     *
+     * @param integer $piso
+     */
+    public function setPiso($piso)
+    {
+        $this->piso = $piso;
+    }
+
+    /**
+     * Get piso
+     *
+     * @return integer 
+     */
+    public function getPiso()
+    {
+        return $this->piso;
+    }
+
+    /**
+     * Set puerta
+     *
+     * @param string $puerta
+     */
+    public function setPuerta($puerta)
+    {
+        $this->puerta = $puerta;
+    }
+
+    /**
+     * Get puerta
+     *
+     * @return string 
+     */
+    public function getPuerta()
+    {
+        return $this->puerta;
+    }
+
+    /**
+     * Set poblacion
+     *
+     * @param string $poblacion
+     */
+    public function setPoblacion($poblacion)
+    {
+        $this->poblacion = $poblacion;
+    }
+
+    /**
+     * Get poblacion
+     *
+     * @return string 
+     */
+    public function getPoblacion()
+    {
+        return $this->poblacion;
+    }
+
+    /**
+     * Set provincia
+     *
+     * @param string $provincia
+     */
+    public function setProvincia($provincia)
+    {
+        $this->provincia = $provincia;
+    }
+
+    /**
+     * Get provincia
+     *
+     * @return string 
+     */
+    public function getProvincia()
+    {
+        return $this->provincia;
+    }
+
+    /**
+     * Set codigo_postal
+     *
+     * @param string $codigoPostal
+     */
+    public function setCodigoPostal($codigoPostal)
+    {
+        $this->codigo_postal = $codigoPostal;
+    }
+
+    /**
+     * Get codigo_postal
+     *
+     * @return string 
+     */
+    public function getCodigoPostal()
+    {
+        return $this->codigo_postal;
     }
 }

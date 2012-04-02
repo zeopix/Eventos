@@ -16,7 +16,13 @@ class LocalType extends AbstractType
             ->add('telephone')
             ->add('latitude')
             ->add('longitude')
-            ->add('adress')
+            ->add('adress', 'text', array('label' => 'Calle', 'required' => false))
+            ->add('numero', 'text', array('label'=>'Número', 'required' => false))
+            ->add('piso', 'integer', array('label'=> 'Piso', 'required' => false))
+            ->add('puerta', 'text', array('label'=> 'Puerta', 'required' => false))
+            ->add('poblacion', 'text', array('label'=> 'Población', 'required' => false))
+            ->add('provincia', 'text', array('label'=> 'Provincia', 'required' => false))
+            ->add('codigo_postal', 'text', array('label'=> 'Código Postal', 'max_length' => 5, 'required' => false))
             ->add('web')
         ;
     }

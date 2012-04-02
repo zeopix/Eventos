@@ -90,6 +90,48 @@ class Local
      * @ORM\Column(name="adress", type="string", length=255, nullable=true)
      */
     private $adress;
+    
+    /**
+     * @var string $numero
+     *
+     * @ORM\Column(name="numero", type="string", length=100, nullable=true)
+     */
+    private $numero;
+
+    /**
+     * @var integer $piso
+     *
+     * @ORM\Column(name="piso", type="integer", nullable=true)
+     */
+    private $piso;
+
+    /**
+     * @var string $puerta
+     *
+     * @ORM\Column(name="puerta", type="string", length=5, nullable=true)
+     */
+    private $puerta;
+
+    /**
+     * @var string $poblacion
+     *
+     * @ORM\Column(name="poblacion", type="string", length=50, nullable=true)
+     */
+    private $poblacion;
+
+    /**
+     * @var string $provincia
+     *
+     * @ORM\Column(name="provincia", type="string", length=50, nullable=true)
+     */
+    private $provincia;
+
+    /**
+     * @var string $codigo_postal
+     *
+     * @ORM\Column(name="codigo_postal", type="string", length=5, nullable=true)
+     */
+    private $codigo_postal;
 
 	/**
      * @var string $web
