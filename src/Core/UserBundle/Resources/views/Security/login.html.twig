@@ -1,0 +1,120 @@
+{% extends "CoreTemplateBundle::layout.html.twig" %}
+{% block stylesheet %}
+	<style>
+		#register{
+			margin-top: 75px;
+			position: relative;
+			float: right;
+			color: white;
+			font-size: 16px;
+		}
+		#register span{
+			font-weight: bold;
+			-webkit-transition: all 0.3s linear;
+			-moz-transition: all 0.3s linear;
+			-ms-transition: all 0.3s linear;
+			-o-transition: all 0.3s linear;
+			transition: all 0.3s linear;
+		}
+		#register a{
+			font-size: 20px;
+			color: white;
+			text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+			float: right;
+		}
+		#register a:hover{
+			text-decoration:none;
+			text-shadow:0 0 5px rgba(255,255,255,0.2);
+		}
+		#icon{
+			position: absolute;
+			top: 100%;
+			margin-top: -85px;
+		}
+		
+		#android{
+			position: relative;
+			bottom: 7px;
+		}
+		#iphone{
+			position: relative;
+			bottom: 13px;
+		}
+		#blackberry{
+			position: relative;
+			left: -10px;
+		}
+		footer{
+			position: absolute;
+			bottom: 0px;
+		}
+		form{
+			margin: 0px;
+		}
+		#login{
+			margin: 0px;
+			margin-top: 1px;
+		}
+		#login input{
+			margin: 0px;
+			
+		}
+		#username, #password{
+			width: 100px;
+			height: 10px;
+			font-size: 10px;
+		}
+		#_submit{
+			font-size: 10px;
+			padding: 1px 4px;
+		}
+		#check{
+			margin: 0px;
+			height: 12px;
+		}
+		#remember_me{
+			margin: 0px;
+		}
+		#check label{
+			font-size: 10px;
+			color: white;
+			margin: 0px;
+		}
+	</style>
+{% endblock%}
+
+{% block main %}
+	<div id="register">
+		¿Quieres una cuenta?<br/><a href="{{path('default_registro')}}"><span>Regístrate</span></a>
+	</div>
+	<div id="icon">
+		<span id="iphone"><img height="32px" width="32px" src="{{asset('bundles/coretemplate/images/icon_iphone.png')}}"></span>
+		<span id="android"><img height="45px" width="45px" src="{{asset('bundles/coretemplate/images/icon_android.png')}}"></span>
+		<span id="blackberry"><img height="55px" width="55px" src="{{asset('bundles/coretemplate/images/icon_blackberry.png')}}"></span>
+	</div>
+{% endblock %}
+{% block social %}
+	<div style="top: 7.5px; float: left; position: relative;">
+	<a target="_blank" href="http://www.facebook.com/eyeonparty"><img src="{{asset('bundles/coretemplate/images/facebook-icon.png')}}"></a>
+	<a target="_blank" href="http://twitter.com/#!/EyeOnParty"><img src="{{asset('bundles/coretemplate/images/twitter-icon.png')}}"></a>
+	</div>
+{% endblock %}
+
+{% block fos_user_content %}
+{% if error %}
+    <div>{{ error|trans({}, 'FOSUserBundle') }}</div>
+{% endif %}
+
+<form class="form-inline" action="{{ path("fos_user_security_check") }}" method="post">
+    <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
+	<p id="login">
+    	<input type="text" id="username" name="_username" value="{{ last_username }}" placeholder="Usuario"/>
+    	<input type="password" id="password" name="_password" placeholder="Contraseña"/>
+    	<input class="btn btn-info" type="submit" id="_submit" name="_submit" value="ENTRAR" />
+	</p>
+	<p id="check">
+    	<input type="checkbox" id="remember_me" name="_remember_me" value="on" />
+    	<label for="remember_me">{{ 'security.login.remember_me'|trans({}, 'FOSUserBundle') }}</label>
+    </p>
+</form>
+{% endblock fos_user_content %}

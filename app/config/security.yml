@@ -18,6 +18,7 @@ security:
             pattern: ^/
             form_login:
                 provider: fos_userbundle
+                login_path:  /
                 csrf_provider: form.csrf_provider
             logout:       true
             anonymous:    true
